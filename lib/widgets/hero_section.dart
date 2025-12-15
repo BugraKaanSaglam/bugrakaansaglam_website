@@ -1,5 +1,7 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
+import '../data/content.dart';
 import '../global/app_theme.dart';
 import '../global/global_functions.dart';
 import 'info_badge.dart';
@@ -14,33 +16,34 @@ class HeroSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
+    final locale = context.locale;
+    final tags = [
+      tr('hero.status_tags.motion'),
+      tr('hero.status_tags.design'),
+      tr('hero.status_tags.analytics'),
+    ];
     final Widget intro = Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        const InfoBadge(
-          label: 'İstanbul / Remote',
-          icon: Icons.location_on_outlined,
-        ),
+        InfoBadge(label: tr('hero.location'), icon: Icons.location_on_outlined),
         const SizedBox(height: 18),
         Text(
-          'Ürün odaklı mobil ve web deneyimleri tasarlıyorum.',
+          tr('hero.title'),
           style: theme.textTheme.displayLarge,
         ),
         const SizedBox(height: 16),
         Text(
-          'Fintekten sahaya uzanan projelerde ekiplerle birlikte çalışıyor,'
-          ' sade kod, güçlü test altyapısı ve ölçülebilir teslimat üzerine'
-          ' odaklanıyorum.',
+          tr('hero.subtitle'),
           style: theme.textTheme.bodyLarge?.copyWith(color: Colors.white70),
         ),
         const SizedBox(height: 24),
         Wrap(
           spacing: 12,
           runSpacing: 12,
-          children: const [
-            QuickFact(label: '8+ yıl', value: 'deneyim'),
-            QuickFact(label: '24', value: 'tamamlanan proje'),
-            QuickFact(label: '2 hafta', value: 'MVP süresi'),
+          children: [
+            QuickFact(label: tr('hero.facts.years'), value: '8+'),
+            QuickFact(label: tr('hero.facts.projects'), value: '24'),
+            QuickFact(label: tr('hero.facts.mvp'), value: '2'),
           ],
         ),
         const SizedBox(height: 24),
@@ -50,23 +53,21 @@ class HeroSection extends StatelessWidget {
           children: [
             FilledButton.icon(
               icon: const Icon(Icons.calendar_today_outlined),
-              label: const Text('Görüşme planla'),
+              label: Text(tr('hero.cta_meeting')),
               onPressed: () => copyToClipboard(
                 context,
-                'hello@bugrakaansaglam.com',
-                'E-posta panoya kopyalandı',
+                contactEmail,
+                locale.languageCode == 'tr' ? 'E-posta panoya kopyalandı' : 'Email copied to clipboard',
               ),
             ),
             OutlinedButton.icon(
               icon: const Icon(Icons.download_outlined),
-              label: const Text('Özet CV'),
-              onPressed: () {
-                ScaffoldMessenger.of(context).showSnackBar(
-                  const SnackBar(
-                    content: Text('PDF linkini ekleyin veya dosyayı bağlayın.'),
-                  ),
-                );
-              },
+              label: Text(tr('hero.cta_resume')),
+              onPressed: () => copyToClipboard(
+                context,
+                contactEmail,
+                locale.languageCode == 'tr' ? 'İletişim bilgisi panoya kopyalandı' : 'Contact copied to clipboard',
+              ),
             ),
           ],
         ),
@@ -91,14 +92,13 @@ class HeroSection extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const InfoBadge(
-            label: 'Şu sıralar',
+          InfoBadge(
+            label: tr('hero.now_building'),
             icon: Icons.radar_outlined,
           ),
           const SizedBox(height: 16),
           Text(
-            'Performanslı Flutter deneyimleri için tasarım sistemleri ve'
-            ' animasyon kütüphaneleri geliştiriyorum.',
+            tr('hero.status'),
             style: theme.textTheme.bodyLarge,
           ),
           const SizedBox(height: 20),
@@ -107,18 +107,14 @@ class HeroSection extends StatelessWidget {
           Wrap(
             spacing: 10,
             runSpacing: 10,
-            children: const [
-              SkillPill(skill: 'Motion'),
-              SkillPill(skill: 'Design Tokens'),
-              SkillPill(skill: 'A/B & Analitik'),
-            ],
+            children: tags.map((skill) => SkillPill(skill: skill)).toList(),
           ),
           const SizedBox(height: 18),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
-                'Müsaitlik',
+                tr('hero.availability_label'),
                 style: theme.textTheme.bodyMedium?.copyWith(
                       color: Colors.white70,
                     ),
@@ -133,12 +129,12 @@ class HeroSection extends StatelessWidget {
                   borderRadius: BorderRadius.circular(12),
                 ),
                 child: Row(
-                  children: const [
-                    Icon(Icons.circle, color: Colors.greenAccent, size: 10),
-                    SizedBox(width: 6),
+                  children: [
+                    const Icon(Icons.circle, color: Colors.greenAccent, size: 10),
+                    const SizedBox(width: 6),
                     Text(
-                      'Yeni projelere açık',
-                      style: TextStyle(color: Colors.white),
+                      tr('hero.availability'),
+                      style: const TextStyle(color: Colors.white),
                     ),
                   ],
                 ),

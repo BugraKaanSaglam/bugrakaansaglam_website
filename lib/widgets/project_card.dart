@@ -1,7 +1,10 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
 import '../global/app_theme.dart';
+import '../global/global_functions.dart';
 import '../models/portfolio_models.dart';
+import 'info_badge.dart';
 
 class ProjectCard extends StatelessWidget {
   const ProjectCard({required this.project, super.key});
@@ -11,6 +14,7 @@ class ProjectCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
+    final locale = context.locale;
     return Card(
       child: Padding(
         padding: const EdgeInsets.all(18),
@@ -20,16 +24,21 @@ class ProjectCard extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text(
-                  project.title,
-                  style: theme.textTheme.titleLarge,
+                Expanded(
+                  child: Text(
+                    project.title.ofLocale(locale),
+                    style: theme.textTheme.titleLarge,
+                  ),
                 ),
-                const Icon(Icons.arrow_outward, color: Colors.white54, size: 20),
+                if (project.meta != null) ...[
+                  const SizedBox(width: 12),
+                  InfoBadge(label: project.meta!.ofLocale(locale)),
+                ],
               ],
             ),
             const SizedBox(height: 10),
             Text(
-              project.description,
+              project.description.ofLocale(locale),
               style: theme.textTheme.bodyMedium?.copyWith(color: Colors.white70),
             ),
             const SizedBox(height: 12),
@@ -46,13 +55,29 @@ class ProjectCard extends StatelessWidget {
                         border: Border.all(color: AppTheme.border),
                       ),
                       child: Text(
-                        tag,
+                        tag.ofLocale(locale),
                         style: const TextStyle(color: Colors.white70),
                       ),
                     ),
                   )
                   .toList(),
             ),
+            if (project.links.isNotEmpty) ...[
+              const SizedBox(height: 12),
+              Wrap(
+                spacing: 10,
+                runSpacing: 10,
+                children: project.links
+                    .map(
+                      (link) => OutlinedButton.icon(
+                        icon: const Icon(Icons.open_in_new, size: 16),
+                        label: Text(link.label),
+                        onPressed: () => openExternalUrl(context, link.url),
+                      ),
+                    )
+                    .toList(),
+              ),
+            ],
           ],
         ),
       ),

@@ -1,0 +1,57 @@
+{
+  "app_title": "Buğra Kaan Sağlam | Mobil & Web Mühendisi",
+  "nav": {
+    "role": "Flutter & ürün geliştirme",
+    "email": "E-postayı kopyala",
+    "cta": "Projeye başlayalım",
+    "lang_en": "EN",
+    "lang_tr": "TR"
+  },
+  "hero": {
+    "location": "İstanbul / Uzaktan",
+    "title": "Yüksek performanslı mobil ve web deneyimleri tasarlıyorum.",
+    "subtitle": "Kurumsal sağlık uygulamaları ve indie yayınlarda tek başıma uçtan uca geliştirdim. Hızlı arayüz, güvenilir oturum akışları ve sorunsuz mağaza teslimatlarına odaklanıyorum.",
+    "cta_meeting": "Görüşme planla",
+    "cta_resume": "CV içeriği aşağıda",
+    "availability_label": "Müsaitlik",
+    "availability": "Yeni projelere açık",
+    "now_building": "Şu sıralar",
+    "status": "Flutter için tutarlı ve performanslı arayüzler sağlayan motion ve animasyon bileşenleri geliştiriyorum.",
+    "facts": {
+      "years": "yıl deneyim",
+      "projects": "tamamlanan proje",
+      "mvp": "MVP süresi"
+    },
+    "status_tags": {
+      "motion": "Motion",
+      "design": "Design Tokens",
+      "analytics": "A/B & Analitik"
+    }
+  },
+  "sections": {
+    "about": "Hakkımda",
+    "skills": "Beceriler",
+    "projects": "Seçili Projeler",
+    "overpowered": "Overpowered Company",
+    "experience": "Deneyim",
+    "education": "Eğitim",
+    "contact": "İletişim"
+  },
+  "about": {
+    "body": "Tek başına çalışan bir front-end mühendisi olarak .NET MAUI ve Flutter ile çapraz platform mobil uygulamalar geliştiriyorum. Sağlık alanında kurumsal stok yönetimi uygulamaları ve indie uygulamalar teslim ettim; performans, UX ve mağaza süreçlerine odaklanıyorum."
+  },
+  "contact": {
+    "lead": "Yeni projeler, danışmanlık veya ekip desteği için ulaşabilirsiniz.",
+    "email": "E-posta",
+    "linkedin": "LinkedIn"
+  },
+  "education": {
+    "degree": "Biyomedikal Mühendisliği Lisans",
+    "school": "TOBB Ekonomi ve Teknoloji Üniversitesi (TOBB ETÜ)",
+    "location": "Ankara, Türkiye",
+    "period": "2014 - 2019 (tahmini)"
+  },
+  "overpowered": {
+    "description": "Overpowered Company çatısı altında yayımlanan oyun ve uygulamalar."
+  }
+}

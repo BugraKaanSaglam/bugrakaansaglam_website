@@ -1,16 +1,17 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
+import '../data/content.dart';
 import '../global/app_theme.dart';
 import '../global/global_functions.dart';
 
 class HeaderBar extends StatelessWidget {
   const HeaderBar({super.key});
 
-  static const String _email = 'hello@bugrakaansaglam.com';
-
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
+    final locale = context.locale;
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
@@ -34,7 +35,7 @@ class HeaderBar extends StatelessWidget {
                   style: theme.textTheme.titleLarge,
                 ),
                 Text(
-                  'Flutter & ürün geliştirme',
+                  tr('nav.role'),
                   style: theme.textTheme.bodyMedium?.copyWith(
                     color: Colors.white70,
                   ),
@@ -46,19 +47,48 @@ class HeaderBar extends StatelessWidget {
         Wrap(
           spacing: 10,
           runSpacing: 10,
+          crossAxisAlignment: WrapCrossAlignment.center,
           children: [
+            ToggleButtons(
+              isSelected: [
+                locale.languageCode == 'en',
+                locale.languageCode == 'tr',
+              ],
+              onPressed: (index) {
+                final selected = index == 0 ? const Locale('en') : const Locale('tr');
+                context.setLocale(selected);
+              },
+              borderRadius: BorderRadius.circular(12),
+              selectedColor: Colors.black,
+              fillColor: AppTheme.accent,
+              color: Colors.white70,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 10),
+                  child: Text(tr('nav.lang_en')),
+                ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 10),
+                  child: Text(tr('nav.lang_tr')),
+                ),
+              ],
+            ),
             OutlinedButton.icon(
               icon: const Icon(Icons.copy, size: 18),
-              label: const Text('E-posta'),
-              onPressed: () => copyToClipboard(context, _email, 'E-posta kopyalandı'),
+              label: Text(tr('nav.email')),
+              onPressed: () => copyToClipboard(
+                context,
+                contactEmail,
+                locale.languageCode == 'tr' ? 'Panoya kopyalandı' : 'Copied to clipboard',
+              ),
             ),
             FilledButton.icon(
               icon: const Icon(Icons.chat_bubble_outline, size: 18),
-              label: const Text('Projeye başlayalım'),
+              label: Text(tr('nav.cta')),
               onPressed: () => copyToClipboard(
                 context,
-                _email,
-                'E-posta panoya kopyalandı',
+                contactEmail,
+                locale.languageCode == 'tr' ? 'E-posta panoya kopyalandı' : 'Email copied to clipboard',
               ),
             ),
           ],

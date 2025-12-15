@@ -1,0 +1,57 @@
+{
+  "app_title": "Buğra Kaan Sağlam | Mobile & Web Engineer",
+  "nav": {
+    "role": "Flutter & product engineering",
+    "email": "Copy email",
+    "cta": "Start a project",
+    "lang_en": "EN",
+    "lang_tr": "TR"
+  },
+  "hero": {
+    "location": "Istanbul / Remote",
+    "title": "Building high-performance mobile and web experiences.",
+    "subtitle": "Sole front-end engineer for enterprise healthcare apps and indie launches. I focus on fast UI, reliable auth/session flows, and smooth releases across stores.",
+    "cta_meeting": "Book a chat",
+    "cta_resume": "See CV content below",
+    "availability_label": "Availability",
+    "availability": "Open to new projects",
+    "now_building": "Now building",
+    "status": "Motion systems and animation libraries for Flutter to keep UI feel consistent and performant.",
+    "facts": {
+      "years": "years experience",
+      "projects": "projects shipped",
+      "mvp": "MVP lead time"
+    },
+    "status_tags": {
+      "motion": "Motion",
+      "design": "Design Tokens",
+      "analytics": "A/B & Analytics"
+    }
+  },
+  "sections": {
+    "about": "About Me",
+    "skills": "Skills",
+    "projects": "Selected Projects",
+    "overpowered": "Overpowered Company",
+    "experience": "Experience",
+    "education": "Education",
+    "contact": "Contact"
+  },
+  "about": {
+    "body": "Sole front-end engineer building cross-platform mobile apps with .NET MAUI and Flutter. Delivered enterprise healthcare inventory apps end-to-end and shipped indie apps; focused on performance, UX, and smooth store releases."
+  },
+  "contact": {
+    "lead": "Reach out for new projects, consulting, or team support.",
+    "email": "Email",
+    "linkedin": "LinkedIn"
+  },
+  "education": {
+    "degree": "BSc in Biomedical Engineering",
+    "school": "TOBB University of Economics and Technology (TOBB ETÜ)",
+    "location": "Ankara, Türkiye",
+    "period": "2014 - 2019 (approx.)"
+  },
+  "overpowered": {
+    "description": "Published titles and apps under Overpowered Company."
+  }
+}

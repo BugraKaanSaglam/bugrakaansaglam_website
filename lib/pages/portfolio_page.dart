@@ -1,5 +1,7 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
+import '../data/content.dart';
 import '../global/app_theme.dart';
 import '../models/portfolio_models.dart';
 import '../widgets/contact_actions.dart';
@@ -15,6 +17,7 @@ class PortfolioPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final locale = context.locale;
     return Scaffold(
       body: Container(
         decoration: const BoxDecoration(gradient: AppTheme.backgroundGradient),
@@ -40,71 +43,44 @@ class PortfolioPage extends StatelessWidget {
                         },
                       ),
                       const SizedBox(height: 42),
-                      const SectionCard(
-                        title: 'Hakkımda',
+                      SectionCard(
+                        title: tr('sections.about'),
                         child: Text(
-                          'Ürün odaklı bir yazılımcıyım. Flutter ile yüksek performanslı'
-                          ' mobil ve web uygulamaları geliştiriyor, gerektiğinde'
-                          ' TypeScript, Node ve bulut servisleriyle uçtan uca'
-                          ' çözümler kuruyorum. Tasarımdan yayına kadar tüm süreci'
-                          ' yalın, ölçülebilir ve sürdürülebilir kılmaya odaklanıyorum.',
+                          aboutSummary.ofLocale(locale),
                         ),
                       ),
                       const SizedBox(height: 32),
-                      const SectionCard(
-                        title: 'Beceriler',
-                        child: SkillsWrap(
-                          skills: [
-                            'Flutter & Dart',
-                            'Flutter Web',
-                            'State Management',
-                            'Native Bridges',
-                            'TypeScript',
-                            'Node.js',
-                            'GraphQL / REST',
-                            'PostgreSQL',
-                            'Cloud & CI/CD',
-                            'Observability',
-                            'Design Systems',
+                      SectionCard(
+                        title: tr('sections.skills'),
+                        child: _SkillsBlock(locale: locale),
+                      ),
+                      const SizedBox(height: 32),
+                      SectionCard(
+                        title: tr('sections.projects'),
+                        child: Column(
+                          children: [
+                            ...projects.map((project) => Padding(
+                                  padding: const EdgeInsets.only(bottom: 16),
+                                  child: ProjectCard(project: project),
+                                )),
                           ],
                         ),
                       ),
                       const SizedBox(height: 32),
                       SectionCard(
-                        title: 'Seçili Projeler',
+                        title: tr('sections.overpowered'),
                         child: Column(
-                          children: const [
-                            ProjectCard(
-                              project: Project(
-                                title: 'Wellness Companion',
-                                description:
-                                    'Kişiye özel programlar, canlı koçluk ve'
-                                    ' davranış analitiği içeren bir wellness'
-                                    ' uygulaması. Gerçek zamanlı mesajlaşma ve'
-                                    ' güvenli veri akışı için modern mimari.',
-                                tags: ['Flutter', 'Supabase', 'Realtime', 'Clean Architecture'],
-                              ),
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              tr('overpowered.description'),
+                              style: Theme.of(context).textTheme.bodyMedium?.copyWith(color: Colors.white70),
                             ),
-                            SizedBox(height: 16),
-                            ProjectCard(
-                              project: Project(
-                                title: 'Field Service Suite',
-                                description:
-                                    'Teknisyenler için çevrimdışı çalışan saha'
-                                    ' uygulaması. Planlama, denetim listeleri ve'
-                                    ' fotoğraflı raporlama ile operasyon verimliliği.',
-                                tags: ['Flutter Web', 'BLoC', 'Offline-first', 'Maps'],
-                              ),
-                            ),
-                            SizedBox(height: 16),
-                            ProjectCard(
-                              project: Project(
-                                title: 'Payments Dashboard',
-                                description:
-                                    'Ödeme takımları için birleşik gösterge paneli.'
-                                    ' KPI takibi, alarm yönetimi ve otomatik rapor'
-                                    ' akışlarıyla operasyonları görünür kıldı.',
-                                tags: ['TypeScript', 'Microservices', 'Monitoring'],
+                            const SizedBox(height: 16),
+                            ...overpoweredProjects.map(
+                              (project) => Padding(
+                                padding: const EdgeInsets.only(bottom: 14),
+                                child: ProjectCard(project: project),
                               ),
                             ),
                           ],
@@ -112,39 +88,27 @@ class PortfolioPage extends StatelessWidget {
                       ),
                       const SizedBox(height: 32),
                       SectionCard(
-                        title: 'Deneyim',
+                        title: tr('sections.experience'),
                         child: Column(
-                          children: const [
-                            ExperienceTile(
-                              experience: Experience(
-                                role: 'Kıdemli Flutter Geliştirici',
-                                company: 'Freelance',
-                                period: '2020 - bugün',
-                                summary:
-                                    'Ürün ekipleriyle birlikte mobil ve web çözümlerini'
-                                    ' sıfırdan kurdum, tasarım sistemleri ve CI/CD'
-                                    ' süreçlerini oturttum.',
-                              ),
-                            ),
-                            SizedBox(height: 12),
-                            ExperienceTile(
-                              experience: Experience(
-                                role: 'Yazılım Geliştirici',
-                                company: 'Çeşitli Startuplar',
-                                period: '2016 - 2020',
-                                summary:
-                                    'Fintek ve SaaS projelerinde full-stack görev aldım;'
-                                    ' ölçeklenebilir API tasarımı, veri modelleri ve'
-                                    ' performans optimizasyonları üstlendim.',
-                              ),
-                            ),
-                          ],
+                          children: experiences
+                              .map(
+                                (exp) => Padding(
+                                  padding: const EdgeInsets.only(bottom: 12),
+                                  child: ExperienceTile(experience: exp),
+                                ),
+                              )
+                              .toList(),
                         ),
                       ),
                       const SizedBox(height: 32),
-                      const SectionCard(
-                        title: 'İletişim',
-                        child: ContactActions(),
+                      SectionCard(
+                        title: tr('sections.education'),
+                        child: _EducationBlock(locale: locale, education: education),
+                      ),
+                      const SizedBox(height: 32),
+                      SectionCard(
+                        title: tr('sections.contact'),
+                        child: const ContactActions(),
                       ),
                     ],
                   ),
@@ -154,6 +118,73 @@ class PortfolioPage extends StatelessWidget {
           ),
         ),
       ),
+    );
+  }
+}
+
+class _SkillsBlock extends StatelessWidget {
+  const _SkillsBlock({required this.locale});
+
+  final Locale locale;
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: skillGroups
+          .map(
+            (group) => Padding(
+              padding: const EdgeInsets.only(bottom: 14),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    group.title.ofLocale(locale),
+                    style: Theme.of(context).textTheme.titleMedium,
+                  ),
+                  const SizedBox(height: 8),
+                  SkillsWrap(skills: group.items),
+                ],
+              ),
+            ),
+          )
+          .toList(),
+    );
+  }
+}
+
+class _EducationBlock extends StatelessWidget {
+  const _EducationBlock({required this.locale, required this.education});
+
+  final Locale locale;
+  final Education education;
+
+  @override
+  Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(
+          education.degree.ofLocale(locale),
+          style: theme.textTheme.titleLarge,
+        ),
+        const SizedBox(height: 6),
+        Text(
+          education.school.ofLocale(locale),
+          style: theme.textTheme.bodyMedium?.copyWith(color: Colors.white70),
+        ),
+        const SizedBox(height: 4),
+        Text(
+          education.location.ofLocale(locale),
+          style: theme.textTheme.bodySmall?.copyWith(color: Colors.white60),
+        ),
+        const SizedBox(height: 4),
+        Text(
+          education.period.ofLocale(locale),
+          style: theme.textTheme.bodySmall?.copyWith(color: Colors.white60),
+        ),
+      ],
     );
   }
 }
