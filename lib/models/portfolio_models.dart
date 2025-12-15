@@ -70,3 +70,11 @@ class SkillGroup {
   final LocalizedText title;
   final List<LocalizedText> items;
 }
+
+class PrivacyDoc {
+  const PrivacyDoc({required this.title, required this.content, this.link});
+
+  final LocalizedText title;
+  final LocalizedText content;
+  final String? link;
+}

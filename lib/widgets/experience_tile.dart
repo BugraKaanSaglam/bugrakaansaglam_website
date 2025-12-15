@@ -27,17 +27,24 @@ class ExperienceTile extends StatelessWidget {
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(experience.role.ofLocale(locale), style: theme.textTheme.titleLarge),
+                    Text(
+                      experience.role.ofLocale(locale),
+                      style: theme.textTheme.titleLarge,
+                    ),
                     const SizedBox(height: 4),
                     Text(
                       experience.company.ofLocale(locale),
-                      style: theme.textTheme.bodyMedium?.copyWith(color: Colors.white70),
+                      style: theme.textTheme.bodyMedium?.copyWith(
+                        color: Colors.white70,
+                      ),
                     ),
                     if (experience.location != null) ...[
                       const SizedBox(height: 2),
                       Text(
                         experience.location!.ofLocale(locale),
-                        style: theme.textTheme.bodySmall?.copyWith(color: Colors.white60),
+                        style: theme.textTheme.bodySmall?.copyWith(
+                          color: Colors.white60,
+                        ),
                       ),
                     ],
                   ],
@@ -48,7 +55,9 @@ class ExperienceTile extends StatelessWidget {
             const SizedBox(height: 12),
             Text(
               experience.summary.ofLocale(locale),
-              style: theme.textTheme.bodyMedium?.copyWith(color: Colors.white70),
+              style: theme.textTheme.bodyMedium?.copyWith(
+                color: Colors.white70,
+              ),
             ),
             if (highlights.isNotEmpty) ...[
               const SizedBox(height: 12),
@@ -62,7 +71,9 @@ class ExperienceTile extends StatelessWidget {
                       Expanded(
                         child: Text(
                           item.ofLocale(locale),
-                          style: theme.textTheme.bodyMedium?.copyWith(color: Colors.white70),
+                          style: theme.textTheme.bodyMedium?.copyWith(
+                            color: Colors.white70,
+                          ),
                         ),
                       ),
                     ],

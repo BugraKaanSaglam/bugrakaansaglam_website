@@ -4,10 +4,12 @@ import 'package:flutter/material.dart';
 import '../data/content.dart';
 import '../global/app_theme.dart';
 import '../models/portfolio_models.dart';
+import '../global/global_functions.dart';
 import '../widgets/contact_actions.dart';
 import '../widgets/experience_tile.dart';
 import '../widgets/header_bar.dart';
 import '../widgets/hero_section.dart';
+import '../pages/privacy_page.dart';
 import '../widgets/project_card.dart';
 import '../widgets/section_card.dart';
 import '../widgets/skills_wrap.dart';
@@ -45,9 +47,7 @@ class PortfolioPage extends StatelessWidget {
                       const SizedBox(height: 42),
                       SectionCard(
                         title: tr('sections.about'),
-                        child: Text(
-                          aboutSummary.ofLocale(locale),
-                        ),
+                        child: Text(aboutSummary.ofLocale(locale)),
                       ),
                       const SizedBox(height: 32),
                       SectionCard(
@@ -59,32 +59,19 @@ class PortfolioPage extends StatelessWidget {
                         title: tr('sections.projects'),
                         child: Column(
                           children: [
-                            ...projects.map((project) => Padding(
-                                  padding: const EdgeInsets.only(bottom: 16),
-                                  child: ProjectCard(project: project),
-                                )),
-                          ],
-                        ),
-                      ),
-                      const SizedBox(height: 32),
-                      SectionCard(
-                        title: tr('sections.overpowered'),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              tr('overpowered.description'),
-                              style: Theme.of(context).textTheme.bodyMedium?.copyWith(color: Colors.white70),
-                            ),
-                            const SizedBox(height: 16),
-                            ...overpoweredProjects.map(
+                            ...projects.map(
                               (project) => Padding(
-                                padding: const EdgeInsets.only(bottom: 14),
+                                padding: const EdgeInsets.only(bottom: 16),
                                 child: ProjectCard(project: project),
                               ),
                             ),
                           ],
                         ),
+                      ),
+                      const SizedBox(height: 32),
+                      SectionCard(
+                        title: tr('sections.privacy'),
+                        child: _PrivacyLinks(locale: locale),
                       ),
                       const SizedBox(height: 32),
                       SectionCard(
@@ -103,7 +90,10 @@ class PortfolioPage extends StatelessWidget {
                       const SizedBox(height: 32),
                       SectionCard(
                         title: tr('sections.education'),
-                        child: _EducationBlock(locale: locale, education: education),
+                        child: _EducationBlock(
+                          locale: locale,
+                          education: education,
+                        ),
                       ),
                       const SizedBox(height: 32),
                       SectionCard(
@@ -149,6 +139,58 @@ class _SkillsBlock extends StatelessWidget {
             ),
           )
           .toList(),
+    );
+  }
+}
+
+class _PrivacyLinks extends StatelessWidget {
+  const _PrivacyLinks({required this.locale});
+
+  final Locale locale;
+
+  @override
+  Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(
+          tr('privacy.lead'),
+          style: theme.textTheme.bodyMedium?.copyWith(color: Colors.white70),
+        ),
+        const SizedBox(height: 12),
+        Wrap(
+          spacing: 10,
+          runSpacing: 10,
+          children: privacyDocs
+              .map(
+                (doc) => OutlinedButton.icon(
+                  icon: const Icon(Icons.privacy_tip_outlined, size: 16),
+                  label: Text(doc.title.ofLocale(locale)),
+                  onPressed: () {
+                    if (doc.link != null) {
+                      openExternalUrl(context, doc.link!);
+                    } else {
+                      Navigator.of(context).push(
+                        MaterialPageRoute(builder: (_) => const PrivacyPage()),
+                      );
+                    }
+                  },
+                ),
+              )
+              .toList(),
+        ),
+        const SizedBox(height: 12),
+        TextButton.icon(
+          onPressed: () {
+            Navigator.of(
+              context,
+            ).push(MaterialPageRoute(builder: (_) => const PrivacyPage()));
+          },
+          icon: const Icon(Icons.menu_book_outlined, size: 16),
+          label: Text(tr('privacy.view_all')),
+        ),
+      ],
     );
   }
 }

@@ -1,7 +1,6 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
-import '../data/content.dart';
 import '../global/app_theme.dart';
 import '../global/global_functions.dart';
 import 'info_badge.dart';
@@ -16,21 +15,19 @@ class HeroSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
-    final locale = context.locale;
     final tags = [
       tr('hero.status_tags.motion'),
       tr('hero.status_tags.design'),
       tr('hero.status_tags.analytics'),
     ];
+    const mailtoUrl =
+        'mailto:bugrakaansaglam@gmail.com?subject=Project%20Inquiry';
     final Widget intro = Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         InfoBadge(label: tr('hero.location'), icon: Icons.location_on_outlined),
         const SizedBox(height: 18),
-        Text(
-          tr('hero.title'),
-          style: theme.textTheme.displayLarge,
-        ),
+        Text(tr('hero.title'), style: theme.textTheme.displayLarge),
         const SizedBox(height: 16),
         Text(
           tr('hero.subtitle'),
@@ -54,20 +51,12 @@ class HeroSection extends StatelessWidget {
             FilledButton.icon(
               icon: const Icon(Icons.calendar_today_outlined),
               label: Text(tr('hero.cta_meeting')),
-              onPressed: () => copyToClipboard(
-                context,
-                contactEmail,
-                locale.languageCode == 'tr' ? 'E-posta panoya kopyalandı' : 'Email copied to clipboard',
-              ),
+              onPressed: () => openExternalUrl(context, mailtoUrl),
             ),
             OutlinedButton.icon(
               icon: const Icon(Icons.download_outlined),
               label: Text(tr('hero.cta_resume')),
-              onPressed: () => copyToClipboard(
-                context,
-                contactEmail,
-                locale.languageCode == 'tr' ? 'İletişim bilgisi panoya kopyalandı' : 'Contact copied to clipboard',
-              ),
+              onPressed: () => openExternalUrl(context, mailtoUrl),
             ),
           ],
         ),
@@ -92,15 +81,9 @@ class HeroSection extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          InfoBadge(
-            label: tr('hero.now_building'),
-            icon: Icons.radar_outlined,
-          ),
+          InfoBadge(label: tr('hero.now_building'), icon: Icons.radar_outlined),
           const SizedBox(height: 16),
-          Text(
-            tr('hero.status'),
-            style: theme.textTheme.bodyLarge,
-          ),
+          Text(tr('hero.status'), style: theme.textTheme.bodyLarge),
           const SizedBox(height: 20),
           const Divider(color: Color(0xFF233152)),
           const SizedBox(height: 12),
@@ -116,8 +99,8 @@ class HeroSection extends StatelessWidget {
               Text(
                 tr('hero.availability_label'),
                 style: theme.textTheme.bodyMedium?.copyWith(
-                      color: Colors.white70,
-                    ),
+                  color: Colors.white70,
+                ),
               ),
               Container(
                 padding: const EdgeInsets.symmetric(
@@ -130,7 +113,11 @@ class HeroSection extends StatelessWidget {
                 ),
                 child: Row(
                   children: [
-                    const Icon(Icons.circle, color: Colors.greenAccent, size: 10),
+                    const Icon(
+                      Icons.circle,
+                      color: Colors.greenAccent,
+                      size: 10,
+                    ),
                     const SizedBox(width: 6),
                     Text(
                       tr('hero.availability'),
@@ -158,11 +145,7 @@ class HeroSection extends StatelessWidget {
 
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        intro,
-        const SizedBox(height: 28),
-        statusCard,
-      ],
+      children: [intro, const SizedBox(height: 28), statusCard],
     );
   }
 }

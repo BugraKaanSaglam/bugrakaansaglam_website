@@ -2,16 +2,14 @@
   "app_title": "Buğra Kaan Sağlam | Mobile & Web Engineer",
   "nav": {
     "role": "Flutter & product engineering",
-    "email": "Copy email",
-    "cta": "Start a project",
     "lang_en": "EN",
     "lang_tr": "TR"
   },
   "hero": {
-    "location": "Istanbul / Remote",
+    "location": "Ankara, Türkiye",
     "title": "Building high-performance mobile and web experiences.",
     "subtitle": "Sole front-end engineer for enterprise healthcare apps and indie launches. I focus on fast UI, reliable auth/session flows, and smooth releases across stores.",
-    "cta_meeting": "Book a chat",
+    "cta_meeting": "Email me",
     "cta_resume": "See CV content below",
     "availability_label": "Availability",
     "availability": "Open to new projects",
@@ -32,7 +30,7 @@
     "about": "About Me",
     "skills": "Skills",
     "projects": "Selected Projects",
-    "overpowered": "Overpowered Company",
+    "privacy": "Privacy Policies",
     "experience": "Experience",
     "education": "Education",
     "contact": "Contact"
@@ -49,9 +47,10 @@
     "degree": "BSc in Biomedical Engineering",
     "school": "TOBB University of Economics and Technology (TOBB ETÜ)",
     "location": "Ankara, Türkiye",
-    "period": "2014 - 2019 (approx.)"
+    "period": "2014 entry"
   },
-  "overpowered": {
-    "description": "Published titles and apps under Overpowered Company."
+  "privacy": {
+    "lead": "Privacy policies for published apps.",
+    "view_all": "View policies"
   }
 }

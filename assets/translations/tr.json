@@ -2,16 +2,14 @@
   "app_title": "Buğra Kaan Sağlam | Mobil & Web Mühendisi",
   "nav": {
     "role": "Flutter & ürün geliştirme",
-    "email": "E-postayı kopyala",
-    "cta": "Projeye başlayalım",
     "lang_en": "EN",
     "lang_tr": "TR"
   },
   "hero": {
-    "location": "İstanbul / Uzaktan",
+    "location": "Ankara, Türkiye",
     "title": "Yüksek performanslı mobil ve web deneyimleri tasarlıyorum.",
     "subtitle": "Kurumsal sağlık uygulamaları ve indie yayınlarda tek başıma uçtan uca geliştirdim. Hızlı arayüz, güvenilir oturum akışları ve sorunsuz mağaza teslimatlarına odaklanıyorum.",
-    "cta_meeting": "Görüşme planla",
+    "cta_meeting": "E-posta gönder",
     "cta_resume": "CV içeriği aşağıda",
     "availability_label": "Müsaitlik",
     "availability": "Yeni projelere açık",
@@ -32,7 +30,7 @@
     "about": "Hakkımda",
     "skills": "Beceriler",
     "projects": "Seçili Projeler",
-    "overpowered": "Overpowered Company",
+    "privacy": "Gizlilik Sözleşmeleri",
     "experience": "Deneyim",
     "education": "Eğitim",
     "contact": "İletişim"
@@ -49,9 +47,10 @@
     "degree": "Biyomedikal Mühendisliği Lisans",
     "school": "TOBB Ekonomi ve Teknoloji Üniversitesi (TOBB ETÜ)",
     "location": "Ankara, Türkiye",
-    "period": "2014 - 2019 (tahmini)"
+    "period": "2014 giriş"
   },
-  "overpowered": {
-    "description": "Overpowered Company çatısı altında yayımlanan oyun ve uygulamalar."
+  "privacy": {
+    "lead": "Yayımlanan uygulamaların gizlilik politikaları.",
+    "view_all": "Politikaları görüntüle"
   }
 }

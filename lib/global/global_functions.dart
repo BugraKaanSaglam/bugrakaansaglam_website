@@ -5,19 +5,16 @@ import 'package:url_launcher/url_launcher.dart';
 void copyToClipboard(BuildContext context, String value, String message) {
   Clipboard.setData(ClipboardData(text: value));
   ScaffoldMessenger.of(context).showSnackBar(
-    SnackBar(
-      content: Text(message),
-      behavior: SnackBarBehavior.floating,
-    ),
+    SnackBar(content: Text(message), behavior: SnackBarBehavior.floating),
   );
 }
 
 Future<void> openExternalUrl(BuildContext context, String url) async {
   final uri = Uri.tryParse(url);
   if (uri == null) {
-    ScaffoldMessenger.of(context).showSnackBar(
-      const SnackBar(content: Text('Link açılamadı')),
-    );
+    ScaffoldMessenger.of(
+      context,
+    ).showSnackBar(const SnackBar(content: Text('Link açılamadı')));
     return;
   }
 
@@ -28,8 +25,8 @@ Future<void> openExternalUrl(BuildContext context, String url) async {
   );
 
   if (!launched && context.mounted) {
-    ScaffoldMessenger.of(context).showSnackBar(
-      const SnackBar(content: Text('Link açılamadı')),
-    );
+    ScaffoldMessenger.of(
+      context,
+    ).showSnackBar(const SnackBar(content: Text('Link açılamadı')));
   }
 }

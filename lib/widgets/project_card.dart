@@ -39,7 +39,9 @@ class ProjectCard extends StatelessWidget {
             const SizedBox(height: 10),
             Text(
               project.description.ofLocale(locale),
-              style: theme.textTheme.bodyMedium?.copyWith(color: Colors.white70),
+              style: theme.textTheme.bodyMedium?.copyWith(
+                color: Colors.white70,
+              ),
             ),
             const SizedBox(height: 12),
             Wrap(
@@ -48,7 +50,10 @@ class ProjectCard extends StatelessWidget {
               children: project.tags
                   .map(
                     (tag) => Container(
-                      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 10,
+                        vertical: 6,
+                      ),
                       decoration: BoxDecoration(
                         color: Colors.white.withValues(alpha: 0.05),
                         borderRadius: BorderRadius.circular(10),

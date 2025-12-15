@@ -11,15 +11,17 @@ class ContactActions extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final locale = context.locale;
+    final telUrl = 'tel:${contactPhone.replaceAll(' ', '')}';
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(tr('contact.lead')),
         const SizedBox(height: 12),
         Text(
-          '$contactLocation • $contactPhone • $contactEmail',
-          style: Theme.of(context).textTheme.bodyMedium?.copyWith(color: Colors.white70),
+          '$contactLocation | $contactPhone | $contactEmail',
+          style: Theme.of(
+            context,
+          ).textTheme.bodyMedium?.copyWith(color: Colors.white70),
         ),
         const SizedBox(height: 16),
         Wrap(
@@ -29,10 +31,9 @@ class ContactActions extends StatelessWidget {
             FilledButton.icon(
               icon: const Icon(Icons.mail_outline),
               label: Text(tr('contact.email')),
-              onPressed: () => copyToClipboard(
+              onPressed: () => openExternalUrl(
                 context,
-                contactEmail,
-                locale.languageCode == 'tr' ? 'E-posta panoya kopyalandı' : 'Email copied to clipboard',
+                'mailto:$contactEmail?subject=Project%20Inquiry',
               ),
             ),
             OutlinedButton.icon(
@@ -43,11 +44,7 @@ class ContactActions extends StatelessWidget {
             OutlinedButton.icon(
               icon: const Icon(Icons.phone_outlined),
               label: Text(contactPhone),
-              onPressed: () => copyToClipboard(
-                context,
-                contactPhone,
-                locale.languageCode == 'tr' ? 'Telefon panoya kopyalandı' : 'Phone copied to clipboard',
-              ),
+              onPressed: () => openExternalUrl(context, telUrl),
             ),
           ],
         ),
