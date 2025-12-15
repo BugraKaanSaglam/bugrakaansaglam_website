@@ -129,7 +129,7 @@ class HeroSection extends StatelessWidget {
                   vertical: 8,
                 ),
                 decoration: BoxDecoration(
-                  color: Colors.greenAccent.withOpacity(0.12),
+                  color: Colors.greenAccent.withValues(alpha: 0.12),
                   borderRadius: BorderRadius.circular(12),
                 ),
                 child: Row(
