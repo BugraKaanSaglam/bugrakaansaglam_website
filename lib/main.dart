@@ -2,7 +2,7 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
 import 'global/app_theme.dart';
-import 'pages/portfolio_page.dart';
+import 'global/app_router.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -22,11 +22,11 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
       title: tr('app_title'),
       debugShowCheckedModeBanner: false,
       theme: AppTheme.buildTheme(),
-      home: const PortfolioPage(),
+      routerConfig: appRouter,
       localizationsDelegates: context.localizationDelegates,
       supportedLocales: context.supportedLocales,
       locale: context.locale,

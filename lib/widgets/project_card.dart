@@ -1,11 +1,11 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 import '../global/app_theme.dart';
 import '../global/global_functions.dart';
 import '../models/portfolio_models.dart';
 import 'info_badge.dart';
-import '../pages/privacy_doc_page.dart';
 
 class ProjectCard extends StatelessWidget {
   const ProjectCard({required this.project, super.key});
@@ -23,11 +23,7 @@ class ProjectCard extends StatelessWidget {
           icon: const Icon(Icons.privacy_tip_outlined, size: 16),
           label: Text(tr('privacy.button')),
           onPressed: () {
-            Navigator.of(context).push(
-              MaterialPageRoute(
-                builder: (_) => PrivacyDocPage(doc: project.privacyDoc!),
-              ),
-            );
+            context.push('/privacy/${project.privacyDoc!.slug}');
           },
         ),
       );
