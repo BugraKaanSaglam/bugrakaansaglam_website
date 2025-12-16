@@ -89,7 +89,7 @@ Bu gizlilik politikası, uygulamanın yüklü olduğu süre boyunca geçerlidir 
 
 Son güncelleme tarihi: 18.02.2025.''',
     ),
-    link: 'https://bugraksaglam.com/privacy/what-should-i-eat-today',
+    link: 'https://bugraksaglam.com/privacy-policy/what-should-i-eat-today',
     slug: 'what-should-i-eat-today',
   ),
   PrivacyDoc(
@@ -167,7 +167,7 @@ Tarafımızca çıkarılan uygulama sonucunda fiziksel ve elektronik olarak ciha
 
 Son güncelleme tarihi: 25.03.2024.''',
     ),
-    link: 'https://bugraksaglam.com/privacy/mice-and-paws-cat-game',
+    link: 'https://bugraksaglam.com/privacy-policy/mice-and-paws-cat-game',
     slug: 'mice-and-paws-cat-game',
   ),
 ];
@@ -323,6 +323,7 @@ final List<Project> projects = [
       LocalizedText(en: 'DevExpress', tr: 'DevExpress'),
       LocalizedText(en: 'Camera2 / ZXing', tr: 'Camera2 / ZXing'),
     ],
+    iconAsset: 'assets/images/cavamedicon.webp',
     meta: const LocalizedText(
       en: 'Completed at CAVAMED A.Ş.',
       tr: 'CAVAMED A.Ş\'de tamamlanmıştır',
@@ -344,6 +345,7 @@ final List<Project> projects = [
       LocalizedText(en: 'Flame', tr: 'Flame'),
       LocalizedText(en: 'Animation', tr: 'Animasyon'),
     ],
+    iconAsset: 'assets/images/miceandpawsicon.webp',
     links: const [
       ProjectLink(
         label: 'GitHub',
@@ -382,6 +384,7 @@ final List<Project> projects = [
       LocalizedText(en: 'Deep Link', tr: 'Derin Link'),
       LocalizedText(en: 'Ads', tr: 'Reklam'),
     ],
+    iconAsset: 'assets/images/whatshouldieaticon.webp',
     links: const [
       ProjectLink(
         label: 'App Store',

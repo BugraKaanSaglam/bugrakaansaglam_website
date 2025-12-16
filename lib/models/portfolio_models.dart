@@ -21,6 +21,7 @@ class Project {
     required this.title,
     required this.description,
     required this.tags,
+    this.iconAsset,
     this.links = const [],
     this.meta,
     this.privacyDoc,
@@ -29,6 +30,7 @@ class Project {
   final LocalizedText title;
   final LocalizedText description;
   final List<LocalizedText> tags;
+  final String? iconAsset;
   final List<ProjectLink> links;
   final LocalizedText? meta;
   final PrivacyDoc? privacyDoc;
@@ -85,4 +87,6 @@ class PrivacyDoc {
   final LocalizedText content;
   final String slug;
   final String? link;
+
+  String get routePath => '/privacy-policy/$slug';
 }
