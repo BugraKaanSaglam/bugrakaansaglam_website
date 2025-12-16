@@ -18,6 +18,11 @@ class PortfolioPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final locale = context.locale;
+    final width = MediaQuery.sizeOf(context).width;
+    final isMobile = width < 720;
+    final isWide = width > 900;
+    final horizontalPadding = isMobile ? 16.0 : 24.0;
+    final sectionGap = isMobile ? 24.0 : 32.0;
     return Scaffold(
       body: Container(
         decoration: const BoxDecoration(gradient: AppTheme.backgroundGradient),
@@ -27,60 +32,73 @@ class PortfolioPage extends StatelessWidget {
               child: ConstrainedBox(
                 constraints: const BoxConstraints(maxWidth: 1100),
                 child: Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 32),
+                  padding: EdgeInsets.symmetric(horizontal: horizontalPadding, vertical: 28),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       const HeaderBar(),
-                      const SizedBox(height: 38),
-                      LayoutBuilder(
-                        builder: (context, constraints) {
-                          final isWide = constraints.maxWidth > 900;
-                          return HeroSection(isWide: isWide);
-                        },
+                      SizedBox(height: isMobile ? 26 : 38),
+                      HeroSection(isWide: isWide, isMobile: isMobile),
+                      SizedBox(height: isMobile ? 30 : 42),
+                      SectionCard(
+                        title: tr('sections.about'),
+                        compact: isMobile,
+                        child: Text(aboutSummary.ofLocale(locale)),
                       ),
-                      const SizedBox(height: 42),
-                      SectionCard(title: tr('sections.about'), child: Text(aboutSummary.ofLocale(locale))),
-                      const SizedBox(height: 32),
+                      SizedBox(height: sectionGap),
                       SectionCard(
                         title: tr('sections.skills'),
+                        compact: isMobile,
                         child: _SkillsBlock(locale: locale),
                       ),
-                      const SizedBox(height: 32),
+                      SizedBox(height: sectionGap),
                       SectionCard(
                         title: tr('sections.projects'),
+                        compact: isMobile,
                         child: Column(
                           children: [
                             ...projects.map(
                               (project) => Padding(
                                 padding: const EdgeInsets.only(bottom: 16),
-                                child: ProjectCard(project: project),
+                                child: ProjectCard(
+                                  project: project,
+                                  compact: isMobile,
+                                ),
                               ),
                             ),
                           ],
                         ),
                       ),
-                      const SizedBox(height: 32),
+                      SizedBox(height: sectionGap),
                       SectionCard(
                         title: tr('sections.experience'),
+                        compact: isMobile,
                         child: Column(
                           children: experiences
                               .map(
                                 (exp) => Padding(
                                   padding: const EdgeInsets.only(bottom: 12),
-                                  child: ExperienceTile(experience: exp),
+                                  child: ExperienceTile(
+                                    experience: exp,
+                                    compact: isMobile,
+                                  ),
                                 ),
                               )
                               .toList(),
                         ),
                       ),
-                      const SizedBox(height: 32),
+                      SizedBox(height: sectionGap),
                       SectionCard(
                         title: tr('sections.education'),
+                        compact: isMobile,
                         child: _EducationBlock(locale: locale, education: education),
                       ),
-                      const SizedBox(height: 32),
-                      SectionCard(title: tr('sections.contact'), child: const ContactActions()),
+                      SizedBox(height: sectionGap),
+                      SectionCard(
+                        title: tr('sections.contact'),
+                        compact: isMobile,
+                        child: ContactActions(compact: isMobile),
+                      ),
                     ],
                   ),
                 ),

@@ -8,9 +8,10 @@ import 'quick_fact.dart';
 import 'skill_pill.dart';
 
 class HeroSection extends StatelessWidget {
-  const HeroSection({required this.isWide, super.key});
+  const HeroSection({required this.isWide, this.isMobile = false, super.key});
 
   final bool isWide;
+  final bool isMobile;
 
   @override
   Widget build(BuildContext context) {
@@ -20,8 +21,7 @@ class HeroSection extends StatelessWidget {
       tr('hero.status_tags.design'),
       tr('hero.status_tags.analytics'),
     ];
-    const mailtoUrl =
-        'mailto:bugrakaansaglam@gmail.com?subject=Project%20Inquiry';
+    const mailtoUrl = 'mailto:bugrakaansaglam@gmail.com?subject=Project%20Inquiry';
     final Widget intro = Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -33,7 +33,7 @@ class HeroSection extends StatelessWidget {
           tr('hero.subtitle'),
           style: theme.textTheme.bodyLarge?.copyWith(color: Colors.white70),
         ),
-        const SizedBox(height: 24),
+        SizedBox(height: isMobile ? 18 : 24),
         Wrap(
           spacing: 12,
           runSpacing: 12,
@@ -44,7 +44,7 @@ class HeroSection extends StatelessWidget {
             ),
           ],
         ),
-        const SizedBox(height: 24),
+        SizedBox(height: isMobile ? 18 : 24),
         Wrap(
           spacing: 12,
           runSpacing: 12,

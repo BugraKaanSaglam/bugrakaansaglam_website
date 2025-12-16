@@ -8,9 +8,10 @@ import '../models/portfolio_models.dart';
 import 'info_badge.dart';
 
 class ProjectCard extends StatelessWidget {
-  const ProjectCard({required this.project, super.key});
+  const ProjectCard({required this.project, this.compact = false, super.key});
 
   final Project project;
+  final bool compact;
 
   @override
   Widget build(BuildContext context) {
@@ -29,97 +30,126 @@ class ProjectCard extends StatelessWidget {
         ),
       );
     }
-    return Card(
-      child: Padding(
-        padding: const EdgeInsets.all(18),
-        child: Row(
+    final content = Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Row(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            if (iconAsset != null) ...[
-              ClipRRect(
-                borderRadius: BorderRadius.circular(14),
-                child: Image.asset(
-                  iconAsset,
-                  width: 62,
-                  height: 62,
-                  fit: BoxFit.cover,
-                  filterQuality: FilterQuality.high,
-                ),
-              ),
-              const SizedBox(width: 16),
-            ],
             Expanded(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Expanded(
-                        child: Text(
-                          project.title.ofLocale(locale),
-                          style: theme.textTheme.titleLarge,
-                        ),
-                      ),
-                      if (project.meta != null) ...[
-                        const SizedBox(width: 12),
-                        InfoBadge(label: project.meta!.ofLocale(locale)),
-                      ],
-                    ],
-                  ),
-                  const SizedBox(height: 10),
-                  Text(
-                    project.description.ofLocale(locale),
-                    style: theme.textTheme.bodyMedium?.copyWith(
-                      color: Colors.white70,
-                    ),
-                  ),
-                  const SizedBox(height: 12),
-                  Wrap(
-                    spacing: 8,
-                    runSpacing: 8,
-                    children: project.tags
-                        .map(
-                          (tag) => Container(
-                            padding: const EdgeInsets.symmetric(
-                              horizontal: 10,
-                              vertical: 6,
-                            ),
-                            decoration: BoxDecoration(
-                              color: Colors.white.withValues(alpha: 0.05),
-                              borderRadius: BorderRadius.circular(10),
-                              border: Border.all(color: AppTheme.border),
-                            ),
-                            child: Text(
-                              tag.ofLocale(locale),
-                              style: const TextStyle(color: Colors.white70),
-                            ),
-                          ),
-                        )
-                        .toList(),
-                  ),
-                  if (project.links.isNotEmpty || buttons.isNotEmpty) ...[
-                    const SizedBox(height: 12),
-                    Wrap(
-                      spacing: 10,
-                      runSpacing: 10,
-                      children: [
-                        ...buttons,
-                        ...project.links.map(
-                          (link) => OutlinedButton.icon(
-                            icon: const Icon(Icons.open_in_new, size: 16),
-                            label: Text(link.label),
-                            onPressed: () => openExternalUrl(context, link.url),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ],
-                ],
+              child: Text(
+                project.title.ofLocale(locale),
+                style: theme.textTheme.titleLarge,
               ),
             ),
+            if (project.meta != null && !compact) ...[
+              const SizedBox(width: 12),
+              InfoBadge(label: project.meta!.ofLocale(locale)),
+            ],
           ],
         ),
+        if (project.meta != null && compact) ...[
+          const SizedBox(height: 8),
+          InfoBadge(label: project.meta!.ofLocale(locale)),
+        ],
+        const SizedBox(height: 10),
+        Text(
+          project.description.ofLocale(locale),
+          style: theme.textTheme.bodyMedium?.copyWith(
+            color: Colors.white70,
+          ),
+        ),
+        const SizedBox(height: 12),
+        Wrap(
+          spacing: 8,
+          runSpacing: 8,
+          children: project.tags
+              .map(
+                (tag) => Container(
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 10,
+                    vertical: 6,
+                  ),
+                  decoration: BoxDecoration(
+                    color: Colors.white.withValues(alpha: 0.05),
+                    borderRadius: BorderRadius.circular(10),
+                    border: Border.all(color: AppTheme.border),
+                  ),
+                  child: Text(
+                    tag.ofLocale(locale),
+                    style: const TextStyle(color: Colors.white70),
+                  ),
+                ),
+              )
+              .toList(),
+        ),
+        if (project.links.isNotEmpty || buttons.isNotEmpty) ...[
+          const SizedBox(height: 12),
+          Wrap(
+            spacing: 10,
+            runSpacing: 10,
+            children: [
+              ...buttons,
+              ...project.links.map(
+                (link) => OutlinedButton.icon(
+                  icon: const Icon(Icons.open_in_new, size: 16),
+                  label: Text(link.label),
+                  onPressed: () => openExternalUrl(context, link.url),
+                ),
+              ),
+            ],
+          ),
+        ],
+      ],
+    );
+
+    final image = iconAsset != null
+        ? ClipRRect(
+            borderRadius: BorderRadius.circular(14),
+            child: Image.asset(
+              iconAsset,
+              width: 62,
+              height: 62,
+              fit: BoxFit.cover,
+              filterQuality: FilterQuality.high,
+              errorBuilder: (context, error, stackTrace) => Container(
+                width: 62,
+                height: 62,
+                decoration: BoxDecoration(
+                  color: Colors.white.withValues(alpha: 0.04),
+                  borderRadius: BorderRadius.circular(14),
+                  border: Border.all(color: AppTheme.border),
+                ),
+                child: const Icon(Icons.image_not_supported_outlined, color: Colors.white54),
+              ),
+            ),
+          )
+        : null;
+
+    return Card(
+      child: Padding(
+        padding: EdgeInsets.all(compact ? 14 : 18),
+        child: compact
+            ? Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  if (image != null) ...[
+                    Center(child: image),
+                    const SizedBox(height: 14),
+                  ],
+                  content,
+                ],
+              )
+            : Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  if (image != null) ...[
+                    image,
+                    const SizedBox(width: 16),
+                  ],
+                  Expanded(child: content),
+                ],
+              ),
       ),
     );
   }
