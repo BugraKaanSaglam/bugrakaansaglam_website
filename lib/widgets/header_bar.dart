@@ -2,6 +2,7 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
 import '../global/app_theme.dart';
+import 'language_toggle.dart';
 
 class HeaderBar extends StatelessWidget {
   const HeaderBar({super.key});
@@ -9,7 +10,6 @@ class HeaderBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
-    final locale = context.locale;
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
@@ -39,32 +39,7 @@ class HeaderBar extends StatelessWidget {
             ),
           ],
         ),
-        ToggleButtons(
-          isSelected: [
-            locale.languageCode == 'en',
-            locale.languageCode == 'tr',
-          ],
-          onPressed: (index) {
-            final selected = index == 0
-                ? const Locale('en')
-                : const Locale('tr');
-            context.setLocale(selected);
-          },
-          borderRadius: BorderRadius.circular(12),
-          selectedColor: Colors.black,
-          fillColor: AppTheme.accent,
-          color: Colors.white70,
-          children: [
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 10),
-              child: Text(tr('nav.lang_en')),
-            ),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 10),
-              child: Text(tr('nav.lang_tr')),
-            ),
-          ],
-        ),
+        const LanguageToggle(),
       ],
     );
   }
