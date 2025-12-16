@@ -10,15 +10,13 @@
     "title": "Building high-performance mobile and web experiences.",
     "subtitle": "Sole front-end engineer for enterprise healthcare apps and indie launches. I focus on fast UI, reliable auth/session flows, and smooth releases across stores.",
     "cta_meeting": "Email me",
-    "cta_resume": "See CV content below",
     "availability_label": "Availability",
     "availability": "Open to new projects",
     "now_building": "Now building",
     "status": "Motion systems and animation libraries for Flutter to keep UI feel consistent and performant.",
     "facts": {
-      "years": "years experience",
-      "projects": "projects shipped",
-      "mvp": "MVP lead time"
+      "label": "Experience",
+      "value": "4+ yrs"
     },
     "status_tags": {
       "motion": "Motion",
@@ -51,6 +49,7 @@
   },
   "privacy": {
     "lead": "Privacy policies for published apps.",
-    "view_all": "View policies"
+    "view_all": "View policies",
+    "button": "Privacy"
   }
 }

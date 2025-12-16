@@ -38,9 +38,10 @@ class HeroSection extends StatelessWidget {
           spacing: 12,
           runSpacing: 12,
           children: [
-            QuickFact(label: tr('hero.facts.years'), value: '8+'),
-            QuickFact(label: tr('hero.facts.projects'), value: '24'),
-            QuickFact(label: tr('hero.facts.mvp'), value: '2'),
+            QuickFact(
+              label: tr('hero.facts.label'),
+              value: tr('hero.facts.value'),
+            ),
           ],
         ),
         const SizedBox(height: 24),
@@ -51,11 +52,6 @@ class HeroSection extends StatelessWidget {
             FilledButton.icon(
               icon: const Icon(Icons.calendar_today_outlined),
               label: Text(tr('hero.cta_meeting')),
-              onPressed: () => openExternalUrl(context, mailtoUrl),
-            ),
-            OutlinedButton.icon(
-              icon: const Icon(Icons.download_outlined),
-              label: Text(tr('hero.cta_resume')),
               onPressed: () => openExternalUrl(context, mailtoUrl),
             ),
           ],

@@ -5,6 +5,7 @@ import '../global/app_theme.dart';
 import '../global/global_functions.dart';
 import '../models/portfolio_models.dart';
 import 'info_badge.dart';
+import '../pages/privacy_doc_page.dart';
 
 class ProjectCard extends StatelessWidget {
   const ProjectCard({required this.project, super.key});
@@ -15,6 +16,22 @@ class ProjectCard extends StatelessWidget {
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
     final locale = context.locale;
+    final buttons = <Widget>[];
+    if (project.privacyDoc != null) {
+      buttons.add(
+        OutlinedButton.icon(
+          icon: const Icon(Icons.privacy_tip_outlined, size: 16),
+          label: Text(tr('privacy.button')),
+          onPressed: () {
+            Navigator.of(context).push(
+              MaterialPageRoute(
+                builder: (_) => PrivacyDocPage(doc: project.privacyDoc!),
+              ),
+            );
+          },
+        ),
+      );
+    }
     return Card(
       child: Padding(
         padding: const EdgeInsets.all(18),
@@ -67,20 +84,21 @@ class ProjectCard extends StatelessWidget {
                   )
                   .toList(),
             ),
-            if (project.links.isNotEmpty) ...[
+            if (project.links.isNotEmpty || buttons.isNotEmpty) ...[
               const SizedBox(height: 12),
               Wrap(
                 spacing: 10,
                 runSpacing: 10,
-                children: project.links
-                    .map(
-                      (link) => OutlinedButton.icon(
-                        icon: const Icon(Icons.open_in_new, size: 16),
-                        label: Text(link.label),
-                        onPressed: () => openExternalUrl(context, link.url),
-                      ),
-                    )
-                    .toList(),
+                children: [
+                  ...buttons,
+                  ...project.links.map(
+                    (link) => OutlinedButton.icon(
+                      icon: const Icon(Icons.open_in_new, size: 16),
+                      label: Text(link.label),
+                      onPressed: () => openExternalUrl(context, link.url),
+                    ),
+                  ),
+                ],
               ),
             ],
           ],

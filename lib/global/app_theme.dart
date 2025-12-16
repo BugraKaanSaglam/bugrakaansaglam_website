@@ -7,24 +7,13 @@ class AppTheme {
   static const Color border = Color(0xFF1D2740);
   static const Color accent = Color(0xFF53E0C4);
 
-  static const Gradient backgroundGradient = LinearGradient(
-    colors: [Color(0xFF0B1221), Color(0xFF0E172F)],
-    begin: Alignment.topLeft,
-    end: Alignment.bottomRight,
-  );
+  static const Gradient backgroundGradient = LinearGradient(colors: [Color(0xFF0B1221), Color(0xFF0E172F)], begin: Alignment.topLeft, end: Alignment.bottomRight);
 
-  static const Gradient cardGradient = LinearGradient(
-    colors: [Color(0xFF12203C), Color(0xFF0E1A32)],
-    begin: Alignment.topLeft,
-    end: Alignment.bottomRight,
-  );
+  static const Gradient cardGradient = LinearGradient(colors: [Color(0xFF12203C), Color(0xFF0E1A32)], begin: Alignment.topLeft, end: Alignment.bottomRight);
 
   static ThemeData buildTheme() {
     final baseTextTheme = GoogleFonts.manropeTextTheme();
-    final colorScheme = ColorScheme.fromSeed(
-      seedColor: accent,
-      brightness: Brightness.dark,
-    );
+    final colorScheme = ColorScheme.fromSeed(seedColor: accent, brightness: Brightness.dark);
 
     return ThemeData(
       useMaterial3: true,
@@ -33,18 +22,9 @@ class AppTheme {
       cardColor: panel,
       textTheme: baseTextTheme
           .copyWith(
-            displayLarge: baseTextTheme.displayLarge?.copyWith(
-              fontWeight: FontWeight.w700,
-              letterSpacing: -1.1,
-              fontSize: 44,
-            ),
-            headlineMedium: baseTextTheme.headlineMedium?.copyWith(
-              fontWeight: FontWeight.w700,
-              letterSpacing: -0.6,
-            ),
-            titleLarge: baseTextTheme.titleLarge?.copyWith(
-              fontWeight: FontWeight.w600,
-            ),
+            displayLarge: baseTextTheme.displayLarge?.copyWith(fontWeight: FontWeight.w700, letterSpacing: -1.1, fontSize: 44),
+            headlineMedium: baseTextTheme.headlineMedium?.copyWith(fontWeight: FontWeight.w700, letterSpacing: -0.6),
+            titleLarge: baseTextTheme.titleLarge?.copyWith(fontWeight: FontWeight.w600),
           )
           .apply(bodyColor: Colors.white, displayColor: Colors.white),
       cardTheme: CardThemeData(
@@ -62,9 +42,7 @@ class AppTheme {
           foregroundColor: Colors.black,
           padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
           textStyle: const TextStyle(fontWeight: FontWeight.w700),
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(14),
-          ),
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
         ),
       ),
       outlinedButtonTheme: OutlinedButtonThemeData(
@@ -73,9 +51,7 @@ class AppTheme {
           side: const BorderSide(color: border),
           padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 14),
           textStyle: const TextStyle(fontWeight: FontWeight.w600),
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(14),
-          ),
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
         ),
       ),
       chipTheme: ChipThemeData(

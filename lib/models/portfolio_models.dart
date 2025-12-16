@@ -23,6 +23,7 @@ class Project {
     required this.tags,
     this.links = const [],
     this.meta,
+    this.privacyDoc,
   });
 
   final LocalizedText title;
@@ -30,6 +31,7 @@ class Project {
   final List<LocalizedText> tags;
   final List<ProjectLink> links;
   final LocalizedText? meta;
+  final PrivacyDoc? privacyDoc;
 }
 
 class Experience {
@@ -72,9 +74,15 @@ class SkillGroup {
 }
 
 class PrivacyDoc {
-  const PrivacyDoc({required this.title, required this.content, this.link});
+  const PrivacyDoc({
+    required this.title,
+    required this.content,
+    required this.slug,
+    this.link,
+  });
 
   final LocalizedText title;
   final LocalizedText content;
+  final String slug;
   final String? link;
 }

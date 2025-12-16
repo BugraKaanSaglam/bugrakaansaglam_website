@@ -9,6 +9,81 @@ final LocalizedText aboutSummary = LocalizedText(
   tr: 'Tek başına çalışan bir front-end mühendisi olarak .NET MAUI ve Flutter ile çapraz platform mobil uygulamalar geliştiriyorum. Sağlık alanında kurumsal stok yönetimi uygulamaları ve indie uygulamalar teslim ettim; performans, UX ve mağaza süreçlerine odaklanıyorum.',
 );
 
+final List<PrivacyDoc> privacyDocs = [
+  PrivacyDoc(
+    title: const LocalizedText(
+      en: 'What Should I Eat Today – Privacy Policy',
+      tr: 'What Should I Eat Today – Gizlilik Politikası',
+    ),
+    content: LocalizedText(
+      en: '''
+1. ACCEPTANCE
+By installing or using the app you agree to the collection and processing of data in line with this policy.
+
+2. SCOPE
+Applies to all our apps on mobile or other platforms.
+
+3. DATA COLLECTION & USE
+- Ads: Google AdMob may use cookies/tech for personalized ads. See AdMob Privacy Policy.
+- Feedback: Used only to improve the app; not shared with third parties.
+- API & Recipes: Provided via public CC0 sources; originals may be from third-party sites.
+- Device Access: May request external storage for database use; only to support functionality.
+
+4. SECURITY
+Standard industry measures are applied; no absolute guarantee.
+
+5. THIRD-PARTY LINKS & DISCLAIMER
+App is only on Google Play and Apple App Store. If downloaded elsewhere, OverPoweredCompany is not responsible.
+Content is provided “as is”; no warranties; you accept responsibility for usage.
+
+6. COPYRIGHT & TERMS
+All content belongs to OverPoweredCompany or licensed sources; no copying/distribution without permission.
+
+7. CONTACT
+For questions: bugraksaglam@gmail.com''',
+      tr: '''
+1. KABUL
+Uygulamayı kurup kullanarak bu politikaya uygun veri toplanmasını ve işlenmesini kabul edersiniz.
+
+2. KAPSAM
+Mobil veya diğer platformlardaki tüm uygulamalarımız için geçerlidir.
+
+3. VERİ TOPLAMA ve KULLANIMI
+- Reklam: Google AdMob kişiselleştirilmiş reklamlar için çerez/teknolojiler kullanabilir. AdMob Gizlilik Politikası’nı inceleyin.
+- Geri Bildirim: Yalnızca geliştirme amacıyla kullanılır, üçüncü taraflarla paylaşılmaz.
+- API ve Tarifler: Kamuya açık CC0 veritabanlarından sağlanır; orijinal kaynaklar üçüncü taraf siteler olabilir.
+- Cihaz Erişimi: Harici depolama izni isteyebilir; yalnızca işlevselliği desteklemek içindir (örn. veritabanı).
+
+4. GÜVENLİK
+Endüstri standartlarında önlemler uygulanır; mutlak güvenlik garanti edilmez.
+
+5. ÜÇÜNCÜ TARAF LİNKLERİ ve SORUMLULUK REDDİ
+Uygulama sadece Google Play ve Apple App Store’da yayınlanır. Başka bir kaynaktan indirildiyse sorumluluk kabul edilmez.
+İçerikler “olduğu gibi” sunulur; garanti verilmez; kullanım sorumluluğu sizdedir.
+
+6. TELİF HAKKI ve KULLANIM KOŞULLARI
+Tüm içerik OverPoweredCompany’ye aittir veya lisanslıdır; izinsiz kopyalama/dağıtma yasaktır.
+
+7. İLETİŞİM
+Sorular için: bugraksaglam@gmail.com''',
+    ),
+    link: 'https://bugraksaglam.com/privacy/what-should-i-eat-today',
+    slug: 'what-should-i-eat-today',
+  ),
+  PrivacyDoc(
+    title: const LocalizedText(
+      en: 'Mice and Paws: Cat Game – Privacy',
+      tr: 'Mice and Paws: Cat Game – Gizlilik',
+    ),
+    content: const LocalizedText(
+      en: 'Privacy policy forthcoming. Please reach out via email for details.',
+      tr: 'Gizlilik politikası eklenecek. Detaylar için e-posta ile ulaşabilirsiniz.',
+    ),
+    link: 'https://bugraksaglam.com/privacy/mice-and-paws-cat-game',
+    slug: 'mice-and-paws-cat-game',
+  ),
+];
+
 final List<SkillGroup> skillGroups = [
   SkillGroup(
     title: LocalizedText(
@@ -196,6 +271,9 @@ final List<Project> projects = [
       ),
     ],
     meta: const LocalizedText(en: 'Indie', tr: 'Indie'),
+    privacyDoc: privacyDocs.firstWhere(
+      (doc) => doc.slug == 'mice-and-paws-cat-game',
+    ),
   ),
   Project(
     title: const LocalizedText(
@@ -225,69 +303,8 @@ final List<Project> projects = [
       ),
     ],
     meta: const LocalizedText(en: 'Indie', tr: 'Indie'),
-  ),
-];
-
-final List<Project> overpoweredProjects = [
-  Project(
-    title: const LocalizedText(
-      en: 'Mice and Paws: Cat Game',
-      tr: 'Mice and Paws: Cat Game',
-    ),
-    description: const LocalizedText(
-      en: 'Published under Overpowered Company; casual cat-interaction game with ads, polished motion, and offline-friendly loops.',
-      tr: 'Overpowered Company altında yayımlandı; reklamlı, akıcı animasyonlu ve offline dostu kedi etkileşim oyunu.',
-    ),
-    tags: const [
-      LocalizedText(en: 'Flutter', tr: 'Flutter'),
-      LocalizedText(en: 'Flame', tr: 'Flame'),
-      LocalizedText(en: 'Google Ads', tr: 'Google Ads'),
-    ],
-    links: const [
-      ProjectLink(
-        label: 'App Store',
-        url: 'https://apps.apple.com/us/app/mice-and-paws-cat-game/',
-      ),
-      ProjectLink(
-        label: 'Google Play',
-        url:
-            'https://play.google.com/store/apps/details?id=com.mice_and_paws_cat_game',
-      ),
-    ],
-    meta: const LocalizedText(
-      en: 'Overpowered Company',
-      tr: 'Overpowered Company',
-    ),
-  ),
-  Project(
-    title: const LocalizedText(
-      en: 'What Should I Eat Today',
-      tr: 'What Should I Eat Today',
-    ),
-    description: const LocalizedText(
-      en: 'Published under Overpowered Company; recipe app with localization, deep links, ads, and Supabase backend.',
-      tr: 'Overpowered Company altında yayımlandı; lokalizasyon, derin link, reklam ve Supabase altyapılı tarif uygulaması.',
-    ),
-    tags: const [
-      LocalizedText(en: 'Flutter', tr: 'Flutter'),
-      LocalizedText(en: 'Supabase', tr: 'Supabase'),
-      LocalizedText(en: 'Localization', tr: 'Lokalizasyon'),
-    ],
-    links: const [
-      ProjectLink(
-        label: 'App Store',
-        url:
-            'https://apps.apple.com/us/app/what-should-i-eat-today/id6741708205',
-      ),
-      ProjectLink(
-        label: 'Google Play',
-        url:
-            'https://play.google.com/store/apps/details?id=com.whatshouldieattoday.mobile',
-      ),
-    ],
-    meta: const LocalizedText(
-      en: 'Overpowered Company',
-      tr: 'Overpowered Company',
+    privacyDoc: privacyDocs.firstWhere(
+      (doc) => doc.slug == 'what-should-i-eat-today',
     ),
   ),
 ];
@@ -304,84 +321,3 @@ final Education education = Education(
   location: const LocalizedText(en: 'Ankara, Türkiye', tr: 'Ankara, Türkiye'),
   period: const LocalizedText(en: '2014 entry', tr: '2014 giriş'),
 );
-
-class PrivacyDoc {
-  const PrivacyDoc({required this.title, required this.content, this.link});
-
-  final LocalizedText title;
-  final LocalizedText content;
-  final String? link;
-}
-
-final List<PrivacyDoc> privacyDocs = [
-  PrivacyDoc(
-    title: const LocalizedText(
-      en: 'What Should I Eat Today – Privacy Policy',
-      tr: 'What Should I Eat Today – Gizlilik Politikası',
-    ),
-    content: LocalizedText(
-      en: '''
-1. ACCEPTANCE
-By installing or using the app you agree to the collection and processing of data in line with this policy.
-
-2. SCOPE
-Applies to all our apps on mobile or other platforms.
-
-3. DATA COLLECTION & USE
-- Ads: Google AdMob may use cookies/tech for personalized ads. See AdMob Privacy Policy.
-- Feedback: Used only to improve the app; not shared with third parties.
-- API & Recipes: Provided via public CC0 sources; originals may be from third-party sites.
-- Device Access: May request external storage for database use; only to support functionality.
-
-4. SECURITY
-Standard industry measures are applied; no absolute guarantee.
-
-5. THIRD-PARTY LINKS & DISCLAIMER
-App is only on Google Play and Apple App Store. If downloaded elsewhere, OverPoweredCompany is not responsible.
-Content is provided “as is”; no warranties; you accept responsibility for usage.
-
-6. COPYRIGHT & TERMS
-All content belongs to OverPoweredCompany or licensed sources; no copying/distribution without permission.
-
-7. CONTACT
-For questions: bugraksaglam@gmail.com''',
-      tr: '''
-1. KABUL
-Uygulamayı kurup kullanarak bu politikaya uygun veri toplanmasını ve işlenmesini kabul edersiniz.
-
-2. KAPSAM
-Mobil veya diğer platformlardaki tüm uygulamalarımız için geçerlidir.
-
-3. VERİ TOPLAMA ve KULLANIMI
-- Reklam: Google AdMob kişiselleştirilmiş reklamlar için çerez/teknolojiler kullanabilir. AdMob Gizlilik Politikası’nı inceleyin.
-- Geri Bildirim: Yalnızca geliştirme amacıyla kullanılır, üçüncü taraflarla paylaşılmaz.
-- API ve Tarifler: Kamuya açık CC0 veritabanlarından sağlanır; orijinal kaynaklar üçüncü taraf siteler olabilir.
-- Cihaz Erişimi: Harici depolama izni isteyebilir; yalnızca işlevselliği desteklemek içindir (örn. veritabanı).
-
-4. GÜVENLİK
-Endüstri standartlarında önlemler uygulanır; mutlak güvenlik garanti edilmez.
-
-5. ÜÇÜNCÜ TARAF LİNKLERİ ve SORUMLULUK REDDİ
-Uygulama sadece Google Play ve Apple App Store’da yayınlanır. Başka bir kaynaktan indirildiyse sorumluluk kabul edilmez.
-İçerikler “olduğu gibi” sunulur; garanti verilmez; kullanım sorumluluğu sizdedir.
-
-6. TELİF HAKKI ve KULLANIM KOŞULLARI
-Tüm içerik OverPoweredCompany’ye aittir veya lisanslıdır; izinsiz kopyalama/dağıtma yasaktır.
-
-7. İLETİŞİM
-Sorular için: bugraksaglam@gmail.com''',
-    ),
-    link: 'https://bugraksaglam.com/privacy/what-should-i-eat-today',
-  ),
-  PrivacyDoc(
-    title: const LocalizedText(
-      en: 'Mice and Paws: Cat Game – Privacy',
-      tr: 'Mice and Paws: Cat Game – Gizlilik',
-    ),
-    content: const LocalizedText(
-      en: 'Privacy policy forthcoming. Please reach out via email for details.',
-      tr: 'Gizlilik politikası eklenecek. Detaylar için e-posta ile ulaşabilirsiniz.',
-    ),
-    link: 'https://bugraksaglam.com/privacy/mice-and-paws-cat-game',
-  ),
-];
