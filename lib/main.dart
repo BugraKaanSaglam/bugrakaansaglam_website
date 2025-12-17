@@ -9,14 +9,22 @@ import 'global/app_router.dart';
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await EasyLocalization.ensureInitialized();
+  const supportedLocales = [Locale('en'), Locale('tr')];
+  const fallbackLocale = Locale('en');
+  final deviceLocale = WidgetsBinding.instance.platformDispatcher.locale;
+  final startLocale = supportedLocales.firstWhere(
+    (locale) => locale.languageCode == deviceLocale.languageCode,
+    orElse: () => fallbackLocale,
+  );
   if (kIsWeb) {
     usePathUrlStrategy();
   }
   runApp(
     EasyLocalization(
-      supportedLocales: const [Locale('en'), Locale('tr')],
+      supportedLocales: supportedLocales,
       path: 'assets/translations',
-      fallbackLocale: const Locale('en'),
+      fallbackLocale: fallbackLocale,
+      startLocale: startLocale,
       child: const MainApp(),
     ),
   );
@@ -95,7 +103,11 @@ class _AppWithSplashState extends State<_AppWithSplash> {
                         const SizedBox(height: 12),
                         const Text(
                           'Loading...',
-                          style: TextStyle(color: Colors.white70, fontWeight: FontWeight.w600),
+                          style: TextStyle(
+                            color: Colors.white70,
+                            fontWeight: FontWeight.w600,
+                            decoration: TextDecoration.none,
+                          ),
                         ),
                       ],
                     ),
