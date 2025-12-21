@@ -26,10 +26,8 @@ flutter build web
 ```
 
 ## Project Structure
-- lib/data - static content
-- lib/models - typed models
-- lib/pages - route-level pages
-- lib/widgets - reusable UI blocks
-- lib/global - theme, router, helpers
+- lib/app - app shell, router, theme, dependencies
+- lib/core - cross-cutting utilities
+- lib/features/portfolio - data, domain, presentation
 - assets/translations - i18n JSON
 - assets/images - media assets

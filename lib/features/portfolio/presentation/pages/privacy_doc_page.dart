@@ -1,19 +1,14 @@
+import 'package:bugrakaansaglam_website/app/app_theme.dart';
+import 'package:bugrakaansaglam_website/features/portfolio/domain/portfolio_models.dart';
+import 'package:bugrakaansaglam_website/features/portfolio/presentation/widgets/language_toggle.dart';
+import 'package:bugrakaansaglam_website/features/portfolio/presentation/widgets/section_card.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-import '../global/app_theme.dart';
-import '../models/portfolio_models.dart';
-import '../widgets/language_toggle.dart';
-import '../widgets/section_card.dart';
-
 class PrivacyDocPage extends StatelessWidget {
-  const PrivacyDocPage({required PrivacyDoc doc, super.key})
-      : doc = doc,
-        isNotFound = false;
-  const PrivacyDocPage.notFound({super.key})
-      : doc = null,
-        isNotFound = true;
+  const PrivacyDocPage({required PrivacyDoc this.doc, super.key}) : isNotFound = false;
+  const PrivacyDocPage.notFound({super.key}) : doc = null, isNotFound = true;
 
   final PrivacyDoc? doc;
   final bool isNotFound;
@@ -38,12 +33,7 @@ class PrivacyDocPage extends StatelessWidget {
         ),
         title: const SizedBox.shrink(),
         backgroundColor: Colors.transparent,
-        actions: const [
-          Padding(
-            padding: EdgeInsets.only(right: 12),
-            child: LanguageToggle(compact: true),
-          ),
-        ],
+        actions: const [Padding(padding: EdgeInsets.only(right: 12), child: LanguageToggle(compact: true))],
       ),
       body: Container(
         decoration: const BoxDecoration(gradient: AppTheme.backgroundGradient),
@@ -55,15 +45,7 @@ class PrivacyDocPage extends StatelessWidget {
                 title: title,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      content,
-                      style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                            color: Colors.white70,
-                            height: 1.4,
-                          ),
-                    ),
-                  ],
+                  children: [Text(content, style: Theme.of(context).textTheme.bodyMedium?.copyWith(color: Colors.white70, height: 1.4))],
                 ),
               ),
             ],

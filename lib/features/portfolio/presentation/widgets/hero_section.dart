@@ -1,17 +1,23 @@
+import 'package:bugrakaansaglam_website/app/app_theme.dart';
+import 'package:bugrakaansaglam_website/core/utils/platform_actions.dart';
+import 'package:bugrakaansaglam_website/features/portfolio/domain/portfolio_models.dart';
+import 'package:bugrakaansaglam_website/features/portfolio/presentation/widgets/info_badge.dart';
+import 'package:bugrakaansaglam_website/features/portfolio/presentation/widgets/quick_fact.dart';
+import 'package:bugrakaansaglam_website/features/portfolio/presentation/widgets/skill_pill.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
-import '../global/app_theme.dart';
-import '../global/global_functions.dart';
-import 'info_badge.dart';
-import 'quick_fact.dart';
-import 'skill_pill.dart';
-
 class HeroSection extends StatelessWidget {
-  const HeroSection({required this.isWide, this.isMobile = false, super.key});
+  const HeroSection({
+    required this.isWide,
+    required this.contact,
+    this.isMobile = false,
+    super.key,
+  });
 
   final bool isWide;
   final bool isMobile;
+  final ContactInfo contact;
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +27,7 @@ class HeroSection extends StatelessWidget {
       tr('hero.status_tags.design'),
       tr('hero.status_tags.analytics'),
     ];
-    const mailtoUrl = 'mailto:bugrakaansaglam@gmail.com?subject=Project%20Inquiry';
+    final mailtoUrl = 'mailto:${contact.email}?subject=Project%20Inquiry';
     final Widget intro = Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [

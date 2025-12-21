@@ -1,8 +1,8 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
-import '../models/portfolio_models.dart';
-import 'info_badge.dart';
+import 'package:bugrakaansaglam_website/features/portfolio/domain/portfolio_models.dart';
+import 'package:bugrakaansaglam_website/features/portfolio/presentation/widgets/info_badge.dart';
 
 class ExperienceTile extends StatelessWidget {
   const ExperienceTile({required this.experience, this.compact = false, super.key});

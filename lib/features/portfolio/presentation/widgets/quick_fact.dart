@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../global/app_theme.dart';
+import 'package:bugrakaansaglam_website/app/app_theme.dart';
 
 class QuickFact extends StatelessWidget {
   const QuickFact({required this.label, required this.value, super.key});

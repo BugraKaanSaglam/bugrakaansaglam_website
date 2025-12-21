@@ -1,8 +1,8 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
-import '../models/portfolio_models.dart';
-import 'skill_pill.dart';
+import 'package:bugrakaansaglam_website/features/portfolio/domain/portfolio_models.dart';
+import 'package:bugrakaansaglam_website/features/portfolio/presentation/widgets/skill_pill.dart';
 
 class SkillsWrap extends StatelessWidget {
   const SkillsWrap({required this.skills, super.key});

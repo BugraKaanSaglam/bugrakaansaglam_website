@@ -1,23 +1,25 @@
+import 'package:bugrakaansaglam_website/app/app_theme.dart';
+import 'package:bugrakaansaglam_website/features/portfolio/domain/portfolio_models.dart';
+import 'package:bugrakaansaglam_website/features/portfolio/presentation/viewmodels/portfolio_view_model.dart';
+import 'package:bugrakaansaglam_website/features/portfolio/presentation/widgets/contact_actions.dart';
+import 'package:bugrakaansaglam_website/features/portfolio/presentation/widgets/experience_tile.dart';
+import 'package:bugrakaansaglam_website/features/portfolio/presentation/widgets/header_bar.dart';
+import 'package:bugrakaansaglam_website/features/portfolio/presentation/widgets/hero_section.dart';
+import 'package:bugrakaansaglam_website/features/portfolio/presentation/widgets/project_card.dart';
+import 'package:bugrakaansaglam_website/features/portfolio/presentation/widgets/section_card.dart';
+import 'package:bugrakaansaglam_website/features/portfolio/presentation/widgets/skills_wrap.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
-import '../data/content.dart';
-import '../global/app_theme.dart';
-import '../models/portfolio_models.dart';
-import '../widgets/contact_actions.dart';
-import '../widgets/experience_tile.dart';
-import '../widgets/header_bar.dart';
-import '../widgets/hero_section.dart';
-import '../widgets/project_card.dart';
-import '../widgets/section_card.dart';
-import '../widgets/skills_wrap.dart';
-
 class PortfolioPage extends StatelessWidget {
-  const PortfolioPage({super.key});
+  const PortfolioPage({required this.viewModel, super.key});
+
+  final PortfolioViewModel viewModel;
 
   @override
   Widget build(BuildContext context) {
     final locale = context.locale;
+    final content = viewModel.content;
     final width = MediaQuery.sizeOf(context).width;
     final isMobile = width < 720;
     final isWide = width > 900;
@@ -38,18 +40,25 @@ class PortfolioPage extends StatelessWidget {
                     children: [
                       const HeaderBar(),
                       SizedBox(height: isMobile ? 26 : 38),
-                      HeroSection(isWide: isWide, isMobile: isMobile),
+                      HeroSection(
+                        isWide: isWide,
+                        isMobile: isMobile,
+                        contact: content.contactInfo,
+                      ),
                       SizedBox(height: isMobile ? 30 : 42),
                       SectionCard(
                         title: tr('sections.about'),
                         compact: isMobile,
-                        child: Text(aboutSummary.ofLocale(locale)),
+                        child: Text(content.aboutSummary.ofLocale(locale)),
                       ),
                       SizedBox(height: sectionGap),
                       SectionCard(
                         title: tr('sections.skills'),
                         compact: isMobile,
-                        child: _SkillsBlock(locale: locale),
+                        child: _SkillsBlock(
+                          locale: locale,
+                          skillGroups: content.skillGroups,
+                        ),
                       ),
                       SizedBox(height: sectionGap),
                       SectionCard(
@@ -57,7 +66,7 @@ class PortfolioPage extends StatelessWidget {
                         compact: isMobile,
                         child: Column(
                           children: [
-                            ...projects.map(
+                            ...content.projects.map(
                               (project) => Padding(
                                 padding: const EdgeInsets.only(bottom: 16),
                                 child: ProjectCard(
@@ -74,7 +83,7 @@ class PortfolioPage extends StatelessWidget {
                         title: tr('sections.experience'),
                         compact: isMobile,
                         child: Column(
-                          children: experiences
+                          children: content.experiences
                               .map(
                                 (exp) => Padding(
                                   padding: const EdgeInsets.only(bottom: 12),
@@ -91,13 +100,19 @@ class PortfolioPage extends StatelessWidget {
                       SectionCard(
                         title: tr('sections.education'),
                         compact: isMobile,
-                        child: _EducationBlock(locale: locale, education: education),
+                        child: _EducationBlock(
+                          locale: locale,
+                          education: content.education,
+                        ),
                       ),
                       SizedBox(height: sectionGap),
                       SectionCard(
                         title: tr('sections.contact'),
                         compact: isMobile,
-                        child: ContactActions(compact: isMobile),
+                        child: ContactActions(
+                          contact: content.contactInfo,
+                          compact: isMobile,
+                        ),
                       ),
                     ],
                   ),
@@ -112,9 +127,10 @@ class PortfolioPage extends StatelessWidget {
 }
 
 class _SkillsBlock extends StatelessWidget {
-  const _SkillsBlock({required this.locale});
+  const _SkillsBlock({required this.locale, required this.skillGroups});
 
   final Locale locale;
+  final List<SkillGroup> skillGroups;
 
   @override
   Widget build(BuildContext context) {

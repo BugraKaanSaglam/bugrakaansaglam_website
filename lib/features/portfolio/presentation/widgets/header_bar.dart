@@ -1,8 +1,8 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
-import '../global/app_theme.dart';
-import 'language_toggle.dart';
+import 'package:bugrakaansaglam_website/app/app_theme.dart';
+import 'package:bugrakaansaglam_website/features/portfolio/presentation/widgets/language_toggle.dart';
 
 class HeaderBar extends StatelessWidget {
   const HeaderBar({super.key});

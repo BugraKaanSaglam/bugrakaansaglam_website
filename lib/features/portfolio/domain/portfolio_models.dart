@@ -90,3 +90,44 @@ class PrivacyDoc {
 
   String get routePath => '/privacy-policy/$slug';
 }
+
+class ContactInfo {
+  const ContactInfo({
+    required this.email,
+    required this.phone,
+    required this.location,
+    required this.linkedIn,
+  });
+
+  final String email;
+  final String phone;
+  final String location;
+  final String linkedIn;
+}
+
+class PortfolioContent {
+  const PortfolioContent({
+    required this.aboutSummary,
+    required this.privacyDocs,
+    required this.skillGroups,
+    required this.experiences,
+    required this.projects,
+    required this.education,
+    required this.contactInfo,
+  });
+
+  final LocalizedText aboutSummary;
+  final List<PrivacyDoc> privacyDocs;
+  final List<SkillGroup> skillGroups;
+  final List<Experience> experiences;
+  final List<Project> projects;
+  final Education education;
+  final ContactInfo contactInfo;
+
+  PrivacyDoc? privacyDocBySlug(String slug) {
+    for (final doc in privacyDocs) {
+      if (doc.slug == slug) return doc;
+    }
+    return null;
+  }
+}

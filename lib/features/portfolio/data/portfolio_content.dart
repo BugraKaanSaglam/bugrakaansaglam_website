@@ -1,15 +1,18 @@
-import '../models/portfolio_models.dart';
+import 'package:bugrakaansaglam_website/features/portfolio/domain/portfolio_models.dart';
 
-const String contactEmail = 'bugrakaansaglam@gmail.com';
-const String contactPhone = '+90 539 929 8008';
-const String contactLocation = 'Ankara, Türkiye';
+const ContactInfo _contactInfo = ContactInfo(
+  email: 'bugrakaansaglam@gmail.com',
+  phone: '+90 539 929 8008',
+  location: 'Ankara, Türkiye',
+  linkedIn: 'https://www.linkedin.com/in/bugrakaansaglam',
+);
 
-final LocalizedText aboutSummary = LocalizedText(
+final LocalizedText _aboutSummary = LocalizedText(
   en: 'Sole front-end engineer building cross-platform mobile apps with .NET MAUI and Flutter. Delivered enterprise healthcare inventory apps end-to-end and shipped indie apps; focused on performance, UX, and smooth store releases.',
   tr: 'Tek başına çalışan bir front-end mühendisi olarak .NET MAUI ve Flutter ile çapraz platform mobil uygulamalar geliştiriyorum. Sağlık alanında kurumsal stok yönetimi uygulamaları ve indie uygulamalar teslim ettim; performans, UX ve mağaza süreçlerine odaklanıyorum.',
 );
 
-final List<PrivacyDoc> privacyDocs = [
+final List<PrivacyDoc> _privacyDocs = [
   PrivacyDoc(
     title: const LocalizedText(
       en: 'What Should I Eat Today – Privacy Policy',
@@ -172,7 +175,7 @@ Son güncelleme tarihi: 25.03.2024.''',
   ),
 ];
 
-final List<SkillGroup> skillGroups = [
+final List<SkillGroup> _skillGroups = [
   SkillGroup(
     title: LocalizedText(
       en: 'Languages & Frameworks',
@@ -263,7 +266,7 @@ final List<SkillGroup> skillGroups = [
   ),
 ];
 
-final List<Experience> experiences = [
+final List<Experience> _experiences = [
   Experience(
     role: const LocalizedText(
       en: 'Mobile application developer',
@@ -307,7 +310,7 @@ final List<Experience> experiences = [
   ),
 ];
 
-final List<Project> projects = [
+final List<Project> _projects = [
   Project(
     title: const LocalizedText(
       en: 'CAVAMED & ERPIMUS',
@@ -362,7 +365,7 @@ final List<Project> projects = [
       ),
     ],
     meta: const LocalizedText(en: 'Indie', tr: 'Indie'),
-    privacyDoc: privacyDocs.firstWhere(
+    privacyDoc: _privacyDocs.firstWhere(
       (doc) => doc.slug == 'mice-and-paws-cat-game',
     ),
   ),
@@ -398,13 +401,13 @@ final List<Project> projects = [
       ),
     ],
     meta: const LocalizedText(en: 'Indie', tr: 'Indie'),
-    privacyDoc: privacyDocs.firstWhere(
+    privacyDoc: _privacyDocs.firstWhere(
       (doc) => doc.slug == 'what-should-i-eat-today',
     ),
   ),
 ];
 
-final Education education = Education(
+final Education _education = Education(
   degree: const LocalizedText(
     en: 'BSc in Biomedical Engineering',
     tr: 'Biyomedikal Mühendisliği Lisans',
@@ -415,4 +418,14 @@ final Education education = Education(
   ),
   location: const LocalizedText(en: 'Ankara, Türkiye', tr: 'Ankara, Türkiye'),
   period: const LocalizedText(en: '2014 entry', tr: '2014 giriş'),
+);
+
+final PortfolioContent portfolioContent = PortfolioContent(
+  aboutSummary: _aboutSummary,
+  privacyDocs: _privacyDocs,
+  skillGroups: _skillGroups,
+  experiences: _experiences,
+  projects: _projects,
+  education: _education,
+  contactInfo: _contactInfo,
 );

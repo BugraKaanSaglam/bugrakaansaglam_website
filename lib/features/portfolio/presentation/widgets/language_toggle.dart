@@ -1,7 +1,7 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
-import '../global/app_theme.dart';
+import 'package:bugrakaansaglam_website/app/app_theme.dart';
 
 class LanguageToggle extends StatelessWidget {
   const LanguageToggle({super.key, this.compact = false});

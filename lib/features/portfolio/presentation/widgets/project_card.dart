@@ -1,11 +1,10 @@
+import 'package:bugrakaansaglam_website/app/app_theme.dart';
+import 'package:bugrakaansaglam_website/core/utils/platform_actions.dart';
+import 'package:bugrakaansaglam_website/features/portfolio/domain/portfolio_models.dart';
+import 'package:bugrakaansaglam_website/features/portfolio/presentation/widgets/info_badge.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-
-import '../global/app_theme.dart';
-import '../global/global_functions.dart';
-import '../models/portfolio_models.dart';
-import 'info_badge.dart';
 
 class ProjectCard extends StatelessWidget {
   const ProjectCard({required this.project, this.compact = false, super.key});

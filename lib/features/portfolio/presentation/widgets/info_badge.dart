@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../global/app_theme.dart';
+import 'package:bugrakaansaglam_website/app/app_theme.dart';
 
 class InfoBadge extends StatelessWidget {
   const InfoBadge({required this.label, this.icon, super.key});
