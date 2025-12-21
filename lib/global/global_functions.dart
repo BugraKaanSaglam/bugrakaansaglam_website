@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -10,11 +11,12 @@ void copyToClipboard(BuildContext context, String value, String message) {
 }
 
 Future<void> openExternalUrl(BuildContext context, String url) async {
+  final errorMessage = tr('errors.link_open_failed', context: context);
   final uri = Uri.tryParse(url);
   if (uri == null) {
     ScaffoldMessenger.of(
       context,
-    ).showSnackBar(const SnackBar(content: Text('Link açılamadı')));
+    ).showSnackBar(SnackBar(content: Text(errorMessage)));
     return;
   }
 
@@ -27,6 +29,6 @@ Future<void> openExternalUrl(BuildContext context, String url) async {
   if (!launched && context.mounted) {
     ScaffoldMessenger.of(
       context,
-    ).showSnackBar(const SnackBar(content: Text('Link açılamadı')));
+    ).showSnackBar(SnackBar(content: Text(errorMessage)));
   }
 }

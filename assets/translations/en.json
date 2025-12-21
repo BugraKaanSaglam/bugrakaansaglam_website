@@ -50,6 +50,11 @@
   "privacy": {
     "lead": "Privacy policies for published apps.",
     "view_all": "View policies",
-    "button": "Privacy"
+    "button": "Privacy",
+    "not_found_title": "Privacy policy not found",
+    "not_found_body": "We could not find the requested privacy policy. Please return to the homepage."
+  },
+  "errors": {
+    "link_open_failed": "Couldn't open the link."
   }
 }

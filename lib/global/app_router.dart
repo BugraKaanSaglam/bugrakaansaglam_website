@@ -1,5 +1,4 @@
 import 'package:bugrakaansaglam_website/models/portfolio_models.dart';
-import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
 import '../data/content.dart';
@@ -23,19 +22,7 @@ final GoRouter appRouter = GoRouter(
         }
 
         if (doc == null) {
-          return Scaffold(
-            appBar: AppBar(automaticallyImplyLeading: false, title: const SizedBox.shrink(), backgroundColor: Colors.transparent),
-            body: Container(
-              decoration: const BoxDecoration(
-                gradient: LinearGradient(colors: [Color(0xFF0B1221), Color(0xFF0E172F)], begin: Alignment.topLeft, end: Alignment.bottomRight),
-              ),
-              child: SafeArea(
-                child: Center(
-                  child: Text('Policy not found', style: Theme.of(context).textTheme.titleMedium?.copyWith(color: Colors.white70)),
-                ),
-              ),
-            ),
-          );
+          return const PrivacyDocPage.notFound();
         }
 
         return PrivacyDocPage(doc: doc);

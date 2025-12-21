@@ -50,6 +50,11 @@
   "privacy": {
     "lead": "Yayımlanan uygulamaların gizlilik politikaları.",
     "view_all": "Politikaları görüntüle",
-    "button": "Gizlilik"
+    "button": "Gizlilik",
+    "not_found_title": "Gizlilik politikası bulunamadı",
+    "not_found_body": "İstenen gizlilik politikası bulunamadı. Lütfen ana sayfaya dönün."
+  },
+  "errors": {
+    "link_open_failed": "Bağlantı açılamadı."
   }
 }
