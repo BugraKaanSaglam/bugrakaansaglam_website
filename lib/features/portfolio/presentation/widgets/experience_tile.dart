@@ -25,30 +25,19 @@ class ExperienceTile extends StatelessWidget {
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Row(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Expanded(
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              experience.role.ofLocale(locale),
-                              style: theme.textTheme.titleLarge,
-                            ),
-                            const SizedBox(height: 4),
-                            Text(
-                              experience.company.ofLocale(locale),
-                              style: theme.textTheme.bodyMedium?.copyWith(
-                                color: Colors.white70,
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                      InfoBadge(label: experience.period.ofLocale(locale)),
-                    ],
+                  Text(
+                    experience.role.ofLocale(locale),
+                    style: theme.textTheme.titleLarge,
                   ),
+                  const SizedBox(height: 4),
+                  Text(
+                    experience.company.ofLocale(locale),
+                    style: theme.textTheme.bodyMedium?.copyWith(
+                      color: Colors.white70,
+                    ),
+                  ),
+                  const SizedBox(height: 10),
+                  InfoBadge(label: experience.period.ofLocale(locale)),
                   if (experience.location != null) ...[
                     const SizedBox(height: 6),
                     Text(

@@ -29,10 +29,7 @@ class _AppWithSplashState extends State<_AppWithSplash> {
   }
 
   Future<void> _warmUp() async {
-    await Future.wait([
-      WidgetsBinding.instance.endOfFrame,
-      Future.delayed(const Duration(milliseconds: 450)),
-    ]);
+    await WidgetsBinding.instance.endOfFrame;
     if (mounted) {
       setState(() {
         _ready = true;

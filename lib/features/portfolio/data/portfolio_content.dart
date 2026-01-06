@@ -274,8 +274,8 @@ final List<Experience> _experiences = [
     ),
     company: const LocalizedText(en: 'CAVAMED A.Ş.', tr: 'CAVAMED A.Ş.'),
     period: const LocalizedText(
-      en: 'Dec 2022 - Present',
-      tr: 'Aralık 2022 - Günümüz',
+      en: 'Dec 2022 - Dec 2025',
+      tr: 'Aralık 2022 - Aralık 2025',
     ),
     location: const LocalizedText(
       en: 'Istanbul, Türkiye',

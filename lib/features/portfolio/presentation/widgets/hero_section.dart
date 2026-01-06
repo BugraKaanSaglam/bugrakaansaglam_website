@@ -28,12 +28,15 @@ class HeroSection extends StatelessWidget {
       tr('hero.status_tags.analytics'),
     ];
     final mailtoUrl = 'mailto:${contact.email}?subject=Project%20Inquiry';
+    final titleStyle = isMobile
+        ? theme.textTheme.displayLarge?.copyWith(fontSize: 34, height: 1.12)
+        : theme.textTheme.displayLarge;
     final Widget intro = Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         InfoBadge(label: tr('hero.location'), icon: Icons.location_on_outlined),
         const SizedBox(height: 18),
-        Text(tr('hero.title'), style: theme.textTheme.displayLarge),
+        Text(tr('hero.title'), style: titleStyle),
         const SizedBox(height: 16),
         Text(
           tr('hero.subtitle'),
@@ -51,17 +54,27 @@ class HeroSection extends StatelessWidget {
           ],
         ),
         SizedBox(height: isMobile ? 18 : 24),
-        Wrap(
-          spacing: 12,
-          runSpacing: 12,
-          children: [
-            FilledButton.icon(
+        if (isMobile)
+          SizedBox(
+            width: double.infinity,
+            child: FilledButton.icon(
               icon: const Icon(Icons.calendar_today_outlined),
               label: Text(tr('hero.cta_meeting')),
               onPressed: () => openExternalUrl(context, mailtoUrl),
             ),
-          ],
-        ),
+          )
+        else
+          Wrap(
+            spacing: 12,
+            runSpacing: 12,
+            children: [
+              FilledButton.icon(
+                icon: const Icon(Icons.calendar_today_outlined),
+                label: Text(tr('hero.cta_meeting')),
+                onPressed: () => openExternalUrl(context, mailtoUrl),
+              ),
+            ],
+          ),
       ],
     );
 
@@ -95,41 +108,33 @@ class HeroSection extends StatelessWidget {
             children: tags.map((skill) => SkillPill(skill: skill)).toList(),
           ),
           const SizedBox(height: 18),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Text(
-                tr('hero.availability_label'),
-                style: theme.textTheme.bodyMedium?.copyWith(
-                  color: Colors.white70,
+          if (isMobile)
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  tr('hero.availability_label'),
+                  style: theme.textTheme.bodyMedium?.copyWith(
+                    color: Colors.white70,
+                  ),
                 ),
-              ),
-              Container(
-                padding: const EdgeInsets.symmetric(
-                  horizontal: 12,
-                  vertical: 8,
+                const SizedBox(height: 10),
+                _AvailabilityBadge(label: tr('hero.availability')),
+              ],
+            )
+          else
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  tr('hero.availability_label'),
+                  style: theme.textTheme.bodyMedium?.copyWith(
+                    color: Colors.white70,
+                  ),
                 ),
-                decoration: BoxDecoration(
-                  color: Colors.greenAccent.withValues(alpha: 0.12),
-                  borderRadius: BorderRadius.circular(12),
-                ),
-                child: Row(
-                  children: [
-                    const Icon(
-                      Icons.circle,
-                      color: Colors.greenAccent,
-                      size: 10,
-                    ),
-                    const SizedBox(width: 6),
-                    Text(
-                      tr('hero.availability'),
-                      style: const TextStyle(color: Colors.white),
-                    ),
-                  ],
-                ),
-              ),
-            ],
-          ),
+                _AvailabilityBadge(label: tr('hero.availability')),
+              ],
+            ),
         ],
       ),
     );
@@ -148,6 +153,41 @@ class HeroSection extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [intro, const SizedBox(height: 28), statusCard],
+    );
+  }
+}
+
+class _AvailabilityBadge extends StatelessWidget {
+  const _AvailabilityBadge({required this.label});
+
+  final String label;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: const EdgeInsets.symmetric(
+        horizontal: 12,
+        vertical: 8,
+      ),
+      decoration: BoxDecoration(
+        color: Colors.greenAccent.withValues(alpha: 0.12),
+        borderRadius: BorderRadius.circular(12),
+      ),
+      child: Row(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          const Icon(
+            Icons.circle,
+            color: Colors.greenAccent,
+            size: 10,
+          ),
+          const SizedBox(width: 6),
+          Text(
+            label,
+            style: const TextStyle(color: Colors.white),
+          ),
+        ],
+      ),
     );
   }
 }

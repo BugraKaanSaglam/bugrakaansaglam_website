@@ -24,6 +24,7 @@ class PortfolioPage extends StatelessWidget {
     final isMobile = width < 720;
     final isWide = width > 900;
     final horizontalPadding = isMobile ? 16.0 : 24.0;
+    final verticalPadding = isMobile ? 22.0 : 28.0;
     final sectionGap = isMobile ? 24.0 : 32.0;
     return Scaffold(
       body: Container(
@@ -34,11 +35,11 @@ class PortfolioPage extends StatelessWidget {
               child: ConstrainedBox(
                 constraints: const BoxConstraints(maxWidth: 1100),
                 child: Padding(
-                  padding: EdgeInsets.symmetric(horizontal: horizontalPadding, vertical: 28),
+                  padding: EdgeInsets.symmetric(horizontal: horizontalPadding, vertical: verticalPadding),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      const HeaderBar(),
+                      HeaderBar(compact: isMobile),
                       SizedBox(height: isMobile ? 26 : 38),
                       HeroSection(
                         isWide: isWide,
