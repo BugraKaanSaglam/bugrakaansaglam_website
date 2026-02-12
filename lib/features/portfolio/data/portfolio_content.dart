@@ -173,6 +173,55 @@ Son güncelleme tarihi: 25.03.2024.''',
     link: 'https://bugraksaglam.com/privacy-policy/mice-and-paws-cat-game',
     slug: 'mice-and-paws-cat-game',
   ),
+  PrivacyDoc(
+    title: const LocalizedText(
+      en: 'Desk4Dent – Privacy Policy',
+      tr: 'Desk4Dent – GİZLİLİK POLİTİKASI',
+    ),
+    content: const LocalizedText(
+      en: '''
+Last Updated: 12.02.2026
+
+Desk4Dent is a software system used only by dentists and authorized clinic staff to manage in-clinic operations. The app provides functions such as patient records, appointment planning, treatment management, accounting tracking, and user authorization. This privacy policy explains for which purposes personal data is processed within the application and how it is protected.
+
+The data processed in Desk4Dent consists of information created and managed by the clinic. This may include patient name, surname, contact details, date of birth, identity number (if available), medical history, anamnesis records, chronic disease information, allergies, medications, dental status data (teeth JSON field), appointment dates, procedure history, and financial records. For user accounts, name, e-mail, role, and company membership data are also processed. For security and audit purposes, the system stores operation logs including created_by, updated_by, and timestamp records.
+
+Desk4Dent infrastructure runs on Supabase (PostgreSQL). Data is hosted on secure servers and role-based access control is applied. Each user can only access data within their authorization scope. Company-based isolation (company_id) separates data between different clinics. Authentication and access-control mechanisms are applied to prevent unauthorized access.
+
+The app may store device token information for appointment notifications. These tokens are used only for notification delivery and are not used for advertising or marketing by third parties. Desk4Dent does not provide advertising services and does not share user data with third parties for commercial purposes.
+
+Health data is considered special category personal data under Law No. 6698 on the Protection of Personal Data (KVKK). Desk4Dent acts as a technical infrastructure provider; lawful collection of patient data and fulfillment of required disclosure obligations are the clinic's responsibility. However, the system commits to applying the necessary technical and administrative safeguards to protect this data.
+
+Personal data is retained in the system as long as the service relationship with the clinic continues. When the service ends, data can be deleted or securely transferred based on the clinic's request. In cases where legal obligations apply, data may be retained in accordance with applicable legislation.
+
+Although Desk4Dent cannot guarantee absolute security due to the nature of the internet, it continues to apply up-to-date security standards to protect data. Access logs are kept and in-system changes are recorded with timestamps.
+
+This privacy policy may be updated due to legal changes, technical infrastructure updates, or changes in service scope. The updated text becomes effective as of its publication date. Users are advised to check the current version regularly.
+
+For all data protection requests and questions: bugraksaglam@gmail.com.''',
+      tr: '''
+Son Güncelleme Tarihi: 12.02.2026
+
+Desk4Dent, yalnızca diş hekimleri ve yetkili klinik personeli tarafından klinik içi operasyonların yönetimi amacıyla kullanılan bir yazılım sistemidir. Uygulama; hasta kayıtlarının tutulması, randevu planlaması, tedavi işlemlerinin yönetimi, muhasebe takibi ve kullanıcı yetkilendirmesi gibi işlevler sunar. Bu gizlilik politikası, uygulama kapsamında işlenen kişisel verilerin hangi amaçlarla işlendiğini ve nasıl korunduğunu açıklamaktadır.
+
+Desk4Dent sisteminde işlenen veriler, klinik tarafından oluşturulan ve yönetilen bilgilerdir. Bu kapsamda hasta adı, soyadı, iletişim bilgileri, doğum tarihi, kimlik numarası (varsa), medikal geçmiş bilgileri, anamnez kayıtları, kronik hastalık bilgileri, alerjiler, kullanılan ilaçlar, diş durumu verileri (teeth JSON alanı), randevu tarihleri, işlem geçmişleri ve finansal kayıtlar sistemde saklanabilir. Ayrıca kullanıcı hesapları kapsamında ad, e-posta, rol bilgisi ve şirket üyelik bilgileri işlenmektedir. Sistem, kullanıcıların yaptığı işlemleri kayıt altına alarak oluşturma ve güncelleme bilgilerini (created_by, updated_by, timestamp kayıtları) güvenlik ve denetim amacıyla saklar.
+
+Desk4Dent altyapısı Supabase (PostgreSQL) veritabanı üzerinde çalışmaktadır. Veriler güvenli sunucularda barındırılır ve rol bazlı erişim kontrolü uygulanır. Her kullanıcı yalnızca yetkisi kapsamında verilere erişebilir. Şirket (company_id) bazlı izolasyon sağlanarak farklı kliniklerin verileri birbirinden ayrıştırılır. Yetkisiz erişimi engellemek amacıyla kimlik doğrulama ve erişim kontrol mekanizmaları uygulanmaktadır.
+
+Uygulama, randevu bildirimleri için cihaz token bilgilerini saklayabilir. Bu bilgiler yalnızca bildirim gönderimi amacıyla kullanılır ve üçüncü taraf reklam ya da pazarlama amacıyla kullanılmaz. Desk4Dent herhangi bir reklam hizmeti sunmaz ve kullanıcı verilerini ticari amaçla üçüncü kişilerle paylaşmaz.
+
+Sağlık verileri, 6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK) kapsamında özel nitelikli kişisel veri olarak kabul edilmektedir. Desk4Dent, teknik altyapı sağlayıcısı konumundadır; hasta verilerinin hukuka uygun şekilde toplanması ve gerekli aydınlatma yükümlülüklerinin yerine getirilmesi klinik sorumluluğundadır. Ancak sistem, bu verilerin korunması için gerekli teknik ve idari güvenlik önlemlerini uygulamayı taahhüt eder.
+
+Kişisel veriler, klinik ile hizmet ilişkisi devam ettiği sürece sistemde saklanır. Hizmet sona erdiğinde klinik talebi doğrultusunda veriler silinebilir veya güvenli şekilde devredilebilir. Yasal yükümlülük gerektiren durumlarda veriler ilgili mevzuat çerçevesinde saklanabilir.
+
+Desk4Dent, internet ortamının doğası gereği mutlak güvenliği garanti edememekle birlikte, veri güvenliğini sağlamak için güncel güvenlik standartlarını uygulamaya devam eder. Erişim kayıtları tutulur ve sistem içi değişiklikler zaman damgası ile kaydedilir.
+
+Bu gizlilik politikası, mevzuat değişiklikleri, teknik altyapı güncellemeleri veya hizmet kapsamındaki değişiklikler doğrultusunda güncellenebilir. Güncellenen metin yayımlandığı tarihten itibaren geçerli olur. Kullanıcıların güncel versiyonu düzenli olarak kontrol etmeleri önerilir.
+
+Her türlü veri koruma talebi ve sorular için: bugraksaglam@gmail.com.''',
+    ),
+    slug: 'desk4dent',
+  ),
 ];
 
 final List<SkillGroup> _skillGroups = [
@@ -317,11 +366,13 @@ final List<Project> _projects = [
       tr: 'Desk4Dent: Dental Klinik Yönetimi',
     ),
     description: const LocalizedText(
-      en: 'Built with Flutter, Desk4Dent combines appointment, patient, procedure, and payment workflows for dental clinics in one mobile app. Role-based authorization, dentist-specific calendar management, and iOS/Android push notification infrastructure simplify day-to-day clinic operations.',
-      tr: 'Flutter ile geliştirilen Desk4Dent, diş klinikleri için randevu, hasta, işlem ve tahsilat süreçlerini tek bir mobil uygulamada birleştirir. Rol bazlı yetkilendirme, doktor bazlı takvim yönetimi ve iOS/Android push bildirim altyapısıyla klinik operasyonlarını sadeleştirir.',
+      en: 'Built with Flutter (single codebase for iOS and Android), Desk4Dent combines appointment, patient, procedure, and payment workflows for dental clinics in one mobile app. It uses Supabase for authentication, database, and security policies; Firebase Messaging for mobile push notifications; and a scalable Riverpod-based state management architecture.',
+      tr: 'Flutter (tek kod tabanından iOS ve Android) ile geliştirilen Desk4Dent, diş klinikleri için randevu, hasta, işlem ve tahsilat süreçlerini tek bir mobil uygulamada birleştirir. Supabase altyapısı üzerinde kimlik doğrulama, veri tabanı ve güvenlik politikalarını yönetir; mobil push bildirimleri için Firebase Messaging kullanır ve ölçeklenebilir Riverpod tabanlı state yönetimi mimarisiyle çalışır.',
     ),
     tags: const [],
+    iconAsset: 'assets/images/desk4denticon.png',
     meta: const LocalizedText(en: 'Indie', tr: 'Indie'),
+    privacyDoc: _privacyDocs.firstWhere((doc) => doc.slug == 'desk4dent'),
   ),
   Project(
     title: const LocalizedText(

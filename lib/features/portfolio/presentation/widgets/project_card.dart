@@ -109,7 +109,7 @@ class ProjectCard extends StatelessWidget {
               iconAsset,
               width: 62,
               height: 62,
-              fit: BoxFit.cover,
+              fit: BoxFit.contain,
               filterQuality: FilterQuality.high,
               errorBuilder: (context, error, stackTrace) => Container(
                 width: 62,
