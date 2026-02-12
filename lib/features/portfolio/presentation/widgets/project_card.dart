@@ -54,34 +54,34 @@ class ProjectCard extends StatelessWidget {
         const SizedBox(height: 10),
         Text(
           project.description.ofLocale(locale),
-          style: theme.textTheme.bodyMedium?.copyWith(
-            color: Colors.white70,
+          style: theme.textTheme.bodyMedium?.copyWith(color: Colors.white70),
+        ),
+        if (project.tags.isNotEmpty) ...[
+          const SizedBox(height: 12),
+          Wrap(
+            spacing: 8,
+            runSpacing: 8,
+            children: project.tags
+                .map(
+                  (tag) => Container(
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 10,
+                      vertical: 6,
+                    ),
+                    decoration: BoxDecoration(
+                      color: Colors.white.withValues(alpha: 0.05),
+                      borderRadius: BorderRadius.circular(10),
+                      border: Border.all(color: AppTheme.border),
+                    ),
+                    child: Text(
+                      tag.ofLocale(locale),
+                      style: const TextStyle(color: Colors.white70),
+                    ),
+                  ),
+                )
+                .toList(),
           ),
-        ),
-        const SizedBox(height: 12),
-        Wrap(
-          spacing: 8,
-          runSpacing: 8,
-          children: project.tags
-              .map(
-                (tag) => Container(
-                  padding: const EdgeInsets.symmetric(
-                    horizontal: 10,
-                    vertical: 6,
-                  ),
-                  decoration: BoxDecoration(
-                    color: Colors.white.withValues(alpha: 0.05),
-                    borderRadius: BorderRadius.circular(10),
-                    border: Border.all(color: AppTheme.border),
-                  ),
-                  child: Text(
-                    tag.ofLocale(locale),
-                    style: const TextStyle(color: Colors.white70),
-                  ),
-                ),
-              )
-              .toList(),
-        ),
+        ],
         if (project.links.isNotEmpty || buttons.isNotEmpty) ...[
           const SizedBox(height: 12),
           Wrap(
@@ -119,7 +119,10 @@ class ProjectCard extends StatelessWidget {
                   borderRadius: BorderRadius.circular(14),
                   border: Border.all(color: AppTheme.border),
                 ),
-                child: const Icon(Icons.image_not_supported_outlined, color: Colors.white54),
+                child: const Icon(
+                  Icons.image_not_supported_outlined,
+                  color: Colors.white54,
+                ),
               ),
             ),
           )
@@ -142,10 +145,7 @@ class ProjectCard extends StatelessWidget {
             : Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  if (image != null) ...[
-                    image,
-                    const SizedBox(width: 16),
-                  ],
+                  if (image != null) ...[image, const SizedBox(width: 16)],
                   Expanded(child: content),
                 ],
               ),

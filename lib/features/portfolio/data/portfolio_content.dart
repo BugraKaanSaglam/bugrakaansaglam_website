@@ -313,6 +313,18 @@ final List<Experience> _experiences = [
 final List<Project> _projects = [
   Project(
     title: const LocalizedText(
+      en: 'Desk4Dent: Dental Clinic Management',
+      tr: 'Desk4Dent: Dental Klinik Yönetimi',
+    ),
+    description: const LocalizedText(
+      en: 'Built with Flutter, Desk4Dent combines appointment, patient, procedure, and payment workflows for dental clinics in one mobile app. Role-based authorization, dentist-specific calendar management, and iOS/Android push notification infrastructure simplify day-to-day clinic operations.',
+      tr: 'Flutter ile geliştirilen Desk4Dent, diş klinikleri için randevu, hasta, işlem ve tahsilat süreçlerini tek bir mobil uygulamada birleştirir. Rol bazlı yetkilendirme, doktor bazlı takvim yönetimi ve iOS/Android push bildirim altyapısıyla klinik operasyonlarını sadeleştirir.',
+    ),
+    tags: const [],
+    meta: const LocalizedText(en: 'Indie', tr: 'Indie'),
+  ),
+  Project(
+    title: const LocalizedText(
       en: 'CAVAMED & ERPIMUS',
       tr: 'CAVAMED & ERPIMUS',
     ),
@@ -338,10 +350,8 @@ final List<Project> _projects = [
       tr: 'Mice and Paws: Cat Game',
     ),
     description: const LocalizedText(
-      en:
-          'Sole front-end developer of a cat-interaction mobile game built end-to-end in Flutter (+ Flame). Implemented 60-FPS animated sprites, collision & hit-testing, sound FX, and a structured asset pipeline. Added Google Mobile Ads, polished UI transitions, and offline-friendly loops. Prepared Play/App Store deliverables (bundle IDs, icons, privacy labels, build configs) and ran internal testing.',
-      tr:
-          'Flutter (+ Flame) ile uçtan uca geliştirilen kedi etkileşimli mobil oyunun tek front-end geliştiricisi. 60 FPS animasyonlu sprite\'lar, çarpışma/isabet testleri, ses efektleri ve düzenli bir varlık hattı kurdu. Google Mobile Ads ekledi, geçişleri iyileştirdi ve offline dostu döngüler hazırladı. Play/App Store teslimleri (bundle ID, ikonlar, gizlilik etiketleri, build config\'leri) için paketleme yapıp dahili testleri yürüttü.',
+      en: 'Sole front-end developer of a cat-interaction mobile game built end-to-end in Flutter (+ Flame). Implemented 60-FPS animated sprites, collision & hit-testing, sound FX, and a structured asset pipeline. Added Google Mobile Ads, polished UI transitions, and offline-friendly loops. Prepared Play/App Store deliverables (bundle IDs, icons, privacy labels, build configs) and ran internal testing.',
+      tr: 'Flutter (+ Flame) ile uçtan uca geliştirilen kedi etkileşimli mobil oyunun tek front-end geliştiricisi. 60 FPS animasyonlu sprite\'lar, çarpışma/isabet testleri, ses efektleri ve düzenli bir varlık hattı kurdu. Google Mobile Ads ekledi, geçişleri iyileştirdi ve offline dostu döngüler hazırladı. Play/App Store teslimleri (bundle ID, ikonlar, gizlilik etiketleri, build config\'leri) için paketleme yapıp dahili testleri yürüttü.',
     ),
     tags: const [
       LocalizedText(en: 'Flutter', tr: 'Flutter'),
@@ -375,10 +385,8 @@ final List<Project> _projects = [
       tr: 'What Should I Eat Today',
     ),
     description: const LocalizedText(
-      en:
-          'Personal recipe-sharing app developed solo with Flutter + Supabase. Built data-dense, animated UI; TR/EN localization; favorites and image caching. Implemented deep links (App/Universal Links, Branch/Firebase-compatible) and Google Mobile Ads. Used Supabase (Postgres). Prepared iOS/Android release artifacts and ran closed testing.',
-      tr:
-          'Flutter + Supabase ile tek başıma geliştirdiğim kişisel tarif paylaşım uygulaması. Veri yoğun, animasyonlu arayüz; TR/EN lokalizasyon; favoriler ve görsel cache. Derin linkler (App/Universal Links, Branch/Firebase uyumlu) ve Google Mobile Ads uygulandı. Supabase (Postgres) kullandım. iOS/Android yayın paketlerini hazırlayıp kapalı testler yaptım.',
+      en: 'Personal recipe-sharing app developed solo with Flutter + Supabase. Built data-dense, animated UI; TR/EN localization; favorites and image caching. Implemented deep links (App/Universal Links, Branch/Firebase-compatible) and Google Mobile Ads. Used Supabase (Postgres). Prepared iOS/Android release artifacts and ran closed testing.',
+      tr: 'Flutter + Supabase ile tek başıma geliştirdiğim kişisel tarif paylaşım uygulaması. Veri yoğun, animasyonlu arayüz; TR/EN lokalizasyon; favoriler ve görsel cache. Derin linkler (App/Universal Links, Branch/Firebase uyumlu) ve Google Mobile Ads uygulandı. Supabase (Postgres) kullandım. iOS/Android yayın paketlerini hazırlayıp kapalı testler yaptım.',
     ),
     tags: const [
       LocalizedText(en: 'Flutter', tr: 'Flutter'),
