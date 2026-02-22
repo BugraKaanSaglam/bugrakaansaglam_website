@@ -24,6 +24,7 @@ class Project {
     this.iconAsset,
     this.links = const [],
     this.meta,
+    this.finePrint,
     this.privacyDoc,
   });
 
@@ -33,6 +34,7 @@ class Project {
   final String? iconAsset;
   final List<ProjectLink> links;
   final LocalizedText? meta;
+  final LocalizedText? finePrint;
   final PrivacyDoc? privacyDoc;
 }
 

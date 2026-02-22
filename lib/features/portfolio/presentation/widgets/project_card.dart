@@ -56,6 +56,16 @@ class ProjectCard extends StatelessWidget {
           project.description.ofLocale(locale),
           style: theme.textTheme.bodyMedium?.copyWith(color: Colors.white70),
         ),
+        if (project.finePrint != null) ...[
+          const SizedBox(height: 10),
+          Text(
+            project.finePrint!.ofLocale(locale),
+            style: theme.textTheme.bodySmall?.copyWith(
+              color: Colors.white60,
+              fontStyle: FontStyle.italic,
+            ),
+          ),
+        ],
         if (project.tags.isNotEmpty) ...[
           const SizedBox(height: 12),
           Wrap(

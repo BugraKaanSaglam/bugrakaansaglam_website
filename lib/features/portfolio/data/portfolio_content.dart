@@ -371,8 +371,34 @@ final List<Project> _projects = [
     ),
     tags: const [],
     iconAsset: 'assets/images/desk4denticon.png',
+    links: const [
+      ProjectLink(
+        label: 'App Store',
+        url: 'https://apps.apple.com/us/app/desk4dent/id6759098204',
+      ),
+    ],
     meta: const LocalizedText(en: 'Indie', tr: 'Indie'),
+    finePrint: const LocalizedText(
+      en: 'Desk4Dent is currently in active use by Ozel Fatsa Agiz ve Dis Sagligi Poliklinigi Ltd. Sti.',
+      tr: 'Desk4Dent, Özel Fatsa Ağız ve Diş Sağlığı Polikliniği Ltd. Şti. tarafından güncel olarak aktif kullanılmaktadır.',
+    ),
     privacyDoc: _privacyDocs.firstWhere((doc) => doc.slug == 'desk4dent'),
+  ),
+  Project(
+    title: const LocalizedText(en: 'DuruGlobal', tr: 'DuruGlobal'),
+    description: const LocalizedText(
+      en: 'In the Flutter-based Duru Global mobile/web app, I designed and implemented end-to-end multi-tenant architecture on Supabase, including role-based authorization (super admin/admin/moderator/agent), RLS policies, and trigger-level publishing safeguards. I integrated a moderation workflow into the admin panel where listings created/updated by non-superadmin users are automatically moved to pending review and published only after super admin approval. On iOS/Android, I optimized Firebase (Core/Messaging), APNS-compatible notifications, app_links deep linking, photo/video media uploads, multilingual support (TR/EN/DE/AR), and onboarding with responsive design principles. I also built public privacy-policy, email verification, reset-password, and account-deletion pages for legal/operational compliance; during release, I resolved CocoaPods/Xcode dependency issues and finalized required Info.plist privacy purpose strings for App Store Connect compatibility.',
+      tr: 'Flutter tabanlı Duru Global mobil/web uygulamasında çok kiracılı (multi-tenant) mimariyi Supabase ile uçtan uca kurgulayarak rol bazlı yetkilendirme (super admin/admin/moderatör/agent), RLS politikaları ve trigger seviyesinde yayın güvenliği geliştirdim; non-superadmin kullanıcıların eklediği/güncellediği ilanları otomatik olarak pending review akışına alıp super admin onayıyla yayına çıkan moderasyon sistemini admin paneline entegre ettim. iOS/Android tarafında Firebase (Core/Messaging), APNS-uyumlu bildirim altyapısı, app_links deep link entegrasyonu, medya yükleme (foto/video), çoklu dil desteği (TR/EN/DE/AR) ve onboarding deneyimini responsive tasarım prensipleriyle optimize ettim. Ayrıca public privacy-policy, email verification, reset-password ve account-deletion sayfalarını geliştirerek yasal/operasyonel gereksinimleri karşıladım; release sürecinde CocoaPods/Xcode bağımlılık sorunlarını çözüp App Store Connect uyumluluğu için gerekli Info.plist privacy purpose string düzeltmelerini tamamlayarak dağıtım kalitesini artırdım.',
+    ),
+    tags: const [],
+    iconAsset: 'assets/images/duruglobalicon.jpeg',
+    links: const [
+      ProjectLink(
+        label: 'Privacy Policy',
+        url: 'https://venturecapitalsdg.com/privacy-policy/',
+      ),
+    ],
+    meta: const LocalizedText(en: 'Indie', tr: 'Indie'),
   ),
   Project(
     title: const LocalizedText(
