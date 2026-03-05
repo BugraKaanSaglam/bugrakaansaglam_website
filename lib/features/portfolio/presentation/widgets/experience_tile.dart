@@ -1,11 +1,16 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
+import 'package:bugrakaansaglam_website/app/app_theme.dart';
 import 'package:bugrakaansaglam_website/features/portfolio/domain/portfolio_models.dart';
 import 'package:bugrakaansaglam_website/features/portfolio/presentation/widgets/info_badge.dart';
 
 class ExperienceTile extends StatelessWidget {
-  const ExperienceTile({required this.experience, this.compact = false, super.key});
+  const ExperienceTile({
+    required this.experience,
+    this.compact = false,
+    super.key,
+  });
 
   final Experience experience;
   final bool compact;
@@ -15,7 +20,16 @@ class ExperienceTile extends StatelessWidget {
     final theme = Theme.of(context);
     final locale = context.locale;
     final highlights = experience.highlights;
-    return Card(
+    return Container(
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(16),
+        gradient: const LinearGradient(
+          colors: [Color(0x1E53E3C8), Color(0x1437536E)],
+          begin: Alignment.topLeft,
+          end: Alignment.bottomRight,
+        ),
+        border: Border.all(color: AppTheme.border.withValues(alpha: 0.88)),
+      ),
       child: Padding(
         padding: EdgeInsets.all(compact ? 14 : 16),
         child: Column(
@@ -33,7 +47,7 @@ class ExperienceTile extends StatelessWidget {
                   Text(
                     experience.company.ofLocale(locale),
                     style: theme.textTheme.bodyMedium?.copyWith(
-                      color: Colors.white70,
+                      color: AppTheme.textMuted,
                     ),
                   ),
                   const SizedBox(height: 10),
@@ -43,7 +57,7 @@ class ExperienceTile extends StatelessWidget {
                     Text(
                       experience.location!.ofLocale(locale),
                       style: theme.textTheme.bodySmall?.copyWith(
-                        color: Colors.white60,
+                        color: AppTheme.textMuted.withValues(alpha: 0.86),
                       ),
                     ),
                   ],
@@ -65,7 +79,7 @@ class ExperienceTile extends StatelessWidget {
                       Text(
                         experience.company.ofLocale(locale),
                         style: theme.textTheme.bodyMedium?.copyWith(
-                          color: Colors.white70,
+                          color: AppTheme.textMuted,
                         ),
                       ),
                       if (experience.location != null) ...[
@@ -73,7 +87,7 @@ class ExperienceTile extends StatelessWidget {
                         Text(
                           experience.location!.ofLocale(locale),
                           style: theme.textTheme.bodySmall?.copyWith(
-                            color: Colors.white60,
+                            color: AppTheme.textMuted.withValues(alpha: 0.86),
                           ),
                         ),
                       ],
@@ -86,7 +100,7 @@ class ExperienceTile extends StatelessWidget {
             Text(
               experience.summary.ofLocale(locale),
               style: theme.textTheme.bodyMedium?.copyWith(
-                color: Colors.white70,
+                color: AppTheme.textMuted,
               ),
             ),
             if (highlights.isNotEmpty) ...[
@@ -97,12 +111,15 @@ class ExperienceTile extends StatelessWidget {
                   child: Row(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      const Text('• ', style: TextStyle(color: Colors.white70)),
+                      const Text(
+                        '• ',
+                        style: TextStyle(color: AppTheme.textMuted),
+                      ),
                       Expanded(
                         child: Text(
                           item.ofLocale(locale),
                           style: theme.textTheme.bodyMedium?.copyWith(
-                            color: Colors.white70,
+                            color: AppTheme.textMuted,
                           ),
                         ),
                       ),

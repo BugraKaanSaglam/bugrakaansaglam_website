@@ -27,10 +27,25 @@ class HeroSection extends StatelessWidget {
       tr('hero.status_tags.design'),
       tr('hero.status_tags.analytics'),
     ];
+    final facts = [
+      (
+        label: tr('hero.facts.experience_label'),
+        value: tr('hero.facts.experience_value'),
+      ),
+      (
+        label: tr('hero.facts.enterprise_label'),
+        value: tr('hero.facts.enterprise_value'),
+      ),
+      (
+        label: tr('hero.facts.indie_label'),
+        value: tr('hero.facts.indie_value'),
+      ),
+    ];
     final mailtoUrl = 'mailto:${contact.email}?subject=Project%20Inquiry';
     final titleStyle = isMobile
-        ? theme.textTheme.displayLarge?.copyWith(fontSize: 34, height: 1.12)
+        ? theme.textTheme.displayLarge?.copyWith(fontSize: 36, height: 1.08)
         : theme.textTheme.displayLarge;
+
     final Widget intro = Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -40,56 +55,51 @@ class HeroSection extends StatelessWidget {
         const SizedBox(height: 16),
         Text(
           tr('hero.subtitle'),
-          style: theme.textTheme.bodyLarge?.copyWith(color: Colors.white70),
+          style: theme.textTheme.bodyLarge?.copyWith(color: AppTheme.textMuted),
         ),
         SizedBox(height: isMobile ? 18 : 24),
         Wrap(
-          spacing: 12,
-          runSpacing: 12,
-          children: [
-            QuickFact(
-              label: tr('hero.facts.label'),
-              value: tr('hero.facts.value'),
-            ),
-          ],
+          spacing: 10,
+          runSpacing: 10,
+          children: facts
+              .map((fact) => QuickFact(label: fact.label, value: fact.value))
+              .toList(),
         ),
-        SizedBox(height: isMobile ? 18 : 24),
+        SizedBox(height: isMobile ? 20 : 26),
         if (isMobile)
           SizedBox(
             width: double.infinity,
             child: FilledButton.icon(
-              icon: const Icon(Icons.calendar_today_outlined),
+              icon: const Icon(Icons.mail_outline),
               label: Text(tr('hero.cta_meeting')),
               onPressed: () => openExternalUrl(context, mailtoUrl),
             ),
           )
         else
-          Wrap(
-            spacing: 12,
-            runSpacing: 12,
-            children: [
-              FilledButton.icon(
-                icon: const Icon(Icons.calendar_today_outlined),
-                label: Text(tr('hero.cta_meeting')),
-                onPressed: () => openExternalUrl(context, mailtoUrl),
-              ),
-            ],
+          FilledButton.icon(
+            icon: const Icon(Icons.mail_outline),
+            label: Text(tr('hero.cta_meeting')),
+            onPressed: () => openExternalUrl(context, mailtoUrl),
           ),
       ],
     );
 
     final Widget statusCard = Container(
       width: double.infinity,
-      padding: const EdgeInsets.all(20),
+      padding: const EdgeInsets.all(22),
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(20),
-        border: Border.all(color: const Color(0xFF233152)),
-        gradient: AppTheme.cardGradient,
+        borderRadius: BorderRadius.circular(22),
+        border: Border.all(color: const Color(0xFF2C4A67)),
+        gradient: const LinearGradient(
+          colors: [Color(0xCC122A41), Color(0xB0112238)],
+          begin: Alignment.topLeft,
+          end: Alignment.bottomRight,
+        ),
         boxShadow: const [
           BoxShadow(
-            color: Colors.black26,
-            blurRadius: 26,
-            offset: Offset(0, 14),
+            color: Color(0x66040A15),
+            blurRadius: 34,
+            offset: Offset(0, 18),
           ),
         ],
       ),
@@ -98,9 +108,14 @@ class HeroSection extends StatelessWidget {
         children: [
           InfoBadge(label: tr('hero.now_building'), icon: Icons.radar_outlined),
           const SizedBox(height: 16),
-          Text(tr('hero.status'), style: theme.textTheme.bodyLarge),
-          const SizedBox(height: 20),
-          const Divider(color: Color(0xFF233152)),
+          Text(
+            tr('hero.status'),
+            style: theme.textTheme.bodyLarge?.copyWith(
+              color: AppTheme.textMuted,
+            ),
+          ),
+          const SizedBox(height: 18),
+          const Divider(color: Color(0xFF2B4561)),
           const SizedBox(height: 12),
           Wrap(
             spacing: 10,
@@ -115,7 +130,7 @@ class HeroSection extends StatelessWidget {
                 Text(
                   tr('hero.availability_label'),
                   style: theme.textTheme.bodyMedium?.copyWith(
-                    color: Colors.white70,
+                    color: AppTheme.textMuted,
                   ),
                 ),
                 const SizedBox(height: 10),
@@ -129,7 +144,7 @@ class HeroSection extends StatelessWidget {
                 Text(
                   tr('hero.availability_label'),
                   style: theme.textTheme.bodyMedium?.copyWith(
-                    color: Colors.white70,
+                    color: AppTheme.textMuted,
                   ),
                 ),
                 _AvailabilityBadge(label: tr('hero.availability')),
@@ -165,27 +180,18 @@ class _AvailabilityBadge extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.symmetric(
-        horizontal: 12,
-        vertical: 8,
-      ),
+      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
       decoration: BoxDecoration(
-        color: Colors.greenAccent.withValues(alpha: 0.12),
+        color: AppTheme.accent.withValues(alpha: 0.14),
         borderRadius: BorderRadius.circular(12),
+        border: Border.all(color: AppTheme.accent.withValues(alpha: 0.6)),
       ),
       child: Row(
         mainAxisSize: MainAxisSize.min,
         children: [
-          const Icon(
-            Icons.circle,
-            color: Colors.greenAccent,
-            size: 10,
-          ),
+          const Icon(Icons.circle, color: AppTheme.accent, size: 10),
           const SizedBox(width: 6),
-          Text(
-            label,
-            style: const TextStyle(color: Colors.white),
-          ),
+          Text(label, style: const TextStyle(color: Colors.white)),
         ],
       ),
     );

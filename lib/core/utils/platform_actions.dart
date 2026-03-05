@@ -10,15 +10,35 @@ void copyToClipboard(BuildContext context, String value, String message) {
   );
 }
 
+String? _normalizeExternalUrl(String url) {
+  final condensed = url.trim().replaceAll(RegExp(r'\s+'), '');
+  if (condensed.isEmpty) return null;
+
+  final hasScheme =
+      condensed.contains('://') ||
+      condensed.startsWith('mailto:') ||
+      condensed.startsWith('tel:');
+  final normalized = hasScheme ? condensed : 'https://$condensed';
+
+  final uri = Uri.tryParse(normalized);
+  if (uri == null) return null;
+
+  final isWeb = uri.scheme == 'http' || uri.scheme == 'https';
+  if (isWeb && uri.host.isEmpty) return null;
+
+  return uri.toString();
+}
+
 Future<void> openExternalUrl(BuildContext context, String url) async {
   final errorMessage = tr('errors.link_open_failed', context: context);
-  final uri = Uri.tryParse(url);
-  if (uri == null) {
+  final normalized = _normalizeExternalUrl(url);
+  if (normalized == null) {
     ScaffoldMessenger.of(
       context,
     ).showSnackBar(SnackBar(content: Text(errorMessage)));
     return;
   }
+  final uri = Uri.parse(normalized);
 
   final launched = await launchUrl(
     uri,

@@ -13,20 +13,22 @@ class HeaderBar extends StatelessWidget {
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
     final iconBadge = Container(
-      padding: const EdgeInsets.all(12),
+      padding: const EdgeInsets.all(13),
       decoration: BoxDecoration(
-        color: Colors.white.withValues(alpha: 0.06),
-        borderRadius: BorderRadius.circular(14),
+        gradient: const LinearGradient(
+          colors: [Color(0xFF20456A), Color(0xFF163355)],
+          begin: Alignment.topLeft,
+          end: Alignment.bottomRight,
+        ),
+        borderRadius: BorderRadius.circular(16),
         border: Border.all(color: AppTheme.border),
       ),
-      child: const Icon(Icons.bolt, color: Colors.white),
+      child: const Icon(Icons.code_rounded, color: AppTheme.accent),
     );
     final name = Text('Buğra Kaan Sağlam', style: theme.textTheme.titleLarge);
     final role = Text(
       tr('nav.role'),
-      style: theme.textTheme.bodyMedium?.copyWith(
-        color: Colors.white70,
-      ),
+      style: theme.textTheme.bodyMedium?.copyWith(color: AppTheme.textMuted),
     );
 
     if (compact) {
@@ -35,10 +37,7 @@ class HeaderBar extends StatelessWidget {
         children: [
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              iconBadge,
-              const LanguageToggle(compact: true),
-            ],
+            children: [iconBadge, const LanguageToggle(compact: true)],
           ),
           const SizedBox(height: 12),
           name,
@@ -57,10 +56,7 @@ class HeaderBar extends StatelessWidget {
             const SizedBox(width: 14),
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                name,
-                role,
-              ],
+              children: [name, role],
             ),
           ],
         ),

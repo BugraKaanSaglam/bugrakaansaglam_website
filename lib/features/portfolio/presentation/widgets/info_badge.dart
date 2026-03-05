@@ -13,7 +13,7 @@ class InfoBadge extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
       decoration: BoxDecoration(
-        color: Colors.white.withValues(alpha: 0.06),
+        color: Colors.white.withValues(alpha: 0.04),
         borderRadius: BorderRadius.circular(10),
         border: Border.all(color: AppTheme.border),
       ),
@@ -27,7 +27,7 @@ class InfoBadge extends StatelessWidget {
           Text(
             label,
             style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-              color: Colors.white70,
+              color: AppTheme.textMuted,
               fontWeight: FontWeight.w600,
             ),
           ),

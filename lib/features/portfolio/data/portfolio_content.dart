@@ -8,8 +8,8 @@ const ContactInfo _contactInfo = ContactInfo(
 );
 
 final LocalizedText _aboutSummary = LocalizedText(
-  en: 'Sole front-end engineer building cross-platform mobile apps with .NET MAUI and Flutter. Delivered enterprise healthcare inventory apps end-to-end and shipped indie apps; focused on performance, UX, and smooth store releases.',
-  tr: 'Tek başına çalışan bir front-end mühendisi olarak .NET MAUI ve Flutter ile çapraz platform mobil uygulamalar geliştiriyorum. Sağlık alanında kurumsal stok yönetimi uygulamaları ve indie uygulamalar teslim ettim; performans, UX ve mağaza süreçlerine odaklanıyorum.',
+  en: 'Sole front-end engineer building cross-platform mobile apps with .NET MAUI and Flutter. Delivered two enterprise healthcare inventory apps end-to-end and shipped independent mobile products with a focus on performance, UX, and smooth store releases.',
+  tr: 'Tek front-end geliştirici olarak .NET MAUI ve Flutter ile çapraz platform mobil uygulamalar geliştiriyorum. İki kurumsal sağlık envanter uygulamasını uçtan uca teslim ettim ve bağımsız mobil ürünler geliştirdim; performans, UX ve sorunsuz mağaza yayın süreçlerine odaklanıyorum.',
 );
 
 final List<PrivacyDoc> _privacyDocs = [
@@ -232,15 +232,11 @@ final List<SkillGroup> _skillGroups = [
     ),
     items: const [
       LocalizedText(en: 'Flutter (Dart)', tr: 'Flutter (Dart)'),
-      LocalizedText(en: 'C# / .NET MAUI', tr: 'C# / .NET MAUI'),
       LocalizedText(
-        en: 'Xamarin.Forms, WPF/WinUI',
-        tr: 'Xamarin.Forms, WPF/WinUI',
+        en: 'C# / .NET ecosystem (MAUI, Xamarin.Forms, WPF/WinUI, WinForms)',
+        tr: 'C# / .NET ekosistemi (MAUI, Xamarin.Forms, WPF/WinUI, WinForms)',
       ),
-      LocalizedText(
-        en: 'WinForms / DevExpress MAUI',
-        tr: 'WinForms / DevExpress MAUI',
-      ),
+      LocalizedText(en: 'DevExpress MAUI', tr: 'DevExpress MAUI'),
     ],
   ),
   SkillGroup(
@@ -249,51 +245,52 @@ final List<SkillGroup> _skillGroups = [
       tr: 'Mimari ve Entegrasyonlar',
     ),
     items: const [
+      LocalizedText(en: 'Software architecture', tr: 'Yazılım mimarisi'),
       LocalizedText(
-        en: 'Software architecture & design patterns',
-        tr: 'Yazılım mimarisi ve tasarım kalıpları',
+        en: 'Software design (design patterns)',
+        tr: 'Yazılım tasarımı (design patterns)',
       ),
+      LocalizedText(en: 'RESTful APIs', tr: 'RESTful API'),
       LocalizedText(
-        en: 'RESTful APIs, RBAC & client-side auth',
-        tr: 'REST API, RBAC ve istemci tarafı kimlik',
+        en: 'RBAC & client-side auth',
+        tr: 'RBAC ve istemci tarafı kimlik doğrulama',
       ),
       LocalizedText(
         en: 'Barcode/QR/DataMatrix (ZXing.Net.MAUI, Camera2)',
         tr: 'Barkod/QR/DataMatrix (ZXing.Net.MAUI, Camera2)',
       ),
       LocalizedText(
-        en: 'Deep linking & push (FCM, CloudKit)',
-        tr: 'Derin link ve push (FCM, CloudKit)',
+        en: 'Deep linking & push notifications (FCM, CloudKit)',
+        tr: 'Derin link ve push bildirimleri (FCM, CloudKit)',
       ),
       LocalizedText(
         en: 'Supabase (PostgreSQL), SignalR',
         tr: 'Supabase (PostgreSQL), SignalR',
       ),
       LocalizedText(
-        en: 'Continuous integration & delivery (CI/CD)',
-        tr: 'Sürekli entegrasyon ve teslim (CI/CD)',
+        en: 'Continuous integration / continuous delivery (CI/CD)',
+        tr: 'Sürekli entegrasyon / sürekli teslim (CI/CD)',
       ),
     ],
   ),
   SkillGroup(
     title: LocalizedText(en: 'DevOps & Delivery', tr: 'DevOps ve Teslimat'),
     items: const [
-      LocalizedText(en: 'Unit testing', tr: 'Birim testleri'),
       LocalizedText(
-        en: 'Performance optimisation',
-        tr: 'Performans optimizasyonu',
+        en: 'Unit testing & performance optimisation',
+        tr: 'Birim testleri ve performans optimizasyonu',
       ),
       LocalizedText(
-        en: 'Git & release workflows',
-        tr: 'Git ve release süreçleri',
+        en: 'Version control systems (Git)',
+        tr: 'Versiyon kontrol sistemleri (Git)',
       ),
       LocalizedText(
-        en: 'Process improvement (SPICE)',
-        tr: 'Süreç iyileştirme (SPICE)',
+        en: 'Software process improvement (SPICE)',
+        tr: 'Yazılım süreç iyileştirme (SPICE)',
       ),
       LocalizedText(
-        en: 'Store releases (Play, App Store, AppGallery)',
-        tr: 'Mağaza yayınları (Play, App Store, AppGallery)',
+        en: 'Mobile release & stores (Play Console, App Store Connect, AppGallery)',
+        tr: 'Mobil release ve mağazalar (Play Console, App Store Connect, AppGallery)',
       ),
     ],
   ),
@@ -304,13 +301,14 @@ final List<SkillGroup> _skillGroups = [
     ),
     items: const [
       LocalizedText(
+        en: 'Mobile application development',
+        tr: 'Mobil uygulama geliştirme',
+      ),
+      LocalizedText(
         en: 'Android & iOS development',
         tr: 'Android ve iOS geliştirme',
       ),
-      LocalizedText(
-        en: 'UI / UX & data-heavy layouts',
-        tr: 'UI / UX ve yoğun veri ekranları',
-      ),
+      LocalizedText(en: 'UI / UX', tr: 'UI / UX'),
     ],
   ),
 ];
@@ -323,8 +321,8 @@ final List<Experience> _experiences = [
     ),
     company: const LocalizedText(en: 'CAVAMED A.Ş.', tr: 'CAVAMED A.Ş.'),
     period: const LocalizedText(
-      en: 'Dec 2022 - Dec 2025',
-      tr: 'Aralık 2022 - Aralık 2025',
+      en: 'Dec 21, 2022 - Dec 22, 2025',
+      tr: '21 Aralık 2022 - 22 Aralık 2025',
     ),
     location: const LocalizedText(
       en: 'Istanbul, Türkiye',
@@ -366,15 +364,22 @@ final List<Project> _projects = [
       tr: 'Desk4Dent: Dental Klinik Yönetimi',
     ),
     description: const LocalizedText(
-      en: 'Built with Flutter (single codebase for iOS and Android), Desk4Dent combines appointment, patient, procedure, and payment workflows for dental clinics in one mobile app. It uses Supabase for authentication, database, and security policies; Firebase Messaging for mobile push notifications; and a scalable Riverpod-based state management architecture.',
-      tr: 'Flutter (tek kod tabanından iOS ve Android) ile geliştirilen Desk4Dent, diş klinikleri için randevu, hasta, işlem ve tahsilat süreçlerini tek bir mobil uygulamada birleştirir. Supabase altyapısı üzerinde kimlik doğrulama, veri tabanı ve güvenlik politikalarını yönetir; mobil push bildirimleri için Firebase Messaging kullanır ve ölçeklenebilir Riverpod tabanlı state yönetimi mimarisiyle çalışır.',
+      en: 'Production healthcare app used by a private dental clinic. Built with Flutter for iOS/Android; centralizes appointments, patient records, treatments, and payments. Uses Supabase (auth + PostgreSQL + security policies), Firebase Cloud Messaging, and scalable Riverpod architecture.',
+      tr: 'Özel bir diş kliniğinde aktif kullanılan üretim sağlık uygulaması. Flutter ile iOS/Android için geliştirildi; randevu, hasta kaydı, tedavi ve ödeme süreçlerini tek bir mobil akışta birleştirir. Supabase (kimlik doğrulama + PostgreSQL + güvenlik politikaları), Firebase Cloud Messaging ve ölçeklenebilir Riverpod mimarisi kullanır.',
     ),
-    tags: const [],
+    tags: const [
+      LocalizedText(en: 'Flutter', tr: 'Flutter'),
+      LocalizedText(en: 'Supabase', tr: 'Supabase'),
+      LocalizedText(en: 'PostgreSQL', tr: 'PostgreSQL'),
+      LocalizedText(en: 'Firebase FCM', tr: 'Firebase FCM'),
+      LocalizedText(en: 'Riverpod', tr: 'Riverpod'),
+    ],
     iconAsset: 'assets/images/desk4denticon.png',
     links: const [
+      ProjectLink(label: 'Website', url: 'https://desk4dent.com/'),
       ProjectLink(
         label: 'App Store',
-        url: 'https://apps.apple.com/us/app/desk4dent/id6759098204',
+        url: 'https://apps.apple.com/ca/app/desk4dent/id6759098204',
       ),
     ],
     meta: const LocalizedText(en: 'Indie', tr: 'Indie'),
@@ -385,20 +390,35 @@ final List<Project> _projects = [
     privacyDoc: _privacyDocs.firstWhere((doc) => doc.slug == 'desk4dent'),
   ),
   Project(
-    title: const LocalizedText(en: 'DuruGlobal', tr: 'DuruGlobal'),
-    description: const LocalizedText(
-      en: 'In the Flutter-based Duru Global mobile/web app, I designed and implemented end-to-end multi-tenant architecture on Supabase, including role-based authorization (super admin/admin/moderator/agent), RLS policies, and trigger-level publishing safeguards. I integrated a moderation workflow into the admin panel where listings created/updated by non-superadmin users are automatically moved to pending review and published only after super admin approval. On iOS/Android, I optimized Firebase (Core/Messaging), APNS-compatible notifications, app_links deep linking, photo/video media uploads, multilingual support (TR/EN/DE/AR), and onboarding with responsive design principles. I also built public privacy-policy, email verification, reset-password, and account-deletion pages for legal/operational compliance; during release, I resolved CocoaPods/Xcode dependency issues and finalized required Info.plist privacy purpose strings for App Store Connect compatibility.',
-      tr: 'Flutter tabanlı Duru Global mobil/web uygulamasında çok kiracılı (multi-tenant) mimariyi Supabase ile uçtan uca kurgulayarak rol bazlı yetkilendirme (super admin/admin/moderatör/agent), RLS politikaları ve trigger seviyesinde yayın güvenliği geliştirdim; non-superadmin kullanıcıların eklediği/güncellediği ilanları otomatik olarak pending review akışına alıp super admin onayıyla yayına çıkan moderasyon sistemini admin paneline entegre ettim. iOS/Android tarafında Firebase (Core/Messaging), APNS-uyumlu bildirim altyapısı, app_links deep link entegrasyonu, medya yükleme (foto/video), çoklu dil desteği (TR/EN/DE/AR) ve onboarding deneyimini responsive tasarım prensipleriyle optimize ettim. Ayrıca public privacy-policy, email verification, reset-password ve account-deletion sayfalarını geliştirerek yasal/operasyonel gereksinimleri karşıladım; release sürecinde CocoaPods/Xcode bağımlılık sorunlarını çözüp App Store Connect uyumluluğu için gerekli Info.plist privacy purpose string düzeltmelerini tamamlayarak dağıtım kalitesini artırdım.',
+    title: const LocalizedText(
+      en: 'DuruGlobal: Real Estate Mobile Platform',
+      tr: 'DuruGlobal: Gayrimenkul Mobil Platformu',
     ),
-    tags: const [],
+    description: const LocalizedText(
+      en: 'Flutter-based mobile/web platform for real estate listings with a multi-tenant architecture. Implemented Supabase-backed RBAC, PostgreSQL RLS policies, and moderation workflows. Integrated deep links, Firebase/APNS push, media uploads, multilingual support (TR/EN/DE/AR), onboarding, legal pages, and release compliance.',
+      tr: 'Flutter tabanlı mobil/web gayrimenkul platformu. Çok kiracılı mimari üzerinde Supabase destekli RBAC, PostgreSQL RLS politikaları ve moderasyon akışlarını uçtan uca geliştirdim. Deep link, Firebase/APNS bildirimleri, medya yükleme, çoklu dil desteği (TR/EN/DE/AR), onboarding, yasal sayfalar ve release uyumluluğu entegre edildi.',
+    ),
+    tags: const [
+      LocalizedText(en: 'Flutter', tr: 'Flutter'),
+      LocalizedText(en: 'Supabase', tr: 'Supabase'),
+      LocalizedText(en: 'PostgreSQL', tr: 'PostgreSQL'),
+      LocalizedText(en: 'Firebase', tr: 'Firebase'),
+      LocalizedText(en: 'RBAC', tr: 'RBAC'),
+      LocalizedText(en: 'Deep Linking', tr: 'Deep Linking'),
+    ],
     iconAsset: 'assets/images/duruglobalicon.jpeg',
     links: const [
+      ProjectLink(label: 'Website', url: 'https://venturecapitalsdg.com/'),
+      ProjectLink(
+        label: 'App Store',
+        url: 'https://apps.apple.com/ca/app/duruglobal/id6759501423',
+      ),
       ProjectLink(
         label: 'Privacy Policy',
         url: 'https://venturecapitalsdg.com/privacy-policy/',
       ),
     ],
-    meta: const LocalizedText(en: 'Indie', tr: 'Indie'),
+    meta: const LocalizedText(en: 'In Progress', tr: 'Devam Ediyor'),
   ),
   Project(
     title: const LocalizedText(
@@ -418,7 +438,7 @@ final List<Project> _projects = [
     iconAsset: 'assets/images/cavamedicon.webp',
     meta: const LocalizedText(
       en: 'Completed at CAVAMED A.Ş.',
-      tr: 'CAVAMED A.Ş\'de tamamlanmıştır',
+      tr: 'CAVAMED A.Ş.\'de tamamlandı',
     ),
   ),
   Project(
@@ -428,7 +448,7 @@ final List<Project> _projects = [
     ),
     description: const LocalizedText(
       en: 'Sole front-end developer of a cat-interaction mobile game built end-to-end in Flutter (+ Flame). Implemented 60-FPS animated sprites, collision & hit-testing, sound FX, and a structured asset pipeline. Added Google Mobile Ads, polished UI transitions, and offline-friendly loops. Prepared Play/App Store deliverables (bundle IDs, icons, privacy labels, build configs) and ran internal testing.',
-      tr: 'Flutter (+ Flame) ile uçtan uca geliştirilen kedi etkileşimli mobil oyunun tek front-end geliştiricisi. 60 FPS animasyonlu sprite\'lar, çarpışma/isabet testleri, ses efektleri ve düzenli bir varlık hattı kurdu. Google Mobile Ads ekledi, geçişleri iyileştirdi ve offline dostu döngüler hazırladı. Play/App Store teslimleri (bundle ID, ikonlar, gizlilik etiketleri, build config\'leri) için paketleme yapıp dahili testleri yürüttü.',
+      tr: 'Flutter (+ Flame) ile uçtan uca geliştirilen kedi etkileşimli mobil oyunun tek front-end geliştiricisi. 60 FPS animasyonlu spritelar, çarpışmalar, ses efektleri ve düzenli varlık hattı kuruldu. Google Mobile Ads eklendi, geçişler iyileştirildi ve offline dostu döngüler hazırlandı. Play/App Store teslimleri (bundle ID, ikonlar, gizlilik etiketleri, build configleri) paketlenip dahili testler yapıldı.',
     ),
     tags: const [
       LocalizedText(en: 'Flutter', tr: 'Flutter'),
@@ -443,7 +463,8 @@ final List<Project> _projects = [
       ),
       ProjectLink(
         label: 'App Store',
-        url: 'https://apps.apple.com/us/app/mice-and-paws-cat-game/',
+        url:
+            'https://apps.apple.com/tr/app/mice-and-paws-cat-game/id6739187435',
       ),
       ProjectLink(
         label: 'Google Play',
@@ -463,7 +484,7 @@ final List<Project> _projects = [
     ),
     description: const LocalizedText(
       en: 'Personal recipe-sharing app developed solo with Flutter + Supabase. Built data-dense, animated UI; TR/EN localization; favorites and image caching. Implemented deep links (App/Universal Links, Branch/Firebase-compatible) and Google Mobile Ads. Used Supabase (Postgres). Prepared iOS/Android release artifacts and ran closed testing.',
-      tr: 'Flutter + Supabase ile tek başıma geliştirdiğim kişisel tarif paylaşım uygulaması. Veri yoğun, animasyonlu arayüz; TR/EN lokalizasyon; favoriler ve görsel cache. Derin linkler (App/Universal Links, Branch/Firebase uyumlu) ve Google Mobile Ads uygulandı. Supabase (Postgres) kullandım. iOS/Android yayın paketlerini hazırlayıp kapalı testler yaptım.',
+      tr: 'Flutter + Supabase ile tek başıma geliştirdiğim kişisel tarif paylaşım uygulaması. Veri yoğun, animasyonlu arayüz; TR/EN lokalizasyon; favoriler ve görsel cache. Derin linkler (App/Universal Links, Branch/Firebase uyumlu) ve Google Mobile Ads uygulandı. Supabase (Postgres) kullanıldı. iOS/Android yayın paketleri hazırlanıp kapalı testler yapıldı.',
     ),
     tags: const [
       LocalizedText(en: 'Flutter', tr: 'Flutter'),
@@ -484,11 +505,62 @@ final List<Project> _projects = [
         url:
             'https://play.google.com/store/apps/details?id=com.whatshouldieattoday.mobile',
       ),
+      ProjectLink(
+        label: 'GitHub',
+        url: 'https://github.com/BugraKaanSaglam/whatshouldieattoday',
+      ),
     ],
     meta: const LocalizedText(en: 'Indie', tr: 'Indie'),
     privacyDoc: _privacyDocs.firstWhere(
       (doc) => doc.slug == 'what-should-i-eat-today',
     ),
+  ),
+  Project(
+    title: const LocalizedText(
+      en: 'Personal Website (Portfolio)',
+      tr: 'Kişisel Web Sitesi (Portfolio)',
+    ),
+    description: const LocalizedText(
+      en: 'Designed and deployed a responsive personal portfolio website to showcase projects, app store links, and contact information with fast loading and maintainable content structure.',
+      tr: 'Projeler, mağaza bağlantıları ve iletişim bilgilerini sergilemek için hızlı açılan ve sürdürülebilir içerik yapısına sahip responsive kişisel portfolio web sitesi tasarlandı ve yayına alındı.',
+    ),
+    tags: const [
+      LocalizedText(en: 'Flutter Web', tr: 'Flutter Web'),
+      LocalizedText(en: 'Responsive UI', tr: 'Responsive UI'),
+    ],
+    links: const [
+      ProjectLink(
+        label: 'Website',
+        url: 'https://bugrakaansaglam-website.pages.dev/',
+      ),
+      ProjectLink(
+        label: 'GitHub',
+        url: 'https://github.com/BugraKaanSaglam/bugrakaansaglam_website',
+      ),
+    ],
+    meta: const LocalizedText(en: 'Personal', tr: 'Kişisel'),
+  ),
+  Project(
+    title: const LocalizedText(
+      en: 'Personal / Business Website',
+      tr: 'Kişisel / İş Web Sitesi',
+    ),
+    description: const LocalizedText(
+      en: 'Built and published a responsive website for a client to present profile/services clearly with mobile-optimized layout and editable content structure.',
+      tr: 'Bir müşteri için profil/hizmet sunumunu netleştiren, mobil uyumlu düzen ve düzenlenebilir içerik yapısına sahip responsive bir web sitesi geliştirildi ve yayımlandı.',
+    ),
+    tags: const [
+      LocalizedText(en: 'Responsive Design', tr: 'Responsive Design'),
+      LocalizedText(en: 'Production Deploy', tr: 'Production Deploy'),
+    ],
+    links: const [
+      ProjectLink(label: 'Website', url: 'https://drmuratsaglam.com'),
+      ProjectLink(
+        label: 'GitHub',
+        url: 'https://github.com/BugraKaanSaglam/muratsaglam_website',
+      ),
+    ],
+    meta: const LocalizedText(en: 'Client Work', tr: 'Müşteri Projesi'),
   ),
 ];
 
@@ -502,7 +574,7 @@ final Education _education = Education(
     tr: 'TOBB Ekonomi ve Teknoloji Üniversitesi (TOBB ETÜ)',
   ),
   location: const LocalizedText(en: 'Ankara, Türkiye', tr: 'Ankara, Türkiye'),
-  period: const LocalizedText(en: '2014 entry', tr: '2014 giriş'),
+  period: const LocalizedText(en: '2014 - 2023', tr: '2014 - 2023'),
 );
 
 final PortfolioContent portfolioContent = PortfolioContent(

@@ -1,27 +1,31 @@
 {
   "app_title": "Buğra Kaan Sağlam | Mobile & Web Engineer",
   "nav": {
-    "role": "Flutter / .Net Framework & Product Engineering",
+    "role": "Mobile Engineer • Flutter & .NET MAUI",
     "lang_en": "EN",
     "lang_tr": "TR"
   },
   "hero": {
     "location": "Ankara, Türkiye",
-    "title": "Building high-performance mobile and web experiences.",
-    "subtitle": "Sole front-end engineer for enterprise healthcare apps and indie launches. I focus on fast UI, reliable auth/session flows, and smooth releases across stores.",
+    "title": "Building production-grade mobile products with performance-first UX.",
+    "subtitle": "Sole front-end engineer for enterprise healthcare systems and independent app launches. I build fast interfaces, reliable auth/session flows, and release-ready products across stores.",
     "cta_meeting": "Email me",
     "availability_label": "Availability",
     "availability": "Open to new projects",
     "now_building": "Now building",
-    "status": "Motion systems and animation libraries for Flutter to keep UI feel consistent and performant.",
+    "status": "Scaling DuruGlobal and Desk4Dent with multi-tenant architecture, secure data flows, and production release pipelines.",
     "facts": {
-      "label": "Experience",
-      "value": "4+ yrs"
+      "experience_label": "Experience",
+      "experience_value": "3+ yrs",
+      "enterprise_label": "Enterprise apps",
+      "enterprise_value": "2",
+      "indie_label": "Indie products",
+      "indie_value": "4"
     },
     "status_tags": {
-      "motion": "Motion",
-      "design": "Design Tokens",
-      "analytics": "A/B & Analytics"
+      "motion": "Flutter + Supabase",
+      "design": "RLS + RBAC",
+      "analytics": "CI/CD Releases"
     }
   },
   "sections": {
@@ -34,10 +38,10 @@
     "contact": "Contact"
   },
   "about": {
-    "body": "Sole front-end engineer building cross-platform mobile apps with .NET MAUI and Flutter. Delivered enterprise healthcare inventory apps end-to-end and shipped indie apps; focused on performance, UX, and smooth store releases."
+    "body": "Sole front-end engineer building cross-platform mobile apps with .NET MAUI and Flutter. Delivered two enterprise healthcare inventory apps end-to-end and shipped independent products with a focus on performance, UX, and robust store release workflows."
   },
   "contact": {
-    "lead": "Reach out for new projects, consulting, or team support.",
+    "lead": "Reach out for product development, consulting, or project collaboration.",
     "email": "Email",
     "linkedin": "LinkedIn"
   },
@@ -45,7 +49,7 @@
     "degree": "BSc in Biomedical Engineering",
     "school": "TOBB University of Economics and Technology (TOBB ETÜ)",
     "location": "Ankara, Türkiye",
-    "period": "2014 entry"
+    "period": "2014 - 2023"
   },
   "privacy": {
     "lead": "Privacy policies for published apps.",

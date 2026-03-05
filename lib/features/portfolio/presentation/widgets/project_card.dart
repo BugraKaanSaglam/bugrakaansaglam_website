@@ -29,6 +29,7 @@ class ProjectCard extends StatelessWidget {
         ),
       );
     }
+
     final content = Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -54,14 +55,16 @@ class ProjectCard extends StatelessWidget {
         const SizedBox(height: 10),
         Text(
           project.description.ofLocale(locale),
-          style: theme.textTheme.bodyMedium?.copyWith(color: Colors.white70),
+          style: theme.textTheme.bodyMedium?.copyWith(
+            color: AppTheme.textMuted,
+          ),
         ),
         if (project.finePrint != null) ...[
           const SizedBox(height: 10),
           Text(
             project.finePrint!.ofLocale(locale),
             style: theme.textTheme.bodySmall?.copyWith(
-              color: Colors.white60,
+              color: AppTheme.textMuted.withValues(alpha: 0.84),
               fontStyle: FontStyle.italic,
             ),
           ),
@@ -85,7 +88,7 @@ class ProjectCard extends StatelessWidget {
                     ),
                     child: Text(
                       tag.ofLocale(locale),
-                      style: const TextStyle(color: Colors.white70),
+                      style: const TextStyle(color: AppTheme.textMuted),
                     ),
                   ),
                 )
@@ -113,32 +116,47 @@ class ProjectCard extends StatelessWidget {
     );
 
     final image = iconAsset != null
-        ? ClipRRect(
-            borderRadius: BorderRadius.circular(14),
-            child: Image.asset(
-              iconAsset,
-              width: 62,
-              height: 62,
-              fit: BoxFit.contain,
-              filterQuality: FilterQuality.high,
-              errorBuilder: (context, error, stackTrace) => Container(
-                width: 62,
-                height: 62,
-                decoration: BoxDecoration(
-                  color: Colors.white.withValues(alpha: 0.04),
-                  borderRadius: BorderRadius.circular(14),
-                  border: Border.all(color: AppTheme.border),
-                ),
-                child: const Icon(
-                  Icons.image_not_supported_outlined,
-                  color: Colors.white54,
+        ? Container(
+            width: 72,
+            height: 72,
+            padding: const EdgeInsets.all(6),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(16),
+              color: Colors.white.withValues(alpha: 0.04),
+              border: Border.all(color: AppTheme.border.withValues(alpha: 0.8)),
+            ),
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(10),
+              child: Image.asset(
+                iconAsset,
+                fit: BoxFit.cover,
+                filterQuality: FilterQuality.high,
+                errorBuilder: (context, error, stackTrace) => Container(
+                  decoration: BoxDecoration(
+                    color: Colors.white.withValues(alpha: 0.04),
+                    borderRadius: BorderRadius.circular(14),
+                    border: Border.all(color: AppTheme.border),
+                  ),
+                  child: const Icon(
+                    Icons.image_not_supported_outlined,
+                    color: Colors.white54,
+                  ),
                 ),
               ),
             ),
           )
         : null;
 
-    return Card(
+    return Container(
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(18),
+        gradient: const LinearGradient(
+          colors: [Color(0x26138E7B), Color(0x221A2A45)],
+          begin: Alignment.topLeft,
+          end: Alignment.bottomRight,
+        ),
+        border: Border.all(color: AppTheme.border.withValues(alpha: 0.9)),
+      ),
       child: Padding(
         padding: EdgeInsets.all(compact ? 14 : 18),
         child: compact
