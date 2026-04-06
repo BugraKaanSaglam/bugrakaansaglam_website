@@ -12,6 +12,29 @@ class ProjectCard extends StatelessWidget {
   final Project project;
   final bool compact;
 
+  void _copyProjectLink(BuildContext context, String projectLink) {
+    copyToClipboard(context, projectLink, tr('projects.copy_link_success'));
+  }
+
+  Widget _buildClickableTitle(
+    BuildContext context,
+    String title,
+    TextStyle? style,
+    String projectLink,
+  ) {
+    return MouseRegion(
+      cursor: SystemMouseCursors.click,
+      child: GestureDetector(
+        behavior: HitTestBehavior.opaque,
+        onTap: () => _copyProjectLink(context, projectLink),
+        child: Padding(
+          padding: const EdgeInsets.symmetric(vertical: 2),
+          child: Text(title, style: style),
+        ),
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
@@ -38,11 +61,7 @@ class ProjectCard extends StatelessWidget {
         OutlinedButton.icon(
           icon: const Icon(Icons.link, size: 16),
           label: Text(tr('projects.copy_link')),
-          onPressed: () => copyToClipboard(
-            context,
-            projectLink,
-            tr('projects.copy_link_success'),
-          ),
+          onPressed: () => _copyProjectLink(context, projectLink),
         ),
       );
     }
@@ -54,19 +73,17 @@ class ProjectCard extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Expanded(
-              child: Text(
+              child: _buildClickableTitle(
+                context,
                 project.title.ofLocale(locale),
-                style: theme.textTheme.titleLarge,
+                theme.textTheme.titleLarge,
+                projectLink,
               ),
             ),
             if (!compact)
               IconButton(
                 tooltip: tr('projects.copy_link'),
-                onPressed: () => copyToClipboard(
-                  context,
-                  projectLink,
-                  tr('projects.copy_link_success'),
-                ),
+                onPressed: () => _copyProjectLink(context, projectLink),
                 icon: const Icon(Icons.link_rounded, size: 20),
                 color: AppTheme.textMuted,
               ),
