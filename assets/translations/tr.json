@@ -1,19 +1,19 @@
 {
   "app_title": "Buğra Kaan Sağlam | Mobil & Web Mühendisi",
   "nav": {
-    "role": "Mobil Mühendis • Flutter & .NET MAUI",
+    "role": "Senior Cross-Platform Mobile Developer",
     "lang_en": "EN",
     "lang_tr": "TR"
   },
   "hero": {
     "location": "Ankara, Türkiye",
-    "title": "Performans odaklı UX ile üretim kalitesinde mobil ürünler geliştiriyorum.",
-    "subtitle": "Kurumsal sağlık sistemlerinde ve bağımsız uygulama yayınlarında tek front-end geliştirici olarak çalıştım. Hızlı arayüzler, güvenilir oturum/kimlik akışları ve mağaza yayına hazır ürünler geliştiriyorum.",
+    "title": "Saglik, gayrimenkul ve tuketici uygulamalarinda production-grade mobil sistemler gelistiriyorum.",
+    "subtitle": "Olceklenebilir mimari, yuksek performansli UI, backend entegrasyonlari, deep linking, bildirim altyapisi ve store compliance sureclerine odaklanan senior cross-platform mobil gelistiriciyim.",
     "cta_meeting": "E-posta gönder",
     "availability_label": "Müsaitlik",
     "availability": "Yeni projelere açık",
     "now_building": "Şu an odak",
-    "status": "DuruGlobal ve Desk4Dent projelerini çok kiracılı mimari, güvenli veri akışları ve üretim release süreçleriyle ölçeklendiriyorum.",
+    "status": "Flutter ve .NET MAUI ile mimariden backend entegrasyonuna, store-ready release sureclerine kadar uctan uca mobil sistemler gelistiriyorum.",
     "facts": {
       "experience_label": "Deneyim",
       "experience_value": "3+ yıl",
@@ -23,9 +23,9 @@
       "indie_value": "4"
     },
     "status_tags": {
-      "motion": "Flutter + Supabase",
-      "design": "RLS + RBAC",
-      "analytics": "CI/CD Release"
+      "motion": "Flutter + .NET MAUI",
+      "design": "Supabase / PostgreSQL",
+      "analytics": "Store Compliance"
     }
   },
   "sections": {
@@ -35,10 +35,11 @@
     "privacy": "Gizlilik Sözleşmeleri",
     "experience": "Deneyim",
     "education": "Eğitim",
+    "references": "Referans",
     "contact": "İletişim"
   },
   "about": {
-    "body": "Tek front-end geliştirici olarak .NET MAUI ve Flutter ile çapraz platform mobil uygulamalar geliştiriyorum. İki kurumsal sağlık envanter uygulamasını uçtan uca teslim ettim; performans, UX ve sağlam mağaza yayın süreçlerine odaklanan bağımsız ürünler yayımladım."
+    "body": "Saglik, gayrimenkul ve tuketici uygulamalarinda 3+ yillik deneyime sahip senior cross-platform mobil gelistiriciyim. Olceklenebilir mimari, yuksek performansli UI, Supabase/PostgreSQL entegrasyonlari, deep linking, push bildirimleri ve app store compliance sureclerinde uzmanlastim. UX, performans ve surdurulebilirlik odagiyla tek front-end gelistirici olarak production-grade uygulamalar teslim ettim."
   },
   "contact": {
     "lead": "Ürün geliştirme, danışmanlık veya proje iş birlikleri için ulaşabilirsiniz.",

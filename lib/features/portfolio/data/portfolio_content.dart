@@ -8,8 +8,8 @@ const ContactInfo _contactInfo = ContactInfo(
 );
 
 final LocalizedText _aboutSummary = LocalizedText(
-  en: 'Sole front-end engineer building cross-platform mobile apps with .NET MAUI and Flutter. Delivered two enterprise healthcare inventory apps end-to-end and shipped independent mobile products with a focus on performance, UX, and smooth store releases.',
-  tr: 'Tek front-end geliştirici olarak .NET MAUI ve Flutter ile çapraz platform mobil uygulamalar geliştiriyorum. İki kurumsal sağlık envanter uygulamasını uçtan uca teslim ettim ve bağımsız mobil ürünler geliştirdim; performans, UX ve sorunsuz mağaza yayın süreçlerine odaklanıyorum.',
+  en: 'Senior Cross-Platform Mobile Developer with 3+ years of experience delivering production-grade apps across healthcare, real estate, and consumer products. Specialized in scalable architectures, high-performance UIs, backend integrations with Supabase/PostgreSQL, deep linking, push notifications, and app store compliance. Proven track record as a sole front-end engineer with strong focus on UX, performance, and maintainability.',
+  tr: 'Saglik, gayrimenkul ve tuketici uygulamalarinda 3+ yillik deneyime sahip senior cross-platform mobil gelistiriciyim. Olceklenebilir mimariler, yuksek performansli arayuzler, Supabase/PostgreSQL backend entegrasyonlari, deep linking, push bildirimleri ve store compliance sureclerinde uzmanlastim. Tek front-end gelistirici olarak UX, performans ve surdurulebilirlik odağıyla production-grade uygulamalar teslim ettim.',
 );
 
 final List<PrivacyDoc> _privacyDocs = [
@@ -233,82 +233,57 @@ final List<SkillGroup> _skillGroups = [
     items: const [
       LocalizedText(en: 'Flutter (Dart)', tr: 'Flutter (Dart)'),
       LocalizedText(
-        en: 'C# / .NET ecosystem (MAUI, Xamarin.Forms, WPF/WinUI, WinForms)',
-        tr: 'C# / .NET ekosistemi (MAUI, Xamarin.Forms, WPF/WinUI, WinForms)',
-      ),
-      LocalizedText(en: 'DevExpress MAUI', tr: 'DevExpress MAUI'),
-    ],
-  ),
-  SkillGroup(
-    title: LocalizedText(
-      en: 'Architecture & Integrations',
-      tr: 'Mimari ve Entegrasyonlar',
-    ),
-    items: const [
-      LocalizedText(en: 'Software architecture', tr: 'Yazılım mimarisi'),
-      LocalizedText(
-        en: 'Software design (design patterns)',
-        tr: 'Yazılım tasarımı (design patterns)',
-      ),
-      LocalizedText(en: 'RESTful APIs', tr: 'RESTful API'),
-      LocalizedText(
-        en: 'RBAC & client-side auth',
-        tr: 'RBAC ve istemci tarafı kimlik doğrulama',
-      ),
-      LocalizedText(
-        en: 'Barcode/QR/DataMatrix (ZXing.Net.MAUI, Camera2)',
-        tr: 'Barkod/QR/DataMatrix (ZXing.Net.MAUI, Camera2)',
-      ),
-      LocalizedText(
-        en: 'Deep linking & push notifications (FCM, CloudKit)',
-        tr: 'Derin link ve push bildirimleri (FCM, CloudKit)',
-      ),
-      LocalizedText(
-        en: 'Supabase (PostgreSQL), SignalR',
-        tr: 'Supabase (PostgreSQL), SignalR',
-      ),
-      LocalizedText(
-        en: 'Continuous integration / continuous delivery (CI/CD)',
-        tr: 'Sürekli entegrasyon / sürekli teslim (CI/CD)',
+        en: 'C# (.NET MAUI, Xamarin)',
+        tr: 'C# (.NET MAUI, Xamarin)',
       ),
     ],
   ),
   SkillGroup(
-    title: LocalizedText(en: 'DevOps & Delivery', tr: 'DevOps ve Teslimat'),
+    title: LocalizedText(en: 'Backend & Database', tr: 'Backend ve Veritabani'),
     items: const [
+      LocalizedText(en: 'Supabase', tr: 'Supabase'),
+      LocalizedText(en: 'PostgreSQL', tr: 'PostgreSQL'),
+      LocalizedText(en: 'REST APIs', tr: 'REST API'),
+    ],
+  ),
+  SkillGroup(
+    title: LocalizedText(en: 'Mobile Engineering', tr: 'Mobil Muhendislik'),
+    items: const [
+      LocalizedText(en: 'Deep linking', tr: 'Deep linking'),
       LocalizedText(
-        en: 'Unit testing & performance optimisation',
-        tr: 'Birim testleri ve performans optimizasyonu',
+        en: 'Push notifications (FCM/APNS)',
+        tr: 'Push notifications (FCM/APNS)',
       ),
       LocalizedText(
-        en: 'Version control systems (Git)',
-        tr: 'Versiyon kontrol sistemleri (Git)',
+        en: 'Barcode/QR scanning (ZXing, Camera2)',
+        tr: 'Barcode/QR scanning (ZXing, Camera2)',
       ),
       LocalizedText(
-        en: 'Software process improvement (SPICE)',
-        tr: 'Yazılım süreç iyileştirme (SPICE)',
-      ),
-      LocalizedText(
-        en: 'Mobile release & stores (Play Console, App Store Connect, AppGallery)',
-        tr: 'Mobil release ve mağazalar (Play Console, App Store Connect, AppGallery)',
+        en: 'Offline-first architecture',
+        tr: 'Offline-first architecture',
       ),
     ],
   ),
   SkillGroup(
-    title: LocalizedText(
-      en: 'Mobile Engineering (Core)',
-      tr: 'Mobil Mühendislik (Çekirdek)',
-    ),
+    title: LocalizedText(en: 'Architecture', tr: 'Mimari'),
     items: const [
+      LocalizedText(en: 'RBAC', tr: 'RBAC'),
+      LocalizedText(en: 'Clean Architecture', tr: 'Clean Architecture'),
       LocalizedText(
-        en: 'Mobile application development',
-        tr: 'Mobil uygulama geliştirme',
+        en: 'State Management (Riverpod)',
+        tr: 'State Management (Riverpod)',
       ),
+    ],
+  ),
+  SkillGroup(
+    title: LocalizedText(en: 'Tools & DevOps', tr: 'Araclar ve DevOps'),
+    items: const [
+      LocalizedText(en: 'Git', tr: 'Git'),
+      LocalizedText(en: 'CI/CD', tr: 'CI/CD'),
       LocalizedText(
-        en: 'Android & iOS development',
-        tr: 'Android ve iOS geliştirme',
+        en: 'App Store, Google Play Console & Huawei Connect Deployment',
+        tr: 'App Store, Google Play Console ve Huawei Connect Deployment',
       ),
-      LocalizedText(en: 'UI / UX', tr: 'UI / UX'),
     ],
   ),
 ];
@@ -360,12 +335,48 @@ final List<Experience> _experiences = [
 final List<Project> _projects = [
   Project(
     title: const LocalizedText(
+      en: 'DuruGlobal: Real Estate Mobile Platform',
+      tr: 'DuruGlobal: Gayrimenkul Mobil Platformu',
+    ),
+    description: const LocalizedText(
+      en: 'Built a full-stack real estate platform for mobile and web targeting international markets. Designed Supabase/PostgreSQL backend architecture with RLS, RBAC, and moderation workflows. Implemented deep links, Firebase/APNS notifications, media uploads, multilingual support, onboarding, and scalable listing management.',
+      tr: 'Uluslararasi pazari hedefleyen mobil ve web tabanli full-stack bir gayrimenkul platformu gelistirdim. Supabase/PostgreSQL altyapisinda RLS, RBAC ve moderasyon akislarini iceren backend mimarisini tasarladim. Deep link, Firebase/APNS bildirimleri, medya yukleme, coklu dil destegi, onboarding ve olceklenebilir ilan yonetimi implement edildi.',
+    ),
+    tags: const [
+      LocalizedText(en: 'Flutter', tr: 'Flutter'),
+      LocalizedText(en: 'Supabase', tr: 'Supabase'),
+      LocalizedText(en: 'PostgreSQL', tr: 'PostgreSQL'),
+      LocalizedText(en: 'Firebase', tr: 'Firebase'),
+      LocalizedText(en: 'RBAC', tr: 'RBAC'),
+      LocalizedText(en: 'Deep Linking', tr: 'Deep Linking'),
+    ],
+    iconAsset: 'assets/images/duruglobalicon.jpeg',
+    links: const [
+      ProjectLink(label: 'Website', url: 'https://venturecapitalsdg.com/'),
+      ProjectLink(
+        label: 'App Store',
+        url: 'https://apps.apple.com/ca/app/duruglobal/id6759501423',
+      ),
+      ProjectLink(
+        label: 'Google Play',
+        url:
+            'https://play.google.com/store/apps/details?id=com.venturecapitalsdg.mobile',
+      ),
+      ProjectLink(
+        label: 'Privacy Policy',
+        url: 'https://venturecapitalsdg.com/privacy-policy/',
+      ),
+    ],
+    meta: const LocalizedText(en: 'In Progress', tr: 'Devam Ediyor'),
+  ),
+  Project(
+    title: const LocalizedText(
       en: 'Desk4Dent: Dental Clinic Management',
       tr: 'Desk4Dent: Dental Klinik Yönetimi',
     ),
     description: const LocalizedText(
-      en: 'Production healthcare app used by a private dental clinic. Built with Flutter for iOS/Android; centralizes appointments, patient records, treatments, and payments. Uses Supabase (auth + PostgreSQL + security policies), Firebase Cloud Messaging, and scalable Riverpod architecture.',
-      tr: 'Özel bir diş kliniğinde aktif kullanılan üretim sağlık uygulaması. Flutter ile iOS/Android için geliştirildi; randevu, hasta kaydı, tedavi ve ödeme süreçlerini tek bir mobil akışta birleştirir. Supabase (kimlik doğrulama + PostgreSQL + güvenlik politikaları), Firebase Cloud Messaging ve ölçeklenebilir Riverpod mimarisi kullanır.',
+      en: 'Developed a production-ready healthcare application used by a private dental clinic. Built scheduling, patient management, and treatment tracking features. Implemented Supabase auth/PostgreSQL/RLS security, Firebase Cloud Messaging, and scalable Riverpod state management.',
+      tr: 'Ozel bir dis kligininde aktif kullanilan production-ready bir saglik uygulamasi gelistirdim. Randevu planlama, hasta yonetimi ve tedavi takibi ozellikleri kuruldu. Supabase auth/PostgreSQL/RLS guvenligi, Firebase Cloud Messaging ve olceklenebilir Riverpod state management yapisi implemente edildi.',
     ),
     tags: const [
       LocalizedText(en: 'Flutter', tr: 'Flutter'),
@@ -391,100 +402,12 @@ final List<Project> _projects = [
   ),
   Project(
     title: const LocalizedText(
-      en: 'DuruGlobal: Real Estate Mobile Platform',
-      tr: 'DuruGlobal: Gayrimenkul Mobil Platformu',
-    ),
-    description: const LocalizedText(
-      en: 'Flutter-based mobile/web platform for real estate listings with a multi-tenant architecture. Implemented Supabase-backed RBAC, PostgreSQL RLS policies, and moderation workflows. Integrated deep links, Firebase/APNS push, media uploads, multilingual support (TR/EN/DE/AR), onboarding, legal pages, and release compliance.',
-      tr: 'Flutter tabanlı mobil/web gayrimenkul platformu. Çok kiracılı mimari üzerinde Supabase destekli RBAC, PostgreSQL RLS politikaları ve moderasyon akışlarını uçtan uca geliştirdim. Deep link, Firebase/APNS bildirimleri, medya yükleme, çoklu dil desteği (TR/EN/DE/AR), onboarding, yasal sayfalar ve release uyumluluğu entegre edildi.',
-    ),
-    tags: const [
-      LocalizedText(en: 'Flutter', tr: 'Flutter'),
-      LocalizedText(en: 'Supabase', tr: 'Supabase'),
-      LocalizedText(en: 'PostgreSQL', tr: 'PostgreSQL'),
-      LocalizedText(en: 'Firebase', tr: 'Firebase'),
-      LocalizedText(en: 'RBAC', tr: 'RBAC'),
-      LocalizedText(en: 'Deep Linking', tr: 'Deep Linking'),
-    ],
-    iconAsset: 'assets/images/duruglobalicon.jpeg',
-    links: const [
-      ProjectLink(label: 'Website', url: 'https://venturecapitalsdg.com/'),
-      ProjectLink(
-        label: 'App Store',
-        url: 'https://apps.apple.com/ca/app/duruglobal/id6759501423',
-      ),
-      ProjectLink(
-        label: 'Privacy Policy',
-        url: 'https://venturecapitalsdg.com/privacy-policy/',
-      ),
-    ],
-    meta: const LocalizedText(en: 'In Progress', tr: 'Devam Ediyor'),
-  ),
-  Project(
-    title: const LocalizedText(
-      en: 'CAVAMED & ERPIMUS',
-      tr: 'CAVAMED & ERPIMUS',
-    ),
-    description: const LocalizedText(
-      en: 'Enterprise healthcare inventory apps built with .NET MAUI; lead engineer for architecture, UI, barcode pipelines, and release workflows.',
-      tr: '.NET MAUI ile geliştirilen kurumsal sağlık stok uygulamaları; mimari, arayüz, barkod altyapısı ve yayın süreçlerinde sorumluluk.',
-    ),
-    tags: const [
-      LocalizedText(en: '.NET MAUI', tr: '.NET MAUI'),
-      LocalizedText(en: 'Healthcare', tr: 'Sağlık'),
-      LocalizedText(en: 'DevExpress', tr: 'DevExpress'),
-      LocalizedText(en: 'Camera2 / ZXing', tr: 'Camera2 / ZXing'),
-    ],
-    iconAsset: 'assets/images/cavamedicon.webp',
-    meta: const LocalizedText(
-      en: 'Completed at CAVAMED A.Ş.',
-      tr: 'CAVAMED A.Ş.\'de tamamlandı',
-    ),
-  ),
-  Project(
-    title: const LocalizedText(
-      en: 'Mice and Paws: Cat Game',
-      tr: 'Mice and Paws: Cat Game',
-    ),
-    description: const LocalizedText(
-      en: 'Sole front-end developer of a cat-interaction mobile game built end-to-end in Flutter (+ Flame). Implemented 60-FPS animated sprites, collision & hit-testing, sound FX, and a structured asset pipeline. Added Google Mobile Ads, polished UI transitions, and offline-friendly loops. Prepared Play/App Store deliverables (bundle IDs, icons, privacy labels, build configs) and ran internal testing.',
-      tr: 'Flutter (+ Flame) ile uçtan uca geliştirilen kedi etkileşimli mobil oyunun tek front-end geliştiricisi. 60 FPS animasyonlu spritelar, çarpışmalar, ses efektleri ve düzenli varlık hattı kuruldu. Google Mobile Ads eklendi, geçişler iyileştirildi ve offline dostu döngüler hazırlandı. Play/App Store teslimleri (bundle ID, ikonlar, gizlilik etiketleri, build configleri) paketlenip dahili testler yapıldı.',
-    ),
-    tags: const [
-      LocalizedText(en: 'Flutter', tr: 'Flutter'),
-      LocalizedText(en: 'Flame', tr: 'Flame'),
-      LocalizedText(en: 'Animation', tr: 'Animasyon'),
-    ],
-    iconAsset: 'assets/images/miceandpawsicon.webp',
-    links: const [
-      ProjectLink(
-        label: 'GitHub',
-        url: 'https://github.com/BugraKaanSaglam/game_for_cats_flutter',
-      ),
-      ProjectLink(
-        label: 'App Store',
-        url:
-            'https://apps.apple.com/tr/app/mice-and-paws-cat-game/id6739187435',
-      ),
-      ProjectLink(
-        label: 'Google Play',
-        url:
-            'https://play.google.com/store/apps/details?id=com.mice_and_paws_cat_game',
-      ),
-    ],
-    meta: const LocalizedText(en: 'Indie', tr: 'Indie'),
-    privacyDoc: _privacyDocs.firstWhere(
-      (doc) => doc.slug == 'mice-and-paws-cat-game',
-    ),
-  ),
-  Project(
-    title: const LocalizedText(
       en: 'What Should I Eat Today',
       tr: 'What Should I Eat Today',
     ),
     description: const LocalizedText(
-      en: 'Personal recipe-sharing app developed solo with Flutter + Supabase. Built data-dense, animated UI; TR/EN localization; favorites and image caching. Implemented deep links (App/Universal Links, Branch/Firebase-compatible) and Google Mobile Ads. Used Supabase (Postgres). Prepared iOS/Android release artifacts and ran closed testing.',
-      tr: 'Flutter + Supabase ile tek başıma geliştirdiğim kişisel tarif paylaşım uygulaması. Veri yoğun, animasyonlu arayüz; TR/EN lokalizasyon; favoriler ve görsel cache. Derin linkler (App/Universal Links, Branch/Firebase uyumlu) ve Google Mobile Ads uygulandı. Supabase (Postgres) kullanıldı. iOS/Android yayın paketleri hazırlanıp kapalı testler yapıldı.',
+      en: 'Built a data-driven mobile application with Flutter + Supabase. Added ingredient-based recipe filtering, deep linking, Google Mobile Ads, TR/EN localization, favorites, image caching, and offline access for previously saved recipes.',
+      tr: 'Flutter + Supabase ile veri odakli bir mobil uygulama gelistirdim. Malzemeye gore tarif filtreleme, deep linking, Google Mobile Ads, TR/EN lokalizasyon, favoriler, gorsel cache ve kaydedilen tariflere offline erisim ozellikleri eklendi.',
     ),
     tags: const [
       LocalizedText(en: 'Flutter', tr: 'Flutter'),
@@ -493,7 +416,7 @@ final List<Project> _projects = [
       LocalizedText(en: 'Deep Link', tr: 'Derin Link'),
       LocalizedText(en: 'Ads', tr: 'Reklam'),
     ],
-    iconAsset: 'assets/images/whatshouldieaticon.webp',
+    iconAsset: 'assets/images/whatshouldieaticon.png',
     links: const [
       ProjectLink(
         label: 'App Store',
@@ -517,6 +440,63 @@ final List<Project> _projects = [
   ),
   Project(
     title: const LocalizedText(
+      en: 'Mice and Paws: Cat Game',
+      tr: 'Mice and Paws: Cat Game',
+    ),
+    description: const LocalizedText(
+      en: 'Developed a 2D mobile game with 60 FPS animations and collision systems. Implemented sprite animations, hit-testing, sound effects, Google Mobile Ads monetization, and offline-friendly gameplay loops.',
+      tr: '60 FPS animasyonlara ve carpismalara sahip 2D bir mobil oyun gelistirdim. Sprite animasyonlari, hit-testing, ses efektleri, Google Mobile Ads monetization ve offline dostu oynanis donguleri implemente edildi.',
+    ),
+    tags: const [
+      LocalizedText(en: 'Flutter', tr: 'Flutter'),
+      LocalizedText(en: 'Flame', tr: 'Flame'),
+      LocalizedText(en: 'Animation', tr: 'Animasyon'),
+    ],
+    iconAsset: 'assets/images/miceandpawsicon.png',
+    links: const [
+      ProjectLink(
+        label: 'GitHub',
+        url: 'https://github.com/BugraKaanSaglam/game_for_cats_flutter',
+      ),
+      ProjectLink(
+        label: 'App Store',
+        url:
+            'https://apps.apple.com/tr/app/mice-and-paws-cat-game/id6739187435',
+      ),
+      ProjectLink(
+        label: 'Google Play',
+        url:
+            'https://play.google.com/store/apps/details?id=com.mice_and_paws_cat_game',
+      ),
+    ],
+    meta: const LocalizedText(en: 'Indie', tr: 'Indie'),
+    privacyDoc: _privacyDocs.firstWhere(
+      (doc) => doc.slug == 'mice-and-paws-cat-game',
+    ),
+  ),
+  Project(
+    title: const LocalizedText(
+      en: 'CAVAMED & ERPIMUS',
+      tr: 'CAVAMED & ERPIMUS',
+    ),
+    description: const LocalizedText(
+      en: 'Enterprise healthcare inventory apps built with .NET MAUI; lead engineer for architecture, UI, barcode pipelines, and release workflows.',
+      tr: '.NET MAUI ile geliştirilen kurumsal sağlık stok uygulamaları; mimari, arayüz, barkod altyapısı ve yayın süreçlerinde sorumluluk.',
+    ),
+    tags: const [
+      LocalizedText(en: '.NET MAUI', tr: '.NET MAUI'),
+      LocalizedText(en: 'Healthcare', tr: 'Sağlık'),
+      LocalizedText(en: 'DevExpress', tr: 'DevExpress'),
+      LocalizedText(en: 'Camera2 / ZXing', tr: 'Camera2 / ZXing'),
+    ],
+    iconAsset: 'assets/images/cavamedicon.png',
+    meta: const LocalizedText(
+      en: 'Completed at CAVAMED A.Ş.',
+      tr: 'CAVAMED A.Ş.\'de tamamlandı',
+    ),
+  ),
+  Project(
+    title: const LocalizedText(
       en: 'Personal Website (Portfolio)',
       tr: 'Kişisel Web Sitesi (Portfolio)',
     ),
@@ -529,10 +509,7 @@ final List<Project> _projects = [
       LocalizedText(en: 'Responsive UI', tr: 'Responsive UI'),
     ],
     links: const [
-      ProjectLink(
-        label: 'Website',
-        url: 'https://bugrakaansaglam-website.pages.dev/',
-      ),
+      ProjectLink(label: 'Website', url: 'https://bugrakaansaglam.com/'),
       ProjectLink(
         label: 'GitHub',
         url: 'https://github.com/BugraKaanSaglam/bugrakaansaglam_website',
@@ -564,6 +541,22 @@ final List<Project> _projects = [
   ),
 ];
 
+final List<ReferenceEntry> _references = [
+  ReferenceEntry(
+    name: const LocalizedText(en: 'Asım Kalyoncu', tr: 'Asım Kalyoncu'),
+    role: const LocalizedText(
+      en: 'Team Leader, Senior Flutter Developer at ORYAZ',
+      tr: 'ORYAZ Team Leader, Senior Flutter Developer',
+    ),
+    comment: const LocalizedText(
+      en: 'Dedicated and capable mobile developer with strong Flutter and cross-platform skills. Learns quickly, writes well-structured code, pays close attention to UX and performance, and consistently pushes for high quality.',
+      tr: 'Flutter ve cross-platform gelistirmede guclu, disiplinli ve yetkin bir mobil gelistirici. Hizli ogrenir, duzenli kod yazar, UX ve performans detaylarina dikkat eder ve surekli yuksek kaliteyi hedefler.',
+    ),
+    email: 'asimkalyoncu@hotmail.com',
+    phone: '+90 533 526 8311',
+  ),
+];
+
 final Education _education = Education(
   degree: const LocalizedText(
     en: 'BSc in Biomedical Engineering',
@@ -584,5 +577,6 @@ final PortfolioContent portfolioContent = PortfolioContent(
   experiences: _experiences,
   projects: _projects,
   education: _education,
+  references: _references,
   contactInfo: _contactInfo,
 );

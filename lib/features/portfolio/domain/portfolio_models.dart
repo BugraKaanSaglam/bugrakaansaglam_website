@@ -107,6 +107,22 @@ class ContactInfo {
   final String linkedIn;
 }
 
+class ReferenceEntry {
+  const ReferenceEntry({
+    required this.name,
+    required this.role,
+    required this.comment,
+    this.email,
+    this.phone,
+  });
+
+  final LocalizedText name;
+  final LocalizedText role;
+  final LocalizedText comment;
+  final String? email;
+  final String? phone;
+}
+
 class PortfolioContent {
   const PortfolioContent({
     required this.aboutSummary,
@@ -115,6 +131,7 @@ class PortfolioContent {
     required this.experiences,
     required this.projects,
     required this.education,
+    required this.references,
     required this.contactInfo,
   });
 
@@ -124,6 +141,7 @@ class PortfolioContent {
   final List<Experience> experiences;
   final List<Project> projects;
   final Education education;
+  final List<ReferenceEntry> references;
   final ContactInfo contactInfo;
 
   PrivacyDoc? privacyDocBySlug(String slug) {

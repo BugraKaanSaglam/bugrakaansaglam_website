@@ -209,6 +209,19 @@ class _PortfolioPageState extends State<PortfolioPage>
                           SizedBox(height: sectionGap),
                           _reveal(
                             start: 0.56,
+                            end: 0.86,
+                            child: SectionCard(
+                              title: tr('sections.references'),
+                              compact: isMobile,
+                              child: _ReferencesBlock(
+                                locale: locale,
+                                references: content.references,
+                              ),
+                            ),
+                          ),
+                          SizedBox(height: sectionGap),
+                          _reveal(
+                            start: 0.64,
                             end: 0.9,
                             child: SectionCard(
                               title: tr('sections.contact'),
@@ -368,6 +381,71 @@ class _EducationBlock extends StatelessWidget {
           ),
         ),
       ],
+    );
+  }
+}
+
+class _ReferencesBlock extends StatelessWidget {
+  const _ReferencesBlock({required this.locale, required this.references});
+
+  final Locale locale;
+  final List<ReferenceEntry> references;
+
+  @override
+  Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+    return Column(
+      children: references
+          .map(
+            (reference) => Container(
+              width: double.infinity,
+              margin: const EdgeInsets.only(bottom: 12),
+              padding: const EdgeInsets.all(16),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(18),
+                border: Border.all(
+                  color: AppTheme.border.withValues(alpha: 0.86),
+                ),
+                color: Colors.white.withValues(alpha: 0.03),
+              ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    reference.name.ofLocale(locale),
+                    style: theme.textTheme.titleLarge,
+                  ),
+                  const SizedBox(height: 4),
+                  Text(
+                    reference.role.ofLocale(locale),
+                    style: theme.textTheme.bodyMedium?.copyWith(
+                      color: AppTheme.textMuted,
+                    ),
+                  ),
+                  const SizedBox(height: 12),
+                  Text(
+                    reference.comment.ofLocale(locale),
+                    style: theme.textTheme.bodyMedium?.copyWith(
+                      color: AppTheme.textMuted,
+                    ),
+                  ),
+                  if (reference.email != null || reference.phone != null) ...[
+                    const SizedBox(height: 12),
+                    Text(
+                      [
+                        if (reference.email != null) reference.email!,
+                        if (reference.phone != null) reference.phone!,
+                      ].join(' • '),
+                      style: theme.textTheme.bodySmall?.copyWith(
+                        color: AppTheme.textMuted.withValues(alpha: 0.84),
+                      ),
+                    ),
+                  ],
+                ],
+              ),
+            ),
+          )
+          .toList(),
     );
   }
 }

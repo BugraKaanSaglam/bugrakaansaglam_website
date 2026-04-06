@@ -29,7 +29,11 @@ String? _normalizeExternalUrl(String url) {
   return uri.toString();
 }
 
-Future<void> openExternalUrl(BuildContext context, String url) async {
+Future<void> openExternalUrl(
+  BuildContext context,
+  String url, {
+  bool sameWindow = false,
+}) async {
   final errorMessage = tr('errors.link_open_failed', context: context);
   final normalized = _normalizeExternalUrl(url);
   if (normalized == null) {
@@ -42,8 +46,10 @@ Future<void> openExternalUrl(BuildContext context, String url) async {
 
   final launched = await launchUrl(
     uri,
-    mode: LaunchMode.externalApplication,
-    webOnlyWindowName: '_blank',
+    mode: sameWindow
+        ? LaunchMode.platformDefault
+        : LaunchMode.externalApplication,
+    webOnlyWindowName: sameWindow ? '_self' : '_blank',
   );
 
   if (!launched && context.mounted) {

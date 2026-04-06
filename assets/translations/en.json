@@ -1,19 +1,19 @@
 {
   "app_title": "Buğra Kaan Sağlam | Mobile & Web Engineer",
   "nav": {
-    "role": "Mobile Engineer • Flutter & .NET MAUI",
+    "role": "Senior Cross-Platform Mobile Developer",
     "lang_en": "EN",
     "lang_tr": "TR"
   },
   "hero": {
     "location": "Ankara, Türkiye",
-    "title": "Building production-grade mobile products with performance-first UX.",
-    "subtitle": "Sole front-end engineer for enterprise healthcare systems and independent app launches. I build fast interfaces, reliable auth/session flows, and release-ready products across stores.",
+    "title": "Shipping production-grade mobile systems across healthcare, real estate, and consumer apps.",
+    "subtitle": "Senior cross-platform mobile developer focused on scalable architecture, high-performance UI, backend integrations, deep linking, notifications, and release compliance.",
     "cta_meeting": "Email me",
     "availability_label": "Availability",
     "availability": "Open to new projects",
     "now_building": "Now building",
-    "status": "Scaling DuruGlobal and Desk4Dent with multi-tenant architecture, secure data flows, and production release pipelines.",
+    "status": "Building full mobile systems with Flutter and .NET MAUI, from architecture and backend integrations to store-ready releases.",
     "facts": {
       "experience_label": "Experience",
       "experience_value": "3+ yrs",
@@ -23,9 +23,9 @@
       "indie_value": "4"
     },
     "status_tags": {
-      "motion": "Flutter + Supabase",
-      "design": "RLS + RBAC",
-      "analytics": "CI/CD Releases"
+      "motion": "Flutter + .NET MAUI",
+      "design": "Supabase / PostgreSQL",
+      "analytics": "Store Compliance"
     }
   },
   "sections": {
@@ -35,10 +35,11 @@
     "privacy": "Privacy Policies",
     "experience": "Experience",
     "education": "Education",
+    "references": "Recommendation",
     "contact": "Contact"
   },
   "about": {
-    "body": "Sole front-end engineer building cross-platform mobile apps with .NET MAUI and Flutter. Delivered two enterprise healthcare inventory apps end-to-end and shipped independent products with a focus on performance, UX, and robust store release workflows."
+    "body": "Senior Cross-Platform Mobile Developer with 3+ years of experience delivering production-grade applications across healthcare, real estate, and consumer apps. Specialized in scalable architecture, high-performance UI, Supabase/PostgreSQL integrations, deep linking, push notifications, and app store compliance. Strong track record as a sole front-end engineer focused on UX, performance, and maintainability."
   },
   "contact": {
     "lead": "Reach out for product development, consulting, or project collaboration.",

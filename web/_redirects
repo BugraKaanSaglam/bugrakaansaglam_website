@@ -2,4 +2,13 @@
 /icons/*     /icons/:splat    200
 /favicon.png /favicon.png     200
 /manifest.json /manifest.json 200
+/duru-global /index.html 200
+/duruglobal /index.html 200
+/desk4dent /index.html 200
+/what-should-i-eat /index.html 200
+/what-should-i-eat-today /index.html 200
+/whatshouldieat /index.html 200
+/whatshuldieat /index.html 200
+/mice-and-paws /index.html 200
+/miceandpaws /index.html 200
 /*           /index.html      200
