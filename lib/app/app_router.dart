@@ -46,8 +46,10 @@ class AppRouter {
     routes: [
       GoRoute(
         path: '/',
-        builder: (context, state) =>
-            PortfolioPage(viewModel: _portfolioViewModel),
+        builder: (context, state) => PortfolioPage(
+          viewModel: _portfolioViewModel,
+          initialProjectSlug: state.uri.queryParameters['project'],
+        ),
       ),
       GoRoute(
         path: '/duru-global',

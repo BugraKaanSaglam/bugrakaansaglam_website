@@ -9,7 +9,7 @@ const ContactInfo _contactInfo = ContactInfo(
 
 final LocalizedText _aboutSummary = LocalizedText(
   en: 'Senior Cross-Platform Mobile Developer with 3+ years of experience delivering production-grade apps across healthcare, real estate, and consumer products. Specialized in scalable architectures, high-performance UIs, backend integrations with Supabase/PostgreSQL, deep linking, push notifications, and app store compliance. Proven track record as a sole front-end engineer with strong focus on UX, performance, and maintainability.',
-  tr: 'Saglik, gayrimenkul ve tuketici uygulamalarinda 3+ yillik deneyime sahip senior cross-platform mobil gelistiriciyim. Olceklenebilir mimariler, yuksek performansli arayuzler, Supabase/PostgreSQL backend entegrasyonlari, deep linking, push bildirimleri ve store compliance sureclerinde uzmanlastim. Tek front-end gelistirici olarak UX, performans ve surdurulebilirlik odağıyla production-grade uygulamalar teslim ettim.',
+  tr: 'Sağlık, gayrimenkul ve tüketici uygulamalarında 3+ yıllık deneyime sahip senior cross-platform mobil geliştiriciyim. Ölçeklenebilir mimariler, yüksek performanslı arayüzler, Supabase/PostgreSQL backend entegrasyonları, deep linking, push bildirimleri ve store compliance süreçlerinde uzmanlaştım. Tek front-end geliştirici olarak UX, performans ve sürdürülebilirlik odağıyla production-grade uygulamalar teslim ettim.',
 );
 
 final List<PrivacyDoc> _privacyDocs = [
@@ -239,7 +239,7 @@ final List<SkillGroup> _skillGroups = [
     ],
   ),
   SkillGroup(
-    title: LocalizedText(en: 'Backend & Database', tr: 'Backend ve Veritabani'),
+    title: LocalizedText(en: 'Backend & Database', tr: 'Backend ve Veritabanı'),
     items: const [
       LocalizedText(en: 'Supabase', tr: 'Supabase'),
       LocalizedText(en: 'PostgreSQL', tr: 'PostgreSQL'),
@@ -247,7 +247,7 @@ final List<SkillGroup> _skillGroups = [
     ],
   ),
   SkillGroup(
-    title: LocalizedText(en: 'Mobile Engineering', tr: 'Mobil Muhendislik'),
+    title: LocalizedText(en: 'Mobile Engineering', tr: 'Mobil Mühendislik'),
     items: const [
       LocalizedText(en: 'Deep linking', tr: 'Deep linking'),
       LocalizedText(
@@ -276,7 +276,7 @@ final List<SkillGroup> _skillGroups = [
     ],
   ),
   SkillGroup(
-    title: LocalizedText(en: 'Tools & DevOps', tr: 'Araclar ve DevOps'),
+    title: LocalizedText(en: 'Tools & DevOps', tr: 'Araçlar ve DevOps'),
     items: const [
       LocalizedText(en: 'Git', tr: 'Git'),
       LocalizedText(en: 'CI/CD', tr: 'CI/CD'),
@@ -334,13 +334,14 @@ final List<Experience> _experiences = [
 
 final List<Project> _projects = [
   Project(
+    slug: 'duru-global',
     title: const LocalizedText(
       en: 'DuruGlobal: Real Estate Mobile Platform',
       tr: 'DuruGlobal: Gayrimenkul Mobil Platformu',
     ),
     description: const LocalizedText(
       en: 'Built a full-stack real estate platform for mobile and web targeting international markets. Designed Supabase/PostgreSQL backend architecture with RLS, RBAC, and moderation workflows. Implemented deep links, Firebase/APNS notifications, media uploads, multilingual support, onboarding, and scalable listing management.',
-      tr: 'Uluslararasi pazari hedefleyen mobil ve web tabanli full-stack bir gayrimenkul platformu gelistirdim. Supabase/PostgreSQL altyapisinda RLS, RBAC ve moderasyon akislarini iceren backend mimarisini tasarladim. Deep link, Firebase/APNS bildirimleri, medya yukleme, coklu dil destegi, onboarding ve olceklenebilir ilan yonetimi implement edildi.',
+      tr: 'Uluslararası pazarı hedefleyen mobil ve web tabanlı full-stack bir gayrimenkul platformu geliştirdim. Supabase/PostgreSQL altyapısında RLS, RBAC ve moderasyon akışlarını içeren backend mimarisini tasarladım. Deep link, Firebase/APNS bildirimleri, medya yükleme, çoklu dil desteği, onboarding ve ölçeklenebilir ilan yönetimi implement edildi.',
     ),
     tags: const [
       LocalizedText(en: 'Flutter', tr: 'Flutter'),
@@ -370,13 +371,14 @@ final List<Project> _projects = [
     meta: const LocalizedText(en: 'In Progress', tr: 'Devam Ediyor'),
   ),
   Project(
+    slug: 'desk4dent',
     title: const LocalizedText(
       en: 'Desk4Dent: Dental Clinic Management',
       tr: 'Desk4Dent: Dental Klinik Yönetimi',
     ),
     description: const LocalizedText(
       en: 'Developed a production-ready healthcare application used by a private dental clinic. Built scheduling, patient management, and treatment tracking features. Implemented Supabase auth/PostgreSQL/RLS security, Firebase Cloud Messaging, and scalable Riverpod state management.',
-      tr: 'Ozel bir dis kligininde aktif kullanilan production-ready bir saglik uygulamasi gelistirdim. Randevu planlama, hasta yonetimi ve tedavi takibi ozellikleri kuruldu. Supabase auth/PostgreSQL/RLS guvenligi, Firebase Cloud Messaging ve olceklenebilir Riverpod state management yapisi implemente edildi.',
+      tr: 'Özel bir diş kliniğinde aktif kullanılan production-ready bir sağlık uygulaması geliştirdim. Randevu planlama, hasta yönetimi ve tedavi takibi özellikleri kuruldu. Supabase auth/PostgreSQL/RLS güvenliği, Firebase Cloud Messaging ve ölçeklenebilir Riverpod state management yapısı implemente edildi.',
     ),
     tags: const [
       LocalizedText(en: 'Flutter', tr: 'Flutter'),
@@ -401,13 +403,14 @@ final List<Project> _projects = [
     privacyDoc: _privacyDocs.firstWhere((doc) => doc.slug == 'desk4dent'),
   ),
   Project(
+    slug: 'what-should-i-eat',
     title: const LocalizedText(
       en: 'What Should I Eat Today',
       tr: 'What Should I Eat Today',
     ),
     description: const LocalizedText(
       en: 'Built a data-driven mobile application with Flutter + Supabase. Added ingredient-based recipe filtering, deep linking, Google Mobile Ads, TR/EN localization, favorites, image caching, and offline access for previously saved recipes.',
-      tr: 'Flutter + Supabase ile veri odakli bir mobil uygulama gelistirdim. Malzemeye gore tarif filtreleme, deep linking, Google Mobile Ads, TR/EN lokalizasyon, favoriler, gorsel cache ve kaydedilen tariflere offline erisim ozellikleri eklendi.',
+      tr: 'Flutter + Supabase ile veri odaklı bir mobil uygulama geliştirdim. Malzemeye göre tarif filtreleme, deep linking, Google Mobile Ads, TR/EN lokalizasyon, favoriler, görsel cache ve kaydedilen tariflere offline erişim özellikleri eklendi.',
     ),
     tags: const [
       LocalizedText(en: 'Flutter', tr: 'Flutter'),
@@ -439,13 +442,14 @@ final List<Project> _projects = [
     ),
   ),
   Project(
+    slug: 'mice-and-paws',
     title: const LocalizedText(
       en: 'Mice and Paws: Cat Game',
       tr: 'Mice and Paws: Cat Game',
     ),
     description: const LocalizedText(
       en: 'Developed a 2D mobile game with 60 FPS animations and collision systems. Implemented sprite animations, hit-testing, sound effects, Google Mobile Ads monetization, and offline-friendly gameplay loops.',
-      tr: '60 FPS animasyonlara ve carpismalara sahip 2D bir mobil oyun gelistirdim. Sprite animasyonlari, hit-testing, ses efektleri, Google Mobile Ads monetization ve offline dostu oynanis donguleri implemente edildi.',
+      tr: '60 FPS animasyonlara ve çarpışmalara sahip 2D bir mobil oyun geliştirdim. Sprite animasyonları, hit-testing, ses efektleri, Google Mobile Ads monetization ve offline dostu oynanış döngüleri implemente edildi.',
     ),
     tags: const [
       LocalizedText(en: 'Flutter', tr: 'Flutter'),
@@ -475,6 +479,7 @@ final List<Project> _projects = [
     ),
   ),
   Project(
+    slug: 'cavamed-erpimus',
     title: const LocalizedText(
       en: 'CAVAMED & ERPIMUS',
       tr: 'CAVAMED & ERPIMUS',
@@ -496,6 +501,7 @@ final List<Project> _projects = [
     ),
   ),
   Project(
+    slug: 'portfolio-website',
     title: const LocalizedText(
       en: 'Personal Website (Portfolio)',
       tr: 'Kişisel Web Sitesi (Portfolio)',
@@ -518,6 +524,7 @@ final List<Project> _projects = [
     meta: const LocalizedText(en: 'Personal', tr: 'Kişisel'),
   ),
   Project(
+    slug: 'personal-business-website',
     title: const LocalizedText(
       en: 'Personal / Business Website',
       tr: 'Kişisel / İş Web Sitesi',
@@ -550,7 +557,7 @@ final List<ReferenceEntry> _references = [
     ),
     comment: const LocalizedText(
       en: 'Dedicated and capable mobile developer with strong Flutter and cross-platform skills. Learns quickly, writes well-structured code, pays close attention to UX and performance, and consistently pushes for high quality.',
-      tr: 'Flutter ve cross-platform gelistirmede guclu, disiplinli ve yetkin bir mobil gelistirici. Hizli ogrenir, duzenli kod yazar, UX ve performans detaylarina dikkat eder ve surekli yuksek kaliteyi hedefler.',
+      tr: 'Flutter ve cross-platform geliştirmede güçlü, disiplinli ve yetkin bir mobil geliştirici. Hızlı öğrenir, düzenli kod yazar, UX ve performans detaylarına dikkat eder ve sürekli yüksek kaliteyi hedefler.',
     ),
     email: 'asimkalyoncu@hotmail.com',
     phone: '+90 533 526 8311',

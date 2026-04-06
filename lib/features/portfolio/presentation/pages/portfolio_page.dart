@@ -14,9 +14,14 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
 class PortfolioPage extends StatefulWidget {
-  const PortfolioPage({required this.viewModel, super.key});
+  const PortfolioPage({
+    required this.viewModel,
+    this.initialProjectSlug,
+    super.key,
+  });
 
   final PortfolioViewModel viewModel;
+  final String? initialProjectSlug;
 
   @override
   State<PortfolioPage> createState() => _PortfolioPageState();
@@ -25,6 +30,7 @@ class PortfolioPage extends StatefulWidget {
 class _PortfolioPageState extends State<PortfolioPage>
     with SingleTickerProviderStateMixin {
   late final AnimationController _revealController;
+  final Map<String, GlobalKey> _projectKeys = {};
 
   @override
   void initState() {
@@ -33,12 +39,38 @@ class _PortfolioPageState extends State<PortfolioPage>
       vsync: this,
       duration: const Duration(milliseconds: 1450),
     )..forward();
+    _scheduleProjectScroll();
   }
 
   @override
   void dispose() {
     _revealController.dispose();
     super.dispose();
+  }
+
+  @override
+  void didUpdateWidget(covariant PortfolioPage oldWidget) {
+    super.didUpdateWidget(oldWidget);
+    if (oldWidget.initialProjectSlug != widget.initialProjectSlug) {
+      _scheduleProjectScroll();
+    }
+  }
+
+  void _scheduleProjectScroll() {
+    final slug = widget.initialProjectSlug;
+    if (slug == null || slug.isEmpty) return;
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      if (!mounted) return;
+      final key = _projectKeys[slug];
+      final targetContext = key?.currentContext;
+      if (targetContext == null) return;
+      Scrollable.ensureVisible(
+        targetContext,
+        duration: const Duration(milliseconds: 650),
+        curve: Curves.easeInOutCubic,
+        alignment: 0.08,
+      );
+    });
   }
 
   Widget _reveal({
@@ -156,6 +188,10 @@ class _PortfolioPageState extends State<PortfolioPage>
                                 children: [
                                   ...content.projects.map(
                                     (project) => Padding(
+                                      key: _projectKeys.putIfAbsent(
+                                        project.slug,
+                                        GlobalKey.new,
+                                      ),
                                       padding: const EdgeInsets.only(
                                         bottom: 16,
                                       ),

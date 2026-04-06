@@ -18,6 +18,9 @@ class ProjectCard extends StatelessWidget {
     final locale = context.locale;
     final buttons = <Widget>[];
     final iconAsset = project.iconAsset;
+    final projectLink = Uri.base
+        .replace(path: '/', queryParameters: {'project': project.slug})
+        .toString();
     if (project.privacyDoc != null) {
       buttons.add(
         OutlinedButton.icon(
@@ -26,6 +29,20 @@ class ProjectCard extends StatelessWidget {
           onPressed: () {
             context.go(project.privacyDoc!.routePath);
           },
+        ),
+      );
+    }
+    if (compact) {
+      buttons.insert(
+        0,
+        OutlinedButton.icon(
+          icon: const Icon(Icons.link, size: 16),
+          label: Text(tr('projects.copy_link')),
+          onPressed: () => copyToClipboard(
+            context,
+            projectLink,
+            tr('projects.copy_link_success'),
+          ),
         ),
       );
     }
@@ -42,6 +59,17 @@ class ProjectCard extends StatelessWidget {
                 style: theme.textTheme.titleLarge,
               ),
             ),
+            if (!compact)
+              IconButton(
+                tooltip: tr('projects.copy_link'),
+                onPressed: () => copyToClipboard(
+                  context,
+                  projectLink,
+                  tr('projects.copy_link_success'),
+                ),
+                icon: const Icon(Icons.link_rounded, size: 20),
+                color: AppTheme.textMuted,
+              ),
             if (project.meta != null && !compact) ...[
               const SizedBox(width: 12),
               InfoBadge(label: project.meta!.ofLocale(locale)),

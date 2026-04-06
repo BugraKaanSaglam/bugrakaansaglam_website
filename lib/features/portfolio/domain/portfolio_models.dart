@@ -18,6 +18,7 @@ class ProjectLink {
 
 class Project {
   const Project({
+    required this.slug,
     required this.title,
     required this.description,
     required this.tags,
@@ -28,6 +29,7 @@ class Project {
     this.privacyDoc,
   });
 
+  final String slug;
   final LocalizedText title;
   final LocalizedText description;
   final List<LocalizedText> tags;

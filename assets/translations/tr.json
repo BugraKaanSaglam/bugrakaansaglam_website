@@ -7,13 +7,13 @@
   },
   "hero": {
     "location": "Ankara, Türkiye",
-    "title": "Saglik, gayrimenkul ve tuketici uygulamalarinda production-grade mobil sistemler gelistiriyorum.",
-    "subtitle": "Olceklenebilir mimari, yuksek performansli UI, backend entegrasyonlari, deep linking, bildirim altyapisi ve store compliance sureclerine odaklanan senior cross-platform mobil gelistiriciyim.",
+    "title": "Sağlık, gayrimenkul ve tüketici uygulamalarında production-grade mobil sistemler geliştiriyorum.",
+    "subtitle": "Ölçeklenebilir mimari, yüksek performanslı UI, backend entegrasyonları, deep linking, bildirim altyapısı ve store compliance süreçlerine odaklanan senior cross-platform mobil geliştiriciyim.",
     "cta_meeting": "E-posta gönder",
     "availability_label": "Müsaitlik",
     "availability": "Yeni projelere açık",
     "now_building": "Şu an odak",
-    "status": "Flutter ve .NET MAUI ile mimariden backend entegrasyonuna, store-ready release sureclerine kadar uctan uca mobil sistemler gelistiriyorum.",
+    "status": "Flutter ve .NET MAUI ile mimariden backend entegrasyonuna, store-ready release süreçlerine kadar uçtan uca mobil sistemler geliştiriyorum.",
     "facts": {
       "experience_label": "Deneyim",
       "experience_value": "3+ yıl",
@@ -39,7 +39,11 @@
     "contact": "İletişim"
   },
   "about": {
-    "body": "Saglik, gayrimenkul ve tuketici uygulamalarinda 3+ yillik deneyime sahip senior cross-platform mobil gelistiriciyim. Olceklenebilir mimari, yuksek performansli UI, Supabase/PostgreSQL entegrasyonlari, deep linking, push bildirimleri ve app store compliance sureclerinde uzmanlastim. UX, performans ve surdurulebilirlik odagiyla tek front-end gelistirici olarak production-grade uygulamalar teslim ettim."
+    "body": "Sağlık, gayrimenkul ve tüketici uygulamalarında 3+ yıllık deneyime sahip senior cross-platform mobil geliştiriciyim. Ölçeklenebilir mimari, yüksek performanslı UI, Supabase/PostgreSQL entegrasyonları, deep linking, push bildirimleri ve app store compliance süreçlerinde uzmanlaştım. UX, performans ve sürdürülebilirlik odağıyla tek front-end geliştirici olarak production-grade uygulamalar teslim ettim."
+  },
+  "projects": {
+    "copy_link": "Linki kopyala",
+    "copy_link_success": "Proje bağlantısı kopyalandı."
   },
   "contact": {
     "lead": "Ürün geliştirme, danışmanlık veya proje iş birlikleri için ulaşabilirsiniz.",

@@ -41,6 +41,10 @@
   "about": {
     "body": "Senior Cross-Platform Mobile Developer with 3+ years of experience delivering production-grade applications across healthcare, real estate, and consumer apps. Specialized in scalable architecture, high-performance UI, Supabase/PostgreSQL integrations, deep linking, push notifications, and app store compliance. Strong track record as a sole front-end engineer focused on UX, performance, and maintainability."
   },
+  "projects": {
+    "copy_link": "Copy Link",
+    "copy_link_success": "Project link copied."
+  },
   "contact": {
     "lead": "Reach out for product development, consulting, or project collaboration.",
     "email": "Email",
