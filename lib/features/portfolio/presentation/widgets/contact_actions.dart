@@ -16,7 +16,6 @@ class ContactActions extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final telUrl = 'tel:${contact.phone.replaceAll(' ', '')}';
     Widget buttonBuilder(Widget button) =>
         compact ? SizedBox(width: double.infinity, child: button) : button;
     return Column(
@@ -24,37 +23,12 @@ class ContactActions extends StatelessWidget {
       children: [
         Text(tr('contact.lead')),
         const SizedBox(height: 12),
-        if (compact)
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                contact.location,
-                style: Theme.of(
-                  context,
-                ).textTheme.bodyMedium?.copyWith(color: AppTheme.textMuted),
-              ),
-              Text(
-                contact.phone,
-                style: Theme.of(
-                  context,
-                ).textTheme.bodyMedium?.copyWith(color: AppTheme.textMuted),
-              ),
-              Text(
-                contact.email,
-                style: Theme.of(
-                  context,
-                ).textTheme.bodyMedium?.copyWith(color: AppTheme.textMuted),
-              ),
-            ],
-          )
-        else
-          Text(
-            '${contact.location} | ${contact.phone} | ${contact.email}',
-            style: Theme.of(
-              context,
-            ).textTheme.bodyMedium?.copyWith(color: AppTheme.textMuted),
-          ),
+        Text(
+          contact.email,
+          style: Theme.of(
+            context,
+          ).textTheme.bodyMedium?.copyWith(color: AppTheme.textMuted),
+        ),
         const SizedBox(height: 16),
         if (compact)
           Column(
@@ -67,22 +41,6 @@ class ContactActions extends StatelessWidget {
                     context,
                     'mailto:${contact.email}?subject=Project%20Inquiry',
                   ),
-                ),
-              ),
-              const SizedBox(height: 10),
-              buttonBuilder(
-                OutlinedButton.icon(
-                  icon: const Icon(Icons.person_outline),
-                  label: Text(tr('contact.linkedin')),
-                  onPressed: () => openExternalUrl(context, contact.linkedIn),
-                ),
-              ),
-              const SizedBox(height: 10),
-              buttonBuilder(
-                OutlinedButton.icon(
-                  icon: const Icon(Icons.phone_outlined),
-                  label: Text(contact.phone),
-                  onPressed: () => openExternalUrl(context, telUrl),
                 ),
               ),
             ],
@@ -99,16 +57,6 @@ class ContactActions extends StatelessWidget {
                   context,
                   'mailto:${contact.email}?subject=Project%20Inquiry',
                 ),
-              ),
-              OutlinedButton.icon(
-                icon: const Icon(Icons.person_outline),
-                label: Text(tr('contact.linkedin')),
-                onPressed: () => openExternalUrl(context, contact.linkedIn),
-              ),
-              OutlinedButton.icon(
-                icon: const Icon(Icons.phone_outlined),
-                label: Text(contact.phone),
-                onPressed: () => openExternalUrl(context, telUrl),
               ),
             ],
           ),

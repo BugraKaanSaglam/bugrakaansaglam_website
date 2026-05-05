@@ -6,7 +6,7 @@
     "lang_tr": "TR"
   },
   "hero": {
-    "location": "Ankara, Türkiye",
+    "location": "Ankara, Turkey",
     "title": "Shipping production-grade mobile systems across healthcare, real estate, and consumer apps.",
     "subtitle": "Senior cross-platform mobile developer focused on scalable architecture, high-performance UI, backend integrations, deep linking, notifications, and release compliance.",
     "cta_meeting": "Email me",
@@ -47,8 +47,7 @@
   },
   "contact": {
     "lead": "Reach out for product development, consulting, or project collaboration.",
-    "email": "Email",
-    "linkedin": "LinkedIn"
+    "email": "Email"
   },
   "education": {
     "degree": "BSc in Biomedical Engineering",

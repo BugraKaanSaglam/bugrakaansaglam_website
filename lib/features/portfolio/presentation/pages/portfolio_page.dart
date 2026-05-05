@@ -465,18 +465,6 @@ class _ReferencesBlock extends StatelessWidget {
                       color: AppTheme.textMuted,
                     ),
                   ),
-                  if (reference.email != null || reference.phone != null) ...[
-                    const SizedBox(height: 12),
-                    Text(
-                      [
-                        if (reference.email != null) reference.email!,
-                        if (reference.phone != null) reference.phone!,
-                      ].join(' • '),
-                      style: theme.textTheme.bodySmall?.copyWith(
-                        color: AppTheme.textMuted.withValues(alpha: 0.84),
-                      ),
-                    ),
-                  ],
                 ],
               ),
             ),

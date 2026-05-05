@@ -98,15 +98,9 @@ class PrivacyDoc {
 class ContactInfo {
   const ContactInfo({
     required this.email,
-    required this.phone,
-    required this.location,
-    required this.linkedIn,
   });
 
   final String email;
-  final String phone;
-  final String location;
-  final String linkedIn;
 }
 
 class ReferenceEntry {
@@ -114,15 +108,11 @@ class ReferenceEntry {
     required this.name,
     required this.role,
     required this.comment,
-    this.email,
-    this.phone,
   });
 
   final LocalizedText name;
   final LocalizedText role;
   final LocalizedText comment;
-  final String? email;
-  final String? phone;
 }
 
 class PortfolioContent {
