@@ -296,8 +296,8 @@ final List<Experience> _experiences = [
     ),
     location: const LocalizedText(en: 'Ankara, Türkiye', tr: 'Ankara, Türkiye'),
     summary: const LocalizedText(
-      en: 'Solo frontend engineer for AreonX: Dungeon Infinity X, a cross-platform mobile dungeon crawler built with Flutter.',
-      tr: 'Flutter ile geliştirilen cross-platform mobil dungeon crawler AreonX: Dungeon Infinity X için tek front-end geliştirici.',
+      en: 'Cross-platform mobile dungeon crawler developed as a solo frontend engineer using Flutter.',
+      tr: 'Flutter kullanılarak tek front-end geliştirici olarak geliştirilen cross-platform mobil dungeon crawler.',
     ),
     highlights: const [
       LocalizedText(
@@ -306,19 +306,39 @@ final List<Experience> _experiences = [
       ),
       LocalizedText(
         en: 'Built core gameplay systems including combat, progression, skills, equipment, achievements, rewards, encounters, and dungeon exploration.',
-        tr: 'Combat, progression, skill, equipment, achievement, reward, encounter ve dungeon exploration sistemlerini geliştirdi.',
+        tr: 'Combat, progression, skills, equipment, achievements, rewards, encounters ve dungeon exploration sistemlerini geliştirdi.',
       ),
       LocalizedText(
-        en: 'Implemented procedural dungeon generation, live content updates, and JSON-driven content pipelines for rapid balancing.',
-        tr: 'Procedural dungeon generation, live content updates ve hızlı dengeleme için JSON tabanlı içerik hatlarını uyguladı.',
+        en: 'Implemented procedural dungeon generation and floor progression systems.',
+        tr: 'Procedural dungeon generation ve floor progression sistemlerini uyguladı.',
+      ),
+      LocalizedText(
+        en: 'Developed automated balance simulation tools capable of running thousands of gameplay simulations to validate progression, economy balance, combat difficulty, and retention metrics.',
+        tr: 'Progression, ekonomi dengesi, combat zorluğu ve retention metriklerini doğrulamak için binlerce simülasyon çalıştırabilen otomatik balans simülasyon araçları geliştirdi.',
+      ),
+      LocalizedText(
+        en: 'Created JSON-driven content pipelines enabling rapid balancing and content iteration without major code changes.',
+        tr: 'Büyük kod değişiklikleri olmadan hızlı dengeleme ve içerik iterasyonu sağlayan JSON tabanlı içerik hatları oluşturdu.',
+      ),
+      LocalizedText(
+        en: 'Integrated Shorebird live update infrastructure for production patches and hotfixes without full store releases.',
+        tr: 'Tam store release gerektirmeden production patch ve hotfix için Shorebird canlı güncelleme altyapısını entegre etti.',
       ),
       LocalizedText(
         en: 'Optimized performance, memory usage, rendering efficiency, and mobile responsiveness across Android and iOS.',
         tr: 'Android ve iOS genelinde performans, bellek kullanımı, render verimliliği ve mobil uyumluluğu optimize etti.',
       ),
       LocalizedText(
-        en: 'Managed production builds, QA workflows, deployment pipelines, and release preparation.',
-        tr: 'Production build, QA akışları, deployment pipeline’ları ve release hazırlık süreçlerini yönetti.',
+        en: 'Implemented rewarded advertisement and monetization workflows.',
+        tr: 'Rewarded advertisement ve monetization iş akışlarını uyguladı.',
+      ),
+      LocalizedText(
+        en: 'Collaborated on backend planning and API contract design for future online services and player progression synchronization.',
+        tr: 'Gelecekteki online servisler ve oyuncu progression senkronizasyonu için backend planlama ve API contract tasarımında birlikte çalıştı.',
+      ),
+      LocalizedText(
+        en: 'Managed production builds, testing workflows, QA processes, deployment pipelines, and release preparation.',
+        tr: 'Production build, test akışları, QA süreçleri, deployment pipeline’ları ve release hazırlık süreçlerini yönetti.',
       ),
     ],
   ),
@@ -342,15 +362,15 @@ final List<Experience> _experiences = [
     ),
     highlights: const [
       LocalizedText(
-        en: 'Designed and implemented scalable front-end architecture using Flutter and .NET MAUI.',
-        tr: 'Flutter ve .NET MAUI kullanarak ölçeklenebilir ön yüz mimarisi tasarladı ve uyguladı.',
+        en: 'Designed and implemented scalable front-end architecture using Flutter and .NET MAUI, improving maintainability and reducing feature development time.',
+        tr: 'Flutter ve .NET MAUI kullanarak ölçeklenebilir ön yüz mimarisi tasarladı ve uyguladı, sürdürülebilirliği artırıp özellik geliştirme süresini azalttı.',
       ),
       LocalizedText(
-        en: 'Built complex data-driven interfaces with DevExpress DataForm/DataGrid and advanced filtering for operational workflows.',
-        tr: 'Operasyonel iş akışları için DevExpress DataForm/DataGrid ve gelişmiş filtrelemeye sahip veri odaklı arayüzler geliştirdi.',
+        en: 'Built complex data-driven interfaces with DevExpress DataForm/DataGrid and advanced filtering, significantly improving user efficiency in operational workflows.',
+        tr: 'Operasyonel iş akışlarında kullanıcı verimliliğini belirgin şekilde artıran DevExpress DataForm/DataGrid ve gelişmiş filtrelemeye sahip veri odaklı arayüzler geliştirdi.',
       ),
       LocalizedText(
-        en: 'Implemented high-performance barcode/QR scanning with ZXing and Camera2, optimized for low-light and small-code detection.',
+        en: 'Implemented high-performance barcode/QR scanning with ZXing and Camera2, optimized for low-light and small-code detection scenarios.',
         tr: 'Düşük ışık ve küçük kod algılama senaryolarına göre optimize edilmiş ZXing ve Camera2 tabanlı yüksek performanslı barkod/QR tarama sistemi kurdu.',
       ),
       LocalizedText(
@@ -358,12 +378,12 @@ final List<Experience> _experiences = [
         tr: 'Backend RBAC mantığıyla uyumlu rol tabanlı arayüz sistemleri geliştirerek güvenliği ve kullanıcı ayrımını iyileştirdi.',
       ),
       LocalizedText(
-        en: 'Improved application performance through caching, virtualization, and payload optimization.',
-        tr: 'Caching, virtualization ve payload optimizasyonu ile uygulama performansını artırdı.',
+        en: 'Improved application performance through caching, virtualization, and payload optimization, resulting in faster load times and smoother UX.',
+        tr: 'Caching, virtualization ve payload optimizasyonu sayesinde daha hızlı yükleme süreleri ve daha akıcı bir UX elde edildi.',
       ),
       LocalizedText(
-        en: 'Managed full mobile release lifecycle across Google Play, App Store, and Huawei AppGallery.',
-        tr: 'Google Play, App Store ve Huawei AppGallery genelinde tam mobil release yaşam döngüsünü yönetti.',
+        en: 'Managed full mobile release lifecycle (CI/CD, signing, store deployment) across Google Play, App Store, and Huawei AppGallery.',
+        tr: 'Google Play, App Store ve Huawei AppGallery genelinde tam mobil release yaşam döngüsünü (CI/CD, signing, store deployment) yönetti.',
       ),
     ],
   ),
@@ -377,8 +397,8 @@ final List<Project> _projects = [
       tr: 'DuruGlobal: Gayrimenkul Mobil Platformu',
     ),
     description: const LocalizedText(
-      en: 'Built a full-stack real estate platform for mobile and web targeting international markets, including Dubai. Designed Supabase/PostgreSQL backend architecture with RLS, RBAC, and moderation workflows. Implemented deep links, push notifications, multilingual support, onboarding, media uploads, and scalable listing management.',
-      tr: 'Dubai dahil uluslararası pazarı hedefleyen mobil ve web tabanlı full-stack bir gayrimenkul platformu geliştirdim. Supabase/PostgreSQL altyapısında RLS, RBAC ve moderasyon akışlarını içeren backend mimarisi tasarladım. Deep link, push bildirimleri, çoklu dil desteği, onboarding, medya yükleme ve ölçeklenebilir ilan yönetimi uyguladım.',
+      en: 'Built a full-stack real estate platform for mobile and web targeting international markets, including Dubai. Designed backend architecture using Supabase (PostgreSQL + RLS), including role-based access control and moderation workflows. Implemented deep linking (App Links / Universal Links), push notifications (Firebase/APNS), multi-language support (TR/EN/DE/AR), scalable onboarding flows, media uploads, listing management, and real-time data interactions.',
+      tr: 'Dubai dahil uluslararası pazarı hedefleyen mobil ve web tabanlı full-stack bir gayrimenkul platformu geliştirdim. Supabase (PostgreSQL + RLS) kullanarak, rol bazlı erişim kontrolü ve moderasyon akışlarını içeren backend mimarisi tasarladım. Deep linking (App Links / Universal Links), push bildirimleri (Firebase/APNS), çoklu dil desteği (TR/EN/DE/AR), ölçeklenebilir onboarding akışları, medya yükleme, ilan yönetimi ve gerçek zamanlı veri etkileşimleri uyguladım.',
     ),
     tags: const [
       LocalizedText(en: 'Flutter', tr: 'Flutter'),
@@ -414,8 +434,8 @@ final List<Project> _projects = [
       tr: 'Desk4Dent: Dental Klinik Yönetimi',
     ),
     description: const LocalizedText(
-      en: 'Developed a production-ready healthcare application used by a private dental clinic. Built appointment scheduling, patient management, treatment tracking, and accounting workflows. Implemented Supabase auth/PostgreSQL/RLS security, device token handling for notifications, and scalable access control.',
-      tr: 'Özel bir diş kliniğinde kullanılan production-ready bir sağlık uygulaması geliştirdim. Randevu planlama, hasta yönetimi, tedavi takibi ve muhasebe iş akışları kuruldu. Supabase auth/PostgreSQL/RLS güvenliği, bildirimler için device token yönetimi ve ölçeklenebilir erişim kontrolü implemente edildi.',
+      en: 'Developed a production-ready healthcare application used by a private dental clinic. Built appointment scheduling, patient management, treatment management, accounting tracking, and user authorization workflows. Implemented Supabase auth/PostgreSQL/RLS security and device token storage for appointment notifications.',
+      tr: 'Özel bir diş kliniğinde kullanılan production-ready bir sağlık uygulaması geliştirdim. Randevu planlama, hasta yönetimi, tedavi yönetimi, muhasebe takibi ve kullanıcı yetkilendirme akışları kuruldu. Supabase auth/PostgreSQL/RLS güvenliği ve randevu bildirimleri için device token saklama yapısı implemente edildi.',
     ),
     tags: const [
       LocalizedText(en: 'Flutter', tr: 'Flutter'),
@@ -438,45 +458,6 @@ final List<Project> _projects = [
       tr: 'Desk4Dent, Özel Fatsa Ağız ve Diş Sağlığı Polikliniği Ltd. Şti. tarafından güncel olarak aktif kullanılmaktadır.',
     ),
     privacyDoc: _privacyDocs.firstWhere((doc) => doc.slug == 'desk4dent'),
-  ),
-  Project(
-    slug: 'what-should-i-eat',
-    title: const LocalizedText(
-      en: 'What Should I Eat Today',
-      tr: 'What Should I Eat Today',
-    ),
-    description: const LocalizedText(
-      en: 'Built a data-driven mobile application with Flutter and Supabase. Added ingredient-based filtering, deep links, Google Mobile Ads, TR/EN localization, favorites, image caching, and offline access for saved recipes.',
-      tr: 'Flutter ve Supabase ile veri odaklı bir mobil uygulama geliştirdim. Malzemeye göre filtreleme, deep link, Google Mobile Ads, TR/EN lokalizasyon, favoriler, görsel cache ve kaydedilen tariflere offline erişim özellikleri eklendi.',
-    ),
-    tags: const [
-      LocalizedText(en: 'Flutter', tr: 'Flutter'),
-      LocalizedText(en: 'Supabase', tr: 'Supabase'),
-      LocalizedText(en: 'Localization', tr: 'Lokalizasyon'),
-      LocalizedText(en: 'Deep Link', tr: 'Derin Link'),
-      LocalizedText(en: 'Ads', tr: 'Reklam'),
-    ],
-    iconAsset: 'assets/images/whatshouldieaticon.png',
-    links: const [
-      ProjectLink(
-        label: 'App Store',
-        url:
-            'https://apps.apple.com/us/app/what-should-i-eat-today/id6741708205',
-      ),
-      ProjectLink(
-        label: 'Google Play',
-        url:
-            'https://play.google.com/store/apps/details?id=com.whatshouldieattoday.mobile',
-      ),
-      ProjectLink(
-        label: 'GitHub',
-        url: 'https://github.com/BugraKaanSaglam/whatshouldieattoday',
-      ),
-    ],
-    meta: const LocalizedText(en: 'Indie', tr: 'Indie'),
-    privacyDoc: _privacyDocs.firstWhere(
-      (doc) => doc.slug == 'what-should-i-eat-today',
-    ),
   ),
   Project(
     slug: 'mice-and-paws',
@@ -516,44 +497,43 @@ final List<Project> _projects = [
     ),
   ),
   Project(
-    slug: 'cavamed-erpimus',
+    slug: 'what-should-i-eat',
     title: const LocalizedText(
-      en: 'CAVAMED & ERPIMUS',
-      tr: 'CAVAMED & ERPIMUS',
+      en: 'What Should I Eat Today',
+      tr: 'What Should I Eat Today',
     ),
     description: const LocalizedText(
-      en: 'Enterprise healthcare applications built with Flutter and .NET MAUI; lead engineer for architecture, UI, barcode pipelines, and release workflows.',
-      tr: 'Flutter ve .NET MAUI ile geliştirilen kurumsal sağlık uygulamaları; mimari, arayüz, barkod altyapısı ve yayın süreçlerinde sorumluluk.',
-    ),
-    tags: const [
-      LocalizedText(en: '.NET MAUI', tr: '.NET MAUI'),
-      LocalizedText(en: 'Healthcare', tr: 'Sağlık'),
-      LocalizedText(en: 'DevExpress', tr: 'DevExpress'),
-      LocalizedText(en: 'Camera2 / ZXing', tr: 'Camera2 / ZXing'),
-    ],
-    iconAsset: 'assets/images/cavamedicon.png',
-    meta: const LocalizedText(
-      en: 'Completed at CAVAMED A.Ş.',
-      tr: 'CAVAMED A.Ş.\'de tamamlandı',
-    ),
-  ),
-  Project(
-    slug: 'areonx-dungeon-infinity-x',
-    title: const LocalizedText(
-      en: 'AreonX: Dungeon Infinity X',
-      tr: 'AreonX: Dungeon Infinity X',
-    ),
-    description: const LocalizedText(
-      en: 'Cross-platform mobile dungeon crawler developed as a solo frontend engineer using Flutter. Features procedural dungeon generation, turn-based combat, progression systems, achievements, live content updates, and long-term retention mechanics for Android and iOS.',
-      tr: 'Flutter kullanılarak tek front-end geliştirici olarak geliştirilen cross-platform mobil dungeon crawler. Procedural dungeon generation, turn-based combat, progression systems, achievement’lar, live content updates ve Android/iOS için uzun vadeli retention mekanikleri içerir.',
+      en: 'Built a data-driven mobile application with Flutter and Supabase. Added ingredient-based filtering, deep links, Google Mobile Ads, TR/EN localization, favorites, image caching, and offline access for saved recipes.',
+      tr: 'Flutter ve Supabase ile veri odaklı bir mobil uygulama geliştirdim. Malzemeye göre filtreleme, deep link, Google Mobile Ads, TR/EN lokalizasyon, favoriler, görsel cache ve kaydedilen tariflere offline erişim özellikleri eklendi.',
     ),
     tags: const [
       LocalizedText(en: 'Flutter', tr: 'Flutter'),
-      LocalizedText(en: 'Flame', tr: 'Flame'),
-      LocalizedText(en: 'Game Architecture', tr: 'Oyun Mimarisi'),
-      LocalizedText(en: 'Live Updates', tr: 'Canlı Güncelleme'),
+      LocalizedText(en: 'Supabase', tr: 'Supabase'),
+      LocalizedText(en: 'Localization', tr: 'Lokalizasyon'),
+      LocalizedText(en: 'Deep Link', tr: 'Derin Link'),
+      LocalizedText(en: 'Ads', tr: 'Reklam'),
     ],
-    meta: const LocalizedText(en: 'Current', tr: 'Güncel'),
+    iconAsset: 'assets/images/whatshouldieaticon.png',
+    links: const [
+      ProjectLink(
+        label: 'App Store',
+        url:
+            'https://apps.apple.com/us/app/what-should-i-eat-today/id6741708205',
+      ),
+      ProjectLink(
+        label: 'Google Play',
+        url:
+            'https://play.google.com/store/apps/details?id=com.whatshouldieattoday.mobile',
+      ),
+      ProjectLink(
+        label: 'GitHub',
+        url: 'https://github.com/BugraKaanSaglam/whatshouldieattoday',
+      ),
+    ],
+    meta: const LocalizedText(en: 'Indie', tr: 'Indie'),
+    privacyDoc: _privacyDocs.firstWhere(
+      (doc) => doc.slug == 'what-should-i-eat-today',
+    ),
   ),
   Project(
     slug: 'portfolio-website',
