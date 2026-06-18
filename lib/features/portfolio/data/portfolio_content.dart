@@ -1,12 +1,10 @@
 import 'package:bugrakaansaglam_website/features/portfolio/domain/portfolio_models.dart';
 
-const ContactInfo _contactInfo = ContactInfo(
-  email: 'bugraksaglam@gmail.com',
-);
+const ContactInfo _contactInfo = ContactInfo(email: 'bugraksaglam@gmail.com');
 
 final LocalizedText _aboutSummary = LocalizedText(
-  en: 'Senior Cross-Platform Mobile Developer with 3+ years of experience delivering production-grade apps across healthcare, real estate, and consumer products. Specialized in scalable architectures, high-performance UIs, backend integrations with Supabase/PostgreSQL, deep linking, push notifications, and app store compliance. Proven track record as a sole front-end engineer with strong focus on UX, performance, and maintainability.',
-  tr: 'Sağlık, gayrimenkul ve tüketici uygulamalarında 3+ yıllık deneyime sahip senior cross-platform mobil geliştiriciyim. Ölçeklenebilir mimariler, yüksek performanslı arayüzler, Supabase/PostgreSQL backend entegrasyonları, deep linking, push bildirimleri ve store compliance süreçlerinde uzmanlaştım. Tek front-end geliştirici olarak UX, performans ve sürdürülebilirlik odağıyla production-grade uygulamalar teslim ettim.',
+  en: 'Senior Mobile Software Engineer with 4+ years of experience developing cross-platform applications with Flutter and .NET MAUI. Experienced in designing, developing, publishing, and maintaining production mobile applications on the App Store and Google Play. Strong background in mobile architecture, REST API integrations, offline-first applications, state management, push notifications, barcode scanning systems, and enterprise software development.',
+  tr: 'Flutter ve .NET MAUI ile cross-platform uygulamalar geliştiren, 4+ yıllık deneyime sahip senior mobil yazılım mühendisiyim. App Store ve Google Play üzerinde yayınlanan production mobil uygulamaların tasarımı, geliştirilmesi, yayınlanması ve bakımı konularında deneyimliyim. Mobil mimari, REST API entegrasyonları, offline-first uygulamalar, state management, push bildirimleri, barkod tarama sistemleri ve kurumsal yazılım geliştirme alanlarında güçlü bir geçmişe sahibim.',
 );
 
 final List<PrivacyDoc> _privacyDocs = [
@@ -228,7 +226,7 @@ final List<SkillGroup> _skillGroups = [
       tr: 'Diller ve Frameworkler',
     ),
     items: const [
-      LocalizedText(en: 'Flutter (Dart)', tr: 'Flutter (Dart)'),
+      LocalizedText(en: 'Flutter(Dart)', tr: 'Flutter(Dart)'),
       LocalizedText(
         en: 'C# (.NET MAUI, Xamarin)',
         tr: 'C# (.NET MAUI, Xamarin)',
@@ -291,6 +289,44 @@ final List<Experience> _experiences = [
       en: 'Mobile application developer',
       tr: 'Mobil uygulama geliştirici',
     ),
+    company: const LocalizedText(en: 'AreonX', tr: 'AreonX'),
+    period: const LocalizedText(
+      en: 'Apr 27, 2026 - Present',
+      tr: '27 Nisan 2026 - Halen',
+    ),
+    location: const LocalizedText(en: 'Ankara, Türkiye', tr: 'Ankara, Türkiye'),
+    summary: const LocalizedText(
+      en: 'Solo frontend engineer for AreonX: Dungeon Infinity X, a cross-platform mobile dungeon crawler built with Flutter.',
+      tr: 'Flutter ile geliştirilen cross-platform mobil dungeon crawler AreonX: Dungeon Infinity X için tek front-end geliştirici.',
+    ),
+    highlights: const [
+      LocalizedText(
+        en: 'Designed and implemented the complete mobile frontend architecture from concept to production.',
+        tr: 'Mobil ön yüz mimarisini fikir aşamasından production seviyesine kadar tasarladı ve uyguladı.',
+      ),
+      LocalizedText(
+        en: 'Built core gameplay systems including combat, progression, skills, equipment, achievements, rewards, encounters, and dungeon exploration.',
+        tr: 'Combat, progression, skill, equipment, achievement, reward, encounter ve dungeon exploration sistemlerini geliştirdi.',
+      ),
+      LocalizedText(
+        en: 'Implemented procedural dungeon generation, live content updates, and JSON-driven content pipelines for rapid balancing.',
+        tr: 'Procedural dungeon generation, live content updates ve hızlı dengeleme için JSON tabanlı içerik hatlarını uyguladı.',
+      ),
+      LocalizedText(
+        en: 'Optimized performance, memory usage, rendering efficiency, and mobile responsiveness across Android and iOS.',
+        tr: 'Android ve iOS genelinde performans, bellek kullanımı, render verimliliği ve mobil uyumluluğu optimize etti.',
+      ),
+      LocalizedText(
+        en: 'Managed production builds, QA workflows, deployment pipelines, and release preparation.',
+        tr: 'Production build, QA akışları, deployment pipeline’ları ve release hazırlık süreçlerini yönetti.',
+      ),
+    ],
+  ),
+  Experience(
+    role: const LocalizedText(
+      en: 'Mobile application developer',
+      tr: 'Mobil uygulama geliştirici',
+    ),
     company: const LocalizedText(en: 'CAVAMED A.Ş.', tr: 'CAVAMED A.Ş.'),
     period: const LocalizedText(
       en: 'Dec 21, 2022 - Dec 22, 2025',
@@ -301,29 +337,33 @@ final List<Experience> _experiences = [
       tr: 'İstanbul, Türkiye',
     ),
     summary: const LocalizedText(
-      en: 'Sole front-end engineer for two enterprise healthcare inventory apps (CAVAMED, ERPIMUS) built with .NET MAUI.',
-      tr: '.NET MAUI ile geliştirilen iki kurumsal sağlık stok yönetimi uygulamasında (CAVAMED, ERPIMUS) tek front-end geliştirici.',
+      en: 'Sole front-end engineer for two enterprise healthcare applications (CAVAMED, ERPIMUS) used in inventory and warehouse operations.',
+      tr: 'Envanter ve depo operasyonlarında kullanılan iki kurumsal sağlık uygulamasında (CAVAMED, ERPIMUS) tek front-end geliştirici.',
     ),
     highlights: const [
       LocalizedText(
-        en: 'Designed front-end architecture; delivered data-heavy UIs with DevExpress (DataForm/DataGrid), advanced filtering, card/detail layouts, and reusable popups.',
-        tr: 'Ön yüz mimarisini tasarladı; DevExpress (DataForm/DataGrid) ile yoğun veri ekranları, gelişmiş filtreleme, kart/detay düzenleri ve tekrar kullanılabilir popup’lar geliştirdi.',
+        en: 'Designed and implemented scalable front-end architecture using Flutter and .NET MAUI.',
+        tr: 'Flutter ve .NET MAUI kullanarak ölçeklenebilir ön yüz mimarisi tasarladı ve uyguladı.',
       ),
       LocalizedText(
-        en: 'Implemented QR/Barcode capture with fast focus & small-code readability; tuned Camera2 pipeline for varied lighting and devices.',
-        tr: 'Hızlı odaklanma ve küçük kod okuma için QR/Barkod yakalama; farklı ışık ve cihaz koşullarına uygun Camera2 hattı ayarı.',
+        en: 'Built complex data-driven interfaces with DevExpress DataForm/DataGrid and advanced filtering for operational workflows.',
+        tr: 'Operasyonel iş akışları için DevExpress DataForm/DataGrid ve gelişmiş filtrelemeye sahip veri odaklı arayüzler geliştirdi.',
       ),
       LocalizedText(
-        en: 'Integrated client-side authentication/session and role-based UI aligned with healthcare privacy expectations.',
-        tr: 'Sağlık verisi hassasiyetine uygun istemci tarafı kimlik doğrulama/oturum ve rol tabanlı arayüz kurgusu.',
+        en: 'Implemented high-performance barcode/QR scanning with ZXing and Camera2, optimized for low-light and small-code detection.',
+        tr: 'Düşük ışık ve küçük kod algılama senaryolarına göre optimize edilmiş ZXing ve Camera2 tabanlı yüksek performanslı barkod/QR tarama sistemi kurdu.',
       ),
       LocalizedText(
-        en: 'Improved performance via virtualization, caching, and payload reduction; boosted load times and stability at scale.',
-        tr: 'Sanal listeleme, caching ve payload azaltma ile performansı artırdı; yükleme süreleri ve kararlılık iyileştirildi.',
+        en: 'Developed role-based UI systems aligned with backend RBAC logic, improving security and user segmentation.',
+        tr: 'Backend RBAC mantığıyla uyumlu rol tabanlı arayüz sistemleri geliştirerek güvenliği ve kullanıcı ayrımını iyileştirdi.',
       ),
       LocalizedText(
-        en: 'Managed signing, CI steps, SDK/API upgrades, and store submissions (Google Play, App Store, Huawei AppGallery).',
-        tr: 'İmzalama, CI adımları, SDK/API yükseltmeleri ve mağaza gönderimlerini (Google Play, App Store, Huawei AppGallery) yönetti.',
+        en: 'Improved application performance through caching, virtualization, and payload optimization.',
+        tr: 'Caching, virtualization ve payload optimizasyonu ile uygulama performansını artırdı.',
+      ),
+      LocalizedText(
+        en: 'Managed full mobile release lifecycle across Google Play, App Store, and Huawei AppGallery.',
+        tr: 'Google Play, App Store ve Huawei AppGallery genelinde tam mobil release yaşam döngüsünü yönetti.',
       ),
     ],
   ),
@@ -337,8 +377,8 @@ final List<Project> _projects = [
       tr: 'DuruGlobal: Gayrimenkul Mobil Platformu',
     ),
     description: const LocalizedText(
-      en: 'Built a full-stack real estate platform for mobile and web targeting international markets. Designed Supabase/PostgreSQL backend architecture with RLS, RBAC, and moderation workflows. Implemented deep links, Firebase/APNS notifications, media uploads, multilingual support, onboarding, and scalable listing management.',
-      tr: 'Uluslararası pazarı hedefleyen mobil ve web tabanlı full-stack bir gayrimenkul platformu geliştirdim. Supabase/PostgreSQL altyapısında RLS, RBAC ve moderasyon akışlarını içeren backend mimarisini tasarladım. Deep link, Firebase/APNS bildirimleri, medya yükleme, çoklu dil desteği, onboarding ve ölçeklenebilir ilan yönetimi implement edildi.',
+      en: 'Built a full-stack real estate platform for mobile and web targeting international markets, including Dubai. Designed Supabase/PostgreSQL backend architecture with RLS, RBAC, and moderation workflows. Implemented deep links, push notifications, multilingual support, onboarding, media uploads, and scalable listing management.',
+      tr: 'Dubai dahil uluslararası pazarı hedefleyen mobil ve web tabanlı full-stack bir gayrimenkul platformu geliştirdim. Supabase/PostgreSQL altyapısında RLS, RBAC ve moderasyon akışlarını içeren backend mimarisi tasarladım. Deep link, push bildirimleri, çoklu dil desteği, onboarding, medya yükleme ve ölçeklenebilir ilan yönetimi uyguladım.',
     ),
     tags: const [
       LocalizedText(en: 'Flutter', tr: 'Flutter'),
@@ -374,8 +414,8 @@ final List<Project> _projects = [
       tr: 'Desk4Dent: Dental Klinik Yönetimi',
     ),
     description: const LocalizedText(
-      en: 'Developed a production-ready healthcare application used by a private dental clinic. Built scheduling, patient management, and treatment tracking features. Implemented Supabase auth/PostgreSQL/RLS security, Firebase Cloud Messaging, and scalable Riverpod state management.',
-      tr: 'Özel bir diş kliniğinde aktif kullanılan production-ready bir sağlık uygulaması geliştirdim. Randevu planlama, hasta yönetimi ve tedavi takibi özellikleri kuruldu. Supabase auth/PostgreSQL/RLS güvenliği, Firebase Cloud Messaging ve ölçeklenebilir Riverpod state management yapısı implemente edildi.',
+      en: 'Developed a production-ready healthcare application used by a private dental clinic. Built appointment scheduling, patient management, treatment tracking, and accounting workflows. Implemented Supabase auth/PostgreSQL/RLS security, device token handling for notifications, and scalable access control.',
+      tr: 'Özel bir diş kliniğinde kullanılan production-ready bir sağlık uygulaması geliştirdim. Randevu planlama, hasta yönetimi, tedavi takibi ve muhasebe iş akışları kuruldu. Supabase auth/PostgreSQL/RLS güvenliği, bildirimler için device token yönetimi ve ölçeklenebilir erişim kontrolü implemente edildi.',
     ),
     tags: const [
       LocalizedText(en: 'Flutter', tr: 'Flutter'),
@@ -406,8 +446,8 @@ final List<Project> _projects = [
       tr: 'What Should I Eat Today',
     ),
     description: const LocalizedText(
-      en: 'Built a data-driven mobile application with Flutter + Supabase. Added ingredient-based recipe filtering, deep linking, Google Mobile Ads, TR/EN localization, favorites, image caching, and offline access for previously saved recipes.',
-      tr: 'Flutter + Supabase ile veri odaklı bir mobil uygulama geliştirdim. Malzemeye göre tarif filtreleme, deep linking, Google Mobile Ads, TR/EN lokalizasyon, favoriler, görsel cache ve kaydedilen tariflere offline erişim özellikleri eklendi.',
+      en: 'Built a data-driven mobile application with Flutter and Supabase. Added ingredient-based filtering, deep links, Google Mobile Ads, TR/EN localization, favorites, image caching, and offline access for saved recipes.',
+      tr: 'Flutter ve Supabase ile veri odaklı bir mobil uygulama geliştirdim. Malzemeye göre filtreleme, deep link, Google Mobile Ads, TR/EN lokalizasyon, favoriler, görsel cache ve kaydedilen tariflere offline erişim özellikleri eklendi.',
     ),
     tags: const [
       LocalizedText(en: 'Flutter', tr: 'Flutter'),
@@ -446,7 +486,7 @@ final List<Project> _projects = [
     ),
     description: const LocalizedText(
       en: 'Developed a 2D mobile game with 60 FPS animations and collision systems. Implemented sprite animations, hit-testing, sound effects, Google Mobile Ads monetization, and offline-friendly gameplay loops.',
-      tr: '60 FPS animasyonlara ve çarpışmalara sahip 2D bir mobil oyun geliştirdim. Sprite animasyonları, hit-testing, ses efektleri, Google Mobile Ads monetization ve offline dostu oynanış döngüleri implemente edildi.',
+      tr: '60 FPS animasyonlara ve çarpışma sistemlerine sahip 2D bir mobil oyun geliştirdim. Sprite animasyonları, hit-testing, ses efektleri, Google Mobile Ads monetization ve offline dostu oynanış döngüleri implemente edildi.',
     ),
     tags: const [
       LocalizedText(en: 'Flutter', tr: 'Flutter'),
@@ -482,8 +522,8 @@ final List<Project> _projects = [
       tr: 'CAVAMED & ERPIMUS',
     ),
     description: const LocalizedText(
-      en: 'Enterprise healthcare inventory apps built with .NET MAUI; lead engineer for architecture, UI, barcode pipelines, and release workflows.',
-      tr: '.NET MAUI ile geliştirilen kurumsal sağlık stok uygulamaları; mimari, arayüz, barkod altyapısı ve yayın süreçlerinde sorumluluk.',
+      en: 'Enterprise healthcare applications built with Flutter and .NET MAUI; lead engineer for architecture, UI, barcode pipelines, and release workflows.',
+      tr: 'Flutter ve .NET MAUI ile geliştirilen kurumsal sağlık uygulamaları; mimari, arayüz, barkod altyapısı ve yayın süreçlerinde sorumluluk.',
     ),
     tags: const [
       LocalizedText(en: '.NET MAUI', tr: '.NET MAUI'),
@@ -498,14 +538,32 @@ final List<Project> _projects = [
     ),
   ),
   Project(
+    slug: 'areonx-dungeon-infinity-x',
+    title: const LocalizedText(
+      en: 'AreonX: Dungeon Infinity X',
+      tr: 'AreonX: Dungeon Infinity X',
+    ),
+    description: const LocalizedText(
+      en: 'Cross-platform mobile dungeon crawler developed as a solo frontend engineer using Flutter. Features procedural dungeon generation, turn-based combat, progression systems, achievements, live content updates, and long-term retention mechanics for Android and iOS.',
+      tr: 'Flutter kullanılarak tek front-end geliştirici olarak geliştirilen cross-platform mobil dungeon crawler. Procedural dungeon generation, turn-based combat, progression systems, achievement’lar, live content updates ve Android/iOS için uzun vadeli retention mekanikleri içerir.',
+    ),
+    tags: const [
+      LocalizedText(en: 'Flutter', tr: 'Flutter'),
+      LocalizedText(en: 'Flame', tr: 'Flame'),
+      LocalizedText(en: 'Game Architecture', tr: 'Oyun Mimarisi'),
+      LocalizedText(en: 'Live Updates', tr: 'Canlı Güncelleme'),
+    ],
+    meta: const LocalizedText(en: 'Current', tr: 'Güncel'),
+  ),
+  Project(
     slug: 'portfolio-website',
     title: const LocalizedText(
       en: 'Personal Website (Portfolio)',
       tr: 'Kişisel Web Sitesi (Portfolio)',
     ),
     description: const LocalizedText(
-      en: 'Designed and deployed a responsive personal portfolio website to showcase projects, app store links, and contact information with fast loading and maintainable content structure.',
-      tr: 'Projeler, mağaza bağlantıları ve iletişim bilgilerini sergilemek için hızlı açılan ve sürdürülebilir içerik yapısına sahip responsive kişisel portfolio web sitesi tasarlandı ve yayına alındı.',
+      en: 'Designed and deployed a responsive personal portfolio website to showcase mobile and web projects, app store links, and contact information. Focused on clean UI, fast loading, and a maintainable content structure so the site can be updated quickly.',
+      tr: 'Mobil ve web projelerini, mağaza bağlantılarını ve iletişim bilgilerini sergilemek için responsive bir kişisel portfolio web sitesi tasarladım ve yayına aldım. Temiz arayüz, hızlı yükleme ve kolay güncellenebilir içerik yapısına odaklandım.',
     ),
     tags: const [
       LocalizedText(en: 'Flutter Web', tr: 'Flutter Web'),
@@ -527,8 +585,8 @@ final List<Project> _projects = [
       tr: 'Kişisel / İş Web Sitesi',
     ),
     description: const LocalizedText(
-      en: 'Built and published a responsive website for a client to present profile/services clearly with mobile-optimized layout and editable content structure.',
-      tr: 'Bir müşteri için profil/hizmet sunumunu netleştiren, mobil uyumlu düzen ve düzenlenebilir içerik yapısına sahip responsive bir web sitesi geliştirildi ve yayımlandı.',
+      en: 'Built and published a responsive website for a client to present profile and services clearly with a mobile-optimized layout and editable content structure.',
+      tr: 'Bir müşteri için profil ve hizmet sunumunu netleştiren, mobil uyumlu düzen ve düzenlenebilir içerik yapısına sahip responsive bir web sitesi geliştirildi ve yayımlandı.',
     ),
     tags: const [
       LocalizedText(en: 'Responsive Design', tr: 'Responsive Design'),
@@ -553,15 +611,15 @@ final List<ReferenceEntry> _references = [
       tr: 'ORYAZ Team Leader, Senior Flutter Developer',
     ),
     comment: const LocalizedText(
-      en: 'Dedicated and capable mobile developer with strong Flutter and cross-platform skills. Learns quickly, writes well-structured code, pays close attention to UX and performance, and consistently pushes for high quality.',
-      tr: 'Flutter ve cross-platform geliştirmede güçlü, disiplinli ve yetkin bir mobil geliştirici. Hızlı öğrenir, düzenli kod yazar, UX ve performans detaylarına dikkat eder ve sürekli yüksek kaliteyi hedefler.',
+      en: 'I have known Buğra for several years and reviewed his projects and approach to software development. He is a dedicated and capable mobile developer, particularly strong in Flutter and cross-platform solutions. He learns quickly, writes well-structured code, pays close attention to UX and performance, and takes true ownership.',
+      tr: 'Buğra’yı birkaç yıldır tanıyorum ve projelerini, yazılım geliştirmeye yaklaşımını yakından inceleme fırsatım oldu. Flutter ve cross-platform çözümlerde özellikle güçlü, disiplinli ve yetkin bir mobil geliştiricidir. Hızlı öğrenir, düzenli kod yazar, UX ve performans detaylarına dikkat eder ve yaptığı işe sahip çıkar.',
     ),
   ),
 ];
 
 final Education _education = Education(
   degree: const LocalizedText(
-    en: 'BSc in Biomedical Engineering',
+    en: 'Bachelor of Science (BSc) in Biomedical Engineering',
     tr: 'Biyomedikal Mühendisliği Lisans',
   ),
   school: const LocalizedText(
@@ -569,7 +627,10 @@ final Education _education = Education(
     tr: 'TOBB Ekonomi ve Teknoloji Üniversitesi (TOBB ETÜ)',
   ),
   location: const LocalizedText(en: 'Ankara, Türkiye', tr: 'Ankara, Türkiye'),
-  period: const LocalizedText(en: '2014 - 2023', tr: '2014 - 2023'),
+  period: const LocalizedText(
+    en: '2014-09-10 - 2023-12-18',
+    tr: '10 Eylül 2014 - 18 Aralık 2023',
+  ),
 );
 
 final PortfolioContent portfolioContent = PortfolioContent(

@@ -1,22 +1,22 @@
 {
-  "app_title": "Buğra Kaan Sağlam | Mobile & Web Engineer",
+  "app_title": "Buğra Kaan Sağlam | Senior Mobile Software Engineer",
   "nav": {
-    "role": "Senior Cross-Platform Mobile Developer",
+    "role": "Senior Mobile Software Engineer",
     "lang_en": "EN",
     "lang_tr": "TR"
   },
   "hero": {
     "location": "Ankara, Turkey",
-    "title": "Shipping production-grade mobile systems across healthcare, real estate, and consumer apps.",
-    "subtitle": "Senior cross-platform mobile developer focused on scalable architecture, high-performance UI, backend integrations, deep linking, notifications, and release compliance.",
+    "title": "Building production mobile systems with Flutter and .NET MAUI.",
+    "subtitle": "Senior mobile software engineer focused on scalable architecture, production-ready UI, backend integrations, offline-first apps, notifications, barcode systems, and release compliance.",
     "cta_meeting": "Email me",
     "availability_label": "Availability",
     "availability": "Open to new projects",
     "now_building": "Now building",
-    "status": "Building full mobile systems with Flutter and .NET MAUI, from architecture and backend integrations to store-ready releases.",
+    "status": "Building mobile systems end to end, from architecture and backend integrations to store-ready releases.",
     "facts": {
       "experience_label": "Experience",
-      "experience_value": "3+ yrs",
+      "experience_value": "4+ yrs",
       "enterprise_label": "Enterprise apps",
       "enterprise_value": "2",
       "indie_label": "Indie products",
@@ -39,7 +39,7 @@
     "contact": "Contact"
   },
   "about": {
-    "body": "Senior Cross-Platform Mobile Developer with 3+ years of experience delivering production-grade applications across healthcare, real estate, and consumer apps. Specialized in scalable architecture, high-performance UI, Supabase/PostgreSQL integrations, deep linking, push notifications, and app store compliance. Strong track record as a sole front-end engineer focused on UX, performance, and maintainability."
+    "body": "Senior Mobile Software Engineer with 4+ years of experience developing cross-platform applications with Flutter and .NET MAUI. Experienced in designing, developing, publishing, and maintaining production mobile applications on the App Store and Google Play. Strong background in mobile architecture, REST API integrations, offline-first applications, state management, push notifications, barcode scanning systems, and enterprise software development."
   },
   "projects": {
     "copy_link": "Copy Link",
@@ -50,7 +50,7 @@
     "email": "Email"
   },
   "education": {
-    "degree": "BSc in Biomedical Engineering",
+    "degree": "Bachelor of Science (BSc) in Biomedical Engineering",
     "school": "TOBB University of Economics and Technology (TOBB ETÜ)",
     "location": "Ankara, Türkiye",
     "period": "2014 - 2023"

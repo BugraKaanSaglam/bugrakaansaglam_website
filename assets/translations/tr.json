@@ -1,22 +1,22 @@
 {
-  "app_title": "Buğra Kaan Sağlam | Mobil & Web Mühendisi",
+  "app_title": "Buğra Kaan Sağlam | Kıdemli Mobil Yazılım Mühendisi",
   "nav": {
-    "role": "Senior Cross-Platform Mobile Developer",
+    "role": "Kıdemli Mobil Yazılım Mühendisi",
     "lang_en": "EN",
     "lang_tr": "TR"
   },
   "hero": {
     "location": "Ankara, Türkiye",
-    "title": "Sağlık, gayrimenkul ve tüketici uygulamalarında production-grade mobil sistemler geliştiriyorum.",
-    "subtitle": "Ölçeklenebilir mimari, yüksek performanslı UI, backend entegrasyonları, deep linking, bildirim altyapısı ve store compliance süreçlerine odaklanan senior cross-platform mobil geliştiriciyim.",
+    "title": "Flutter ve .NET MAUI ile production mobil sistemler geliştiriyorum.",
+    "subtitle": "Ölçeklenebilir mimari, production-ready arayüzler, backend entegrasyonları, offline-first uygulamalar, bildirim sistemleri, barkod altyapıları ve release compliance süreçlerine odaklanan kıdemli mobil yazılım mühendisiyim.",
     "cta_meeting": "E-posta gönder",
     "availability_label": "Müsaitlik",
     "availability": "Yeni projelere açık",
     "now_building": "Şu an odak",
-    "status": "Flutter ve .NET MAUI ile mimariden backend entegrasyonuna, store-ready release süreçlerine kadar uçtan uca mobil sistemler geliştiriyorum.",
+    "status": "Mobil sistemleri mimariden backend entegrasyonuna, store-ready release süreçlerine kadar uçtan uca geliştiriyorum.",
     "facts": {
       "experience_label": "Deneyim",
-      "experience_value": "3+ yıl",
+      "experience_value": "4+ yıl",
       "enterprise_label": "Kurumsal uygulama",
       "enterprise_value": "2",
       "indie_label": "Indie ürün",
@@ -39,7 +39,7 @@
     "contact": "İletişim"
   },
   "about": {
-    "body": "Sağlık, gayrimenkul ve tüketici uygulamalarında 3+ yıllık deneyime sahip senior cross-platform mobil geliştiriciyim. Ölçeklenebilir mimari, yüksek performanslı UI, Supabase/PostgreSQL entegrasyonları, deep linking, push bildirimleri ve app store compliance süreçlerinde uzmanlaştım. UX, performans ve sürdürülebilirlik odağıyla tek front-end geliştirici olarak production-grade uygulamalar teslim ettim."
+    "body": "Flutter ve .NET MAUI ile cross-platform uygulamalar geliştiren, 4+ yıllık deneyime sahip senior mobil yazılım mühendisiyim. App Store ve Google Play üzerinde yayınlanan production mobil uygulamaların tasarımı, geliştirilmesi, yayınlanması ve bakımı konularında deneyimliyim. Mobil mimari, REST API entegrasyonları, offline-first uygulamalar, state management, push bildirimleri, barkod tarama sistemleri ve kurumsal yazılım geliştirme alanlarında güçlü bir geçmişe sahibim."
   },
   "projects": {
     "copy_link": "Linki kopyala",
